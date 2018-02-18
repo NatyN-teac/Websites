@@ -344,15 +344,7 @@
             clear: both;
         }
 
-        .timeline > li:before,
-        .timeline > li:after {
-            content: " ";
-            display: table;
-        }
-
-        .timeline > li:after {
-            clear: both;
-        }
+      
 
         .timeline > li > .timeline-panel {
             width: 46%;
@@ -476,9 +468,11 @@
         top: 16px;
     }
 
-    ul.timeline > li > .timeline-panel {
+    /*
+ul.timeline > li > .timeline-panel {
         float: right;
     }
+    */
 
         ul.timeline > li > .timeline-panel:before {
             border-left-width: 0;

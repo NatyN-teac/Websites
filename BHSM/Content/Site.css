@@ -29,8 +29,8 @@ textarea {
 
 /*Only for overrriding the bootstrap css*/
 .navbar{
-    border-bottom:1px solid rgb(42, 70, 98);
-   background: rgb(42, 82, 118);
+    border-bottom:1px solid rgb(11, 29, 52);
+   background: rgb(11, 29, 52);
    height: 42px;
    margin-top: -50px;
    position: relative;
@@ -110,13 +110,22 @@ textarea {
     font-family: 'Felipa', cursive;
 }
 
-
+.heck{
+    position:absolute;
+    width:100%;
+    left:0;
+    z-index:-1;
+}
 
 .headr{
-    background-color:rgb(42, 70, 98);
+    background-color:#1C4882;
     
-    height: 20vh;
+    height: 30vh;
     margin-top: -20px;
+    margin-bottom:30px;
+    position:relative;
+    z-index:-1;
+   
 }
 .navbar-collapse.in {
     background-color: rgb(42, 82, 118);

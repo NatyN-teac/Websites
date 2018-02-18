@@ -31,7 +31,8 @@ namespace BHSM
                       "~/Content/site.css",
                       "~/Content/slider.css",
                        "~/Content/indexBodyStyle.css",
-                       "~/Content/foot.css"));
+                       "~/Content/foot.css",
+                       "~/Content/deprt.css"));
 
         }
     }

@@ -198,6 +198,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PathologyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -210,6 +211,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\deprt.css" />
     <Content Include="Content\foot.css" />
     <Content Include="Content\indexBodyStyle.css" />
     <Content Include="Content\slider.css" />
@@ -274,6 +276,7 @@
     <Content Include="Views\Shared\_footer.cshtml" />
     <Content Include="Views\Shared\_slider.cshtml" />
     <Content Include="Views\Shared\_Layout -without.cshtml" />
+    <Content Include="Views\Pathology\PathoIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
