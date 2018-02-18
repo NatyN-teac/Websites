@@ -3559,15 +3559,6 @@ input[type="button"].btn-block {
   clear: both;
 }
 
-.btn-group-vertical > .btn-group:before,
-.btn-group-vertical > .btn-group:after {
-  display: table;
-  content: " ";
-}
-
-.btn-group-vertical > .btn-group:after {
-  clear: both;
-}
 
 .btn-group-vertical > .btn-group > .btn {
   float: none;

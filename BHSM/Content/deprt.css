@@ -1,6 +1,5 @@
 ﻿.container .contra{
-    background-color:#fff;;
-   
+    background-color:#fff;   
     margin-top:-130px;
     width:100%;
 }
@@ -15,13 +14,149 @@
     background-color:#386392;
     width:100%;
     height:8vh;
-
-        padding-bottom:2px;
+    padding-bottom:2px;
+    
     
 }
 .sub-header h3{
     padding-left:20px;
-     padding-top:15px;
+    padding-top:15px;
+    margin-bottom:10px;
 
 
+}
+
+.cover{
+    background-color:#fff;
+    width:100%;
+    margin-top:5px;
+}
+
+
+.sidebar{
+    float:left;
+    width:27%;
+    
+    
+}
+.sidebar .side-head{
+    width:100%;
+}
+.sidebar .side-head ul{
+    width:100%;
+    margin-left:0px;
+    margin-top:-9px;
+    background-color:#f3f3f3;
+    
+    border-bottom:1px solid #fff;
+ 
+
+
+}
+.side-head ul >li{
+    list-style:none;
+    padding-top:8px;
+    padding-bottom:8px;
+    text-align:left;
+}
+ .side-head ul li a{
+    font-size:19px;
+    text-decoration:none;
+    color:gray;
+
+}
+.sidebar .side-head ul:hover,
+.sidebar .side-head ul:active{
+    font-size:19px;
+    
+
+    background: #DDE4EC;
+
+}
+.sidebar .side-head ul li a:hover,
+.sidebar .side-head ul li a:active{
+  
+color: #0B1D34;
+
+}
+
+
+.bodypart{
+    float:right;
+    width:73%;
+    height:100%;
+    background-color:#fff;
+    padding-left:10px;
+    margin-top:-9px;
+}
+
+.breadcump{
+    margin-top:-57px;
+}
+.body-head h2{
+    text-align:center;
+}
+
+.body-body p{
+   text-align:justify;
+   padding:20px;
+}
+.vision h3{
+    text-align:center;
+}
+
+.chair-alafi{
+    background:#fff;
+    width:100%;
+    padding:10px;
+
+
+}
+.chair-alafi .imgery {
+    width:80%;
+    margin-left: 29px;
+}
+
+.chair-alafi .imgery img {
+    width:100%;
+}
+
+.chair-alafi .explains{
+    width:80%;
+    margin-left:29px;
+    margin-top:-20px;
+    background-color:#386392;
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+.chair-alafi .explains h3{
+    text-align:center;
+    color:#fff;
+    padding-top:10px;
+
+}
+.chair-alafi .explains a{
+    text-decoration:none;
+    color:aliceblue;
+    margin-left:60px;
+
+}
+.chair-alafi .explains a:hover{
+    color:#ff6a00;
+}
+
+
+/*external css code*/
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
 }

@@ -121,12 +121,26 @@ textarea {
     background-color:#1C4882;
     
     height: 30vh;
-    margin-top: -20px;
+    margin-top: 0px;
     margin-bottom:30px;
     position:relative;
     z-index:-1;
    
+
 }
+.headr .logtext{
+    position:absolute;
+    top:31px;
+    left:330px;
+
+}
+.headr .logtext h2{
+    color:#cccaca;
+    font-size:16px;
+    text-align:left;
+}
+
+
 .navbar-collapse.in {
     background-color: rgb(42, 82, 118);
   
@@ -175,4 +189,16 @@ textarea {
 }
 li.dropdown:hover > .dropdown-menu {
     display: block;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
 }
