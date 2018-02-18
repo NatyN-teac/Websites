@@ -1,0 +1,29 @@
+﻿footer{
+    width: 100%;
+    background-color: rgb(28,72,130);
+    height: 300px;
+    color:#fff;
+    padding:20px;
+}
+
+footer .footer-header {
+    padding-top:5px;
+}
+
+footer .footer-part1 {
+       
+    }
+
+footer .footer-part1 ul li{
+    list-style:none;
+    padding-bottom:10px;
+}
+footer .footer-part1 ul li a{
+   color: rgba(255, 255, 255, 0.5);
+   font-size: 14px;
+   text-decoration:none;
+   text-transform:uppercase;    
+}
+footer .footer-part1 ul li a:hover{
+    color:#fff;
+}
