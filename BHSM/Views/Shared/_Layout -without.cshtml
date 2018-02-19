@@ -175,6 +175,16 @@
 
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Centers </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Allied Hospital</a></li>
+                            <li><a href="#">Stories</a></li>
+                            <li><a href="#">Social Media</a></li>
+                            <li><a href="#">Magazine</a></li>
+
+                        </ul>
+                    </li>
 
                 </ul>
 
@@ -218,6 +228,11 @@
         </div>
         @Html.Partial("_footer")
 
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/slider")
+        @RenderSection("scripts", required: false)
 
         <script type="text/javascript">
 
@@ -277,9 +292,6 @@
 
 
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @Scripts.Render("~/bundles/slider")
-        @RenderSection("scripts", required: false)
+    
 </body>
 </html>

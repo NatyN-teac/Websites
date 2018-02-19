@@ -277,6 +277,7 @@
     <Content Include="Views\Shared\_slider.cshtml" />
     <Content Include="Views\Shared\_Layout -without.cshtml" />
     <Content Include="Views\Pathology\PathoIndex.cshtml" />
+    <Content Include="Views\Pathology\History.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

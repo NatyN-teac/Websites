@@ -13,5 +13,10 @@ namespace BHSM.Controllers
         {
             return View();
         }
+
+       public ActionResult History()
+        {
+            return View();
+        }
     }
 }
