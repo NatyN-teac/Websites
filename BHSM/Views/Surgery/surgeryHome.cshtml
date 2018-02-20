@@ -1,15 +1,8 @@
 ﻿
 @{
-    ViewBag.Title = "PathoIndex";
-    Layout = "~/Views/Shared/_Layout -without.cshtml";
+    ViewBag.Title = "surgeryHome";
+    Layout = "~/Views/Shared/_DepartmentOnly.cshtml";
 }
-
-
-
-
-
-
-
 <div class="container">
     <div class="contra">
         <div class="sub-header">
@@ -21,7 +14,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">About</a>
+                                @Html.ActionLink("Home", "surgeryHome", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -30,8 +23,7 @@
                     <div>
                         <ul>
                             <li>
-                                @Html.ActionLink("History", "History", "Pathology", new {@class="hist" })
-                               
+                                @Html.ActionLink("About", "About", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -40,7 +32,17 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer"  href="#">Centennial</a>
+                                @Html.ActionLink("History", "History", "Pathology")
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-head">
+                    <div>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Unit", "Unit", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -50,7 +52,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Staff</a>
+                                @Html.ActionLink("Staff", "staff", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -59,7 +61,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Research</a>
+                               @Html.ActionLink("Research", "research", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -68,9 +70,9 @@
                     <div>
                         <ul>
                             <li>
-                                @Html.ActionLink("Programs", "index", "Home", new {  })
+                                @Html.ActionLink("Programs", "program", "Surgery")
 
-                                
+
                             </li>
                         </ul>
                     </div>
@@ -79,7 +81,8 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Contact Us</a>
+                                 @Html.ActionLink("Contact Us", "contact", "Surgery")
+
                             </li>
                         </ul>
                     </div>
@@ -88,7 +91,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Department Calendar</a>
+                                @Html.ActionLink("Calendar", "calendar", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -97,13 +100,13 @@
 
                     <div class="imgery">
                         <h2 style="text-align:center;padding-top:10px;">Head of the Department</h2>
-                        <img src="~/images/img/slide3.jpg"/>
+                        <img src="~/images/img/slide3.jpg" />
                     </div>
                     <div class="explains">
                         <h3>Dr. RXjxv martinozole</h3>
                         <a href="#">LearnMore</a>
                     </div>
-                   
+
                 </div>
                 <div class="chair-alafi">
 
@@ -120,15 +123,11 @@
 
 
             </div>
-           
-            <div class="bodypart" >
+
+            <div class="bodypart">
                 <div>
-                    <div class="breadcump">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Department</a></li>
-                            <li class="active">Data</li>
-                        </ol>
+                    <div class="breadcumps">
+
                     </div>
                     <div class="body-head">
                         <h2>Mission Statement</h2>
@@ -334,10 +333,4 @@
 
 
 </div>
-
-@section scripts{
-    <script>
-     
-    </script>
-}
 

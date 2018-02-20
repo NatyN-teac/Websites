@@ -1,9 +1,8 @@
 ﻿
 @{
-    ViewBag.Title = "History";
-    Layout = "~/Views/Shared/_Layout -without.cshtml";
+    ViewBag.Title = "contact";
+    Layout = "~/Views/Shared/_DepartmentOnly.cshtml";
 }
-
 <div class="container">
     <div class="contra">
         <div class="sub-header">
@@ -15,7 +14,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">About</a>
+                                @Html.ActionLink("Home", "surgeryHome", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -24,7 +23,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">History</a>
+                                @Html.ActionLink("About", "About", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -33,36 +32,7 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Centennial</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="side-head">
-                    <div>
-                        <ul>
-                            <li>
-                                <a class="loadmorer" href="#">Staff</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="side-head">
-                    <div>
-                        <ul>
-                            <li>
-                                <a class="loadmorer" href="#">Research</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="side-head">
-                    <div>
-                        <ul>
-                            <li>
-                                @Html.ActionLink("Programs", "index", "Home", new { })
-
+                                @Html.ActionLink("History", "History", "Pathology")
 
                             </li>
                         </ul>
@@ -72,7 +42,17 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Contact Us</a>
+                                @Html.ActionLink("Unit", "Unit", "Surgery")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="side-head">
+                    <div>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Staff", "staff", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -81,7 +61,37 @@
                     <div>
                         <ul>
                             <li>
-                                <a class="loadmorer" href="#">Department Calendar</a>
+                                @Html.ActionLink("Research", "research", "Surgery")
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-head">
+                    <div>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Programs", "program", "Surgery")
+
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-head">
+                    <div>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Contact Us", "contact", "Surgery")
+
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="side-head">
+                    <div>
+                        <ul>
+                            <li>
+                                @Html.ActionLink("Calendar", "calendar", "Surgery")
                             </li>
                         </ul>
                     </div>
@@ -116,15 +126,11 @@
 
             <div class="bodypart">
                 <div>
-                    <div class="breadcump">
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Department</a></li>
-                            <li class="active">History</li>
-                        </ol>
+                    <div class="breadcumps">
+
                     </div>
                     <div class="body-head">
-                        <h2>Mission Statement</h2>
+                        <h2>Calendar</h2>
                     </div>
                     <div class="body-body">
                         <p>
@@ -327,10 +333,3 @@
 
 
 </div>
-
-@section scripts{
-    <script>
-
-    </script>
-}
-

@@ -25,6 +25,7 @@ namespace BHSM
 
             bundles.Add(new ScriptBundle("~/bundles/slider").Include(
                      "~/Scripts/immersive.js"));
+           
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -32,7 +33,11 @@ namespace BHSM
                       "~/Content/slider.css",
                        "~/Content/indexBodyStyle.css",
                        "~/Content/foot.css",
-                       "~/Content/deprt.css"));
+                       "~/Content/deprt.css",
+                       "~/Content/DepartOnly.css"));
+
+            bundles.Add(new StyleBundle("~/Content/share").Include(
+                   "~/Content/sharedstyle.css"));
 
         }
     }

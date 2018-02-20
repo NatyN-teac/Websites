@@ -9,6 +9,7 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -121,7 +122,7 @@ textarea {
     background-color:#1C4882;
     
     height: 30vh;
-    margin-top: 0px;
+    margin-top: -20px;
     margin-bottom:30px;
     position:relative;
     z-index:-1;
@@ -154,7 +155,14 @@ textarea {
     background-color: rgb(99, 117, 134);
     font-family: 'Lato',sans-serif;
  
+
 }
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -20px;
+}
+
+
 
 .navbar-nav > li > .dropdown-menu {
 
