@@ -1,4 +1,4 @@
-﻿body {
+﻿    body {
     padding-top: 50px;
     padding-bottom: 20px;
     background-color: #e9e9e9;
@@ -63,7 +63,7 @@ textarea {
 
 
 .header-main {
-    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url(../images/black.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.69),rgba(0,0,0,0.3)),url(../images/black.jpg);
     background-size: cover;
     background-position: center;
     height: 50vh;

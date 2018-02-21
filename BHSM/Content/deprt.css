@@ -89,6 +89,7 @@ color: #0B1D34;
     background-color:#fff;
     padding-left:10px;
     margin-top:-9px;
+    padding-right:10px;
 }
 
 .breadcump{
@@ -96,18 +97,31 @@ color: #0B1D34;
 }
 .body-head h2{
     text-align:center;
+
 }
 
 .body-body p{
    text-align:justify;
    padding:20px;
 }
-.vision h3{
+.vision {
+    margin-top:50px;
+    margin-bottom:20px;
+}
+.vision > h2#liness{
+    padding-top:20px;
     text-align:center;
+    padding-bottom:10px;
+    text-decoration:underline;
+    color:#ff6a00;
+    font-weight:400;
+    
+
 }
 
+
 .chair-alafi{
-    background:#fff;
+    background:#edf0f3;
     width:100%;
     padding:10px;
 
@@ -166,4 +180,272 @@ color: #0B1D34;
     margin-top:30px;
     padding-bottom:20px;
     padding-left:100px;
+}
+
+
+/*Contact Us page style*/
+
+#whattt{
+    width:80%;
+}
+
+
+.contact-head {
+    background: linear-gradient(rgba(3, 3, 3, 0.44),rgba(3, 3, 3, 0.50)),url('../images/Contact.jpg');
+    height:40vh;
+    background-size:cover;
+    background-position:right;
+    width:100%;
+   
+   
+    position:relative;
+}
+
+.contact-head  h1{
+    position:absolute;
+    top:70px;
+    left:125px;
+    font-weight:600;
+    color:#f5f5f5;
+}
+
+.contact-head  h5{
+    position:absolute;
+    top:150px;
+    left:35px;
+    text-align:center;
+    color:#fff;
+}
+
+.std-affairs{
+    width:100%;
+
+}
+
+
+.contact-detail-desc{
+    border:1px solid #016701;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:90px;
+
+
+}
+.contact-detail-desc ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+.contact-detail-desc ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#016701;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+.contact-detail-desc ul li i{
+     padding:0px;
+}
+ #depart{
+    border:1px solid #681974;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:90px;
+    border-top-left-radius:90px;
+
+
+}
+ #depart ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+ #depart ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#681974;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+#depart ul li i{
+    padding:0px;
+}
+
+
+
+ #leyet{
+    border:1px solid #ff6a00;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-left-radius:50px;
+    border-top-right-radius:90px;
+
+   
+
+}
+ #leyet ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+ #leyet ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#ff6a00;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+#leyet ul li i{
+     padding:0px;
+}
+
+
+.enqu {
+    margin-top:100px;
+    margin-left:150px;
+    padding:20px;
+    
+    width:50%;
+    border-radius:30px;
+
+}
+.enqu a{
+    text-decoration:none;
+    margin-left:40px;
+    border:1px solid #064494;
+    border-radius:40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:50px;
+    padding-right:50px;
+    background-color:#e8f0fa;
+    color:#064494;
+    font-size:17px;
+    text-transform:uppercase;
+}
+.enqu a:hover,
+.enqu a:active{
+    color:#fff;
+    background-color:#064494;
+   box-shadow:20px,inset;
+}
+
+.mapss {
+    margin-top:50px;
+    width:100%;
+}
+.mapss img{
+    width:90%;
+    height:300px;
+}
+.our-seniour{
+    margin-top:100px;
+    width:100%;
+}
+
+
+.det{
+    width:100%;
+    border:1px solid gray;
+    position:relative;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:20px;
+    background-color:#d7d3d3;
+}
+.det .dtttl{
+    position:absolute;
+    top:-40px;
+    left:33px;
+
+    
+    
+    
+}
+.det .dtttl img {
+        border-radius: 50%;
+        width:100px;
+        height:93px;
+        background-color:#d7d3d3;
+        padding:5px;
+       border:1px solid gray;
+       border-bottom:none;
+      
+
+}
+.det .detl{
+    background-color:#f5f2f2;
+    margin-top:56px;
+    border-radius:20px;
+}
+.det .detl h5{
+    color:green;
+    text-align:center;
+    font-size:16px;
+}
+.det .detl h6{
+    text-align:center;
+    padding:10px;
+}
+
+/*this is for Unit page*/
+.unit{
+    width:100%;
+    padding:20px;
+}
+.unit .des{
+    border:1px solid gray;
+    margin-top:50px;
+    padding:30px;
+    border-radius:10px;
+    
+}
+.unit h2{
+    color:#084662;
+    text-align:center;
+}
+.unit-detail{
+    margin-top:40px;
+    padding:20px;
+    background-color:#eeeded;
+    box-shadow:2px 7px 8px gray;
+}
+.unit-detail-one{
+    background-color:#f3f3f3;
+      box-shadow:2px 7px 8px gray;
+      padding:20px;
+      margin-top:40px;
+
+}
+.one h4{
+    text-align:left;
+
+}
+.surgery-details {
+   
+    margin:2px;
+    border-radius:20px;
+    padding:7px;
+    background-color:#b8dcdb;
 }
