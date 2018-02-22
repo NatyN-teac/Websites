@@ -449,3 +449,70 @@ color: #0B1D34;
     padding:7px;
     background-color:#b8dcdb;
 }
+
+/*Research Center*/
+
+#second-research{
+    background-color:#431A36;
+}
+
+#three-research{
+    background-color:#AA4800;
+}
+
+#sec-sec-sec{
+    background-color:#545713;
+}
+#sec-sec-res{
+    background-color:#992D33;
+}
+#sec-res{
+    background-color:#0E6DAF;
+}
+
+.res-box{
+    width:100%;
+    padding:15px;
+    background-color:#5A7715;
+    color:#fff;
+    margin-top:20px;
+
+
+}
+
+.res-box .phot{
+    width:100%;
+    padding:20px;
+}
+.res-box .phot img {
+    width: 100%;
+    height: 140px;
+}
+.res-box h4{
+   text-transform:uppercase;
+   font-size:14px;
+}
+
+.res-box  h3{
+    
+    padding-left:20px;
+}
+
+/*History*/
+.history{
+    margin-top:30px;
+}
+
+
+/*Staff page*/
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #386392;
+}
+#idd{
+    background-color:#eef1f3;
+}
+
