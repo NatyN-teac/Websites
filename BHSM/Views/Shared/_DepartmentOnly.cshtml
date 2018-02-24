@@ -98,11 +98,8 @@
                             <li><a href="#">Physiology</a></li>
                             <li><a href="#">psychiatry</a></li>
                             <li><a href="#">Radiography</a></li>
-                            <li><a href="#">Radiology</a></li>
-                         
-                            @Html.ActionLink("Surgery", "surgeryHome", "Surgery")
-
-
+                            <li><a href="#">Radiology</a></li>                         
+                            <li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
                         </ul>
                     </li>
 
@@ -309,6 +306,8 @@
 				 var id = $('.item.active').data('slide-number');
 				$('#carousel-text').html($('#slide-content-'+id).html());
 		});
+
+
 });
 
 
