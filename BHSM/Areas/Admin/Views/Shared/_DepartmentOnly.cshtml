@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,family=Felipa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/share")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar navbar-inverse"></span>
+                    <span class="icon-bar navbar-inverse"></span>
+                    <span class="icon-bar navbar-inverse"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  
+
+                   
+
+                </ul>
+
+               
+
+            </div>
+        </div>
+       
+    </div>
+
+    <div class="header-footer">
+        <div class="headr">
+            <div class="log" style="padding-left:200px;padding-top:15px;padding-bottom:10px;">
+                <img  alt="logo of AAu" src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
+                     class="img-circle" style="width:100px; height:100px;"  />
+            </div>
+            <div class="logtext">
+                <h2>Addis Ababa University</h2>
+                <h2>College Of Health Science</h2>
+                <h2>School Of Medicine</h2>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container body-content">
+        
+                    @RenderBody()
+
+           
+     
+
+    </div>
+    @Html.Partial("_footer")
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/slider")
+    @RenderSection("scripts", required: false)
+
+
+    <script type="text/javascript">
+
+		function htmlbodyHeightUpdate(){
+		var height3 = $( window ).height()
+		var height1 = $('.nav').height()+50
+		height2 = $('.main').height()
+		if(height2 > height3){
+			$('html').height(Math.max(height1,height3,height2)+10);
+			$('body').height(Math.max(height1,height3,height2)+10);
+		}
+		else
+		{
+			$('html').height(Math.max(height1,height3,height2));
+			$('body').height(Math.max(height1,height3,height2));
+		}
+
+	}
+	$(document).ready(function () {
+		htmlbodyHeightUpdate()
+		$( window ).resize(function() {
+			htmlbodyHeightUpdate()
+		});
+		$( window ).scroll(function() {
+			height2 = $('.main').height()
+			htmlbodyHeightUpdate()
+		});
+
+
+
+	});
+
+	jQuery(document).ready(function($) {
+
+		$('#myCarousel').carousel({
+				interval: 5000
+		});
+
+		//Handles the carousel thumbnails
+		$('[id^=carousel-selector-]').click(function () {
+		var id_selector = $(this).attr("id");
+		try {
+			var id = /-(\d+)$/.exec(id_selector)[1];
+			console.log(id_selector, id);
+			jQuery('#myCarousel').carousel(parseInt(id));
+		} catch (e) {
+			console.log('Regex failed!', e);
+		}
+	});
+		// When the carousel slides, auto update the text
+		$('#myCarousel').on('slid.bs.carousel', function (e) {
+				 var id = $('.item.active').data('slide-number');
+				$('#carousel-text').html($('#slide-content-'+id).html());
+		});
+
+
+});
+
+
+
+    </script>
+
+
+
+    </body>
+</html>

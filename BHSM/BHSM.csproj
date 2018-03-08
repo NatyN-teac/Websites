@@ -207,6 +207,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
+    <Compile Include="Areas\Admin\Models\Department.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -215,6 +218,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803080148522_AddedStaffModel.cs" />
+    <Compile Include="Migrations\201803080148522_AddedStaffModel.Designer.cs">
+      <DependentUpon>201803080148522_AddedStaffModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080155510_DepartmentAdded.cs" />
+    <Compile Include="Migrations\201803080155510_DepartmentAdded.Designer.cs">
+      <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -242,6 +254,8 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Mvc.sitemap" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_DepartmentOnly.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -314,7 +328,9 @@
     <Content Include="Views\Surgery\calendar.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
@@ -324,6 +340,14 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803080148522_AddedStaffModel.resx">
+      <DependentUpon>201803080148522_AddedStaffModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080155510_DepartmentAdded.resx">
+      <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

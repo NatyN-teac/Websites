@@ -55,7 +55,8 @@
 
 .dep-highlight-text .link-btn-circl {
     position: relative;
-   margin-left:220px;
+   top: -320px;
+margin-left: -14px;
     border: 1px solid #00ffff;
     border-radius: 15px;
     padding:5px;
