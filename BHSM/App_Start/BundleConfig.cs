@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace BHSM
 {
@@ -25,7 +24,10 @@ namespace BHSM
 
             bundles.Add(new ScriptBundle("~/bundles/slider").Include(
                      "~/Scripts/immersive.js"));
-           
+
+            bundles.Add(new ScriptBundle("~/bundles/pageSpec").Include(
+                    "~/Scripts/OfficePageScript.js"));
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
@@ -35,6 +37,9 @@ namespace BHSM
                        "~/Content/foot.css",
                        "~/Content/deprt.css",
                        "~/Content/DepartOnly.css"));
+
+            bundles.Add(new StyleBundle("~/Content/Non").Include(
+                     "~/Content/StyleForNonDep.css"));
 
             bundles.Add(new StyleBundle("~/Content/share").Include(
                    "~/Content/sharedstyle.css"));

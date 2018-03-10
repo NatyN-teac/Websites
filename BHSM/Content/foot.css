@@ -46,3 +46,9 @@ footer .footer-part1 ul li a:hover{
     text-align:left;
 }
 
+/*Admin footer*/
+#adminfooter{
+    margin-top:297px;
+    height:200px;
+
+}

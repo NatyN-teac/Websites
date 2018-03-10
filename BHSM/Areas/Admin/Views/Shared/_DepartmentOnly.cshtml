@@ -26,25 +26,19 @@
                     <span class="icon-bar navbar-inverse"></span>
                     <span class="icon-bar navbar-inverse"></span>
                     <span class="icon-bar navbar-inverse"></span>
-                </button>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  
-
                    
+                </button>
+                @Html.ActionLink("Admin Panel", "Index", "Department", new { area = "" }, new { @class = "navbar-brand" })
 
-                </ul>
-
-               
 
             </div>
+
+           
         </div>
        
     </div>
 
-    <div class="header-footer">
+    @*<div class="header-footer">
         <div class="headr">
             <div class="log" style="padding-left:200px;padding-top:15px;padding-bottom:10px;">
                 <img  alt="logo of AAu" src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
@@ -58,7 +52,7 @@
 
         </div>
 
-    </div>
+    </div>*@
 
 
 
@@ -78,7 +72,26 @@
      
 
     </div>
-    @Html.Partial("_footer")
+    <footer id="adminfooter">
+
+       
+        <div class="footrr">
+            <div class="log" style="padding-left:10px; ">
+                <img src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
+                     class="img-circle" style="width:100px; height:100px;margin-top:20px;  " />
+            </div>
+            <div class="logtext">
+                <h2>Addis Ababa University</h2>
+                <h2>College Of Health Science</h2>
+                <h2>School Of Medicine</h2>
+            </div>
+
+        </div>
+
+        
+
+        <p style="margin-left:30px; padding-top:20px;">&copy; @DateTime.Now.Year - Addis Ababa University School OF Medicine</p>
+    </footer>
 
 
 

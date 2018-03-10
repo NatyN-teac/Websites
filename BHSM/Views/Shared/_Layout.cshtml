@@ -55,15 +55,22 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">About </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">History</a></li>
-                                <li><a href="#">School At a Glance</a></li>
-                                <li><a href="#">School Adminstratives</a></li>
-                                <li><a href="#">Office &amp; Services</a></li>
-                                <li><a href="#">Direction &amp; Maps</a></li>
-                                <li><a href="#">Event Calendar</a></li>
-                                <li><a href="#">Enquiry</a></li>
+                                <li>@Html.ActionLink("History", "History", "AboutTab")</li>
+                                <li>@Html.ActionLink("School At Glance", "SchoolAtGlance", "AboutTab")</li>
+                                <li>@Html.ActionLink("Leadership", "SchoolAdmin", "AboutTab")</li>
+
+                                <li>@Html.ActionLink("Office &amp Services", "OfficeAndService", "AboutTab")</li>
+
+                                <li>@Html.ActionLink("Direction &amp Maps", "DirectionMap", "AboutTab")</li>
+                                <li>@Html.ActionLink("Event Calendar", "EventCalendar", "AboutTab")</li>
+                                <li>@Html.ActionLink("Graduation", "Graduation", "AboutTab")</li>
+                                <li>@Html.ActionLink("Culture &amp Campus", "cultureCampus", "AboutTab")</li>
+                                <li>@Html.ActionLink("Facts &amp Figures", "factFigures", "AboutTab")</li>
+                                <li>@Html.ActionLink("Enquiry", "enqury", "AboutTab")</li>
                                 <li class="divider"></li>
-                                <li><a href="#">Contact Us</a></li>
+                                <li>@Html.ActionLink("Contact Us", "contactUs", "AboutTab")</li>
+
+                              
                             </ul>
                         </li>
 
@@ -148,7 +155,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#">Events &amp; Activities</a></li>
                                 <li><a href="#">International Students</a></li>
-                                <li><a href="#">Graduation</a></li>
+                                <li><a href="#">Student Exchange Program</a></li>
                                 <li><a href="#">Office Of Student Affairs</a></li>
                                 <li><a href="#">Student Assembly</a></li>
                                 <li><a href="#">Student outreach Resource Center</a></li>

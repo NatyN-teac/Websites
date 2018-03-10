@@ -208,8 +208,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
     <Compile Include="Areas\Admin\Models\Department.cs" />
+    <Compile Include="Controllers\AboutTabController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -225,6 +227,14 @@
     <Compile Include="Migrations\201803080155510_DepartmentAdded.cs" />
     <Compile Include="Migrations\201803080155510_DepartmentAdded.Designer.cs">
       <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081247038_addDataAnnotation.cs" />
+    <Compile Include="Migrations\201803081247038_addDataAnnotation.Designer.cs">
+      <DependentUpon>201803081247038_addDataAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081916229_DataAnnotationAdded.cs" />
+    <Compile Include="Migrations\201803081916229_DataAnnotationAdded.Designer.cs">
+      <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -242,6 +252,7 @@
     <Content Include="Content\indexBodyStyle.css" />
     <Content Include="Content\sharedstyle.css" />
     <Content Include="Content\slider.css" />
+    <Content Include="Content\StyleForNonDep.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -256,6 +267,11 @@
     <Content Include="Mvc.sitemap" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_DepartmentOnly.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -269,6 +285,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\OfficePageScript.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
@@ -326,11 +343,22 @@
     <Content Include="Views\Surgery\program.cshtml" />
     <Content Include="Views\Surgery\contact.cshtml" />
     <Content Include="Views\Surgery\calendar.cshtml" />
+    <Content Include="Views\Shared\_NotDepartment.cshtml" />
+    <Content Include="Views\AboutTab\History.cshtml" />
+    <Content Include="Views\AboutTab\SchoolAtGlance.cshtml" />
+    <Content Include="Views\AboutTab\SchoolAdmin.cshtml" />
+    <Content Include="Views\AboutTab\OfficeAndService.cshtml" />
+    <Content Include="Views\AboutTab\DirectionMap.cshtml" />
+    <Content Include="Views\AboutTab\EventCalendar.cshtml" />
+    <Content Include="Views\AboutTab\Graduation.cshtml" />
+    <Content Include="Views\AboutTab\cultureCampus.cshtml" />
+    <Content Include="Views\AboutTab\factFigures.cshtml" />
+    <Content Include="Views\AboutTab\enqury.cshtml" />
+    <Content Include="Views\AboutTab\contactUs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
@@ -347,6 +375,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803080155510_DepartmentAdded.resx">
       <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081247038_addDataAnnotation.resx">
+      <DependentUpon>201803081247038_addDataAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081916229_DataAnnotationAdded.resx">
+      <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,233 +1,236 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,family=Felipa" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
-    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>@ViewBag.Title - My ASP.NET Application</title>
+	<link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,family=Felipa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 
 
-    @Styles.Render("~/Content/css")
-    @Styles.Render("~/Content/share")
-    @Scripts.Render("~/bundles/modernizr")
+	@Styles.Render("~/Content/css")
+	@Styles.Render("~/Content/share")
+	@Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar navbar-inverse"></span>
-                    <span class="icon-bar navbar-inverse"></span>
-                    <span class="icon-bar navbar-inverse"></span>
-                </button>
-            </div>
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar navbar-inverse"></span>
+					<span class="icon-bar navbar-inverse"></span>
+					<span class="icon-bar navbar-inverse"></span>
+				</button>
+			</div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">School At a Glance</a></li>
-                            <li><a href="#">School Adminstratives</a></li>
-                            <li><a href="#">Office &amp; Services</a></li>
-                            <li><a href="#">Direction &amp; Maps</a></li>
-                            <li><a href="#">Event Calendar</a></li>
-                            <li><a href="#">Enquiry</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </li>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">About </a>
+						<ul class="dropdown-menu">
+							<li>@Html.ActionLink("History", "History", "AboutTab")</li>
+							<li>@Html.ActionLink("School At Glance", "SchoolAtGlance", "AboutTab")</li>
+							<li>@Html.ActionLink("Leadership", "SchoolAdmin", "AboutTab")</li>
 
-                    <!--the second navbar list-->
+							<li>@Html.ActionLink("Office &amp Services", "OfficeAndService", "AboutTab")</li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics </a>
-                        <ul class="dropdown-menu">
-                            <li>
-
-                                <a href="#">Curriculum</a>
-                            </li>
-                            <li><a href="#">Medical Education</a></li>
-                            <li><a href="#">MD Admission</a></li>
-                            <li><a href="#">Graduate Education</a></li>
-                            <li><a href="#">Post Doctoral Training</a></li>
-                            <li><a href="#">Continuing Education</a></li>
-                            <li><a href="#">Office For External Education</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">More</a></li>
-                        </ul>
-                    </li>
-
-                    <!--the third navbar list-->
+							<li>@Html.ActionLink("Direction &amp Maps", "DirectionMap", "AboutTab")</li>
+							<li>@Html.ActionLink("Event Calendar", "EventCalendar", "AboutTab")</li>
+							<li>@Html.ActionLink("Graduation", "Graduation", "AboutTab")</li>
+							<li>@Html.ActionLink("Culture &amp Campus", "cultureCampus", "AboutTab")</li>
+							<li>@Html.ActionLink("Facts &amp Figures", "factFigures", "AboutTab")</li>
+							<li>@Html.ActionLink("Enquiry", "enqury", "AboutTab")</li>
+							<li class="divider"></li>
+							<li>@Html.ActionLink("Contact Us", "contactUs", "AboutTab")</li>
 
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department</a>
-                        <ul class="dropdown-menu">
+						</ul>
+					</li>
 
-                            <li><a href="#">Anatomy</a></li>
-                            <li><a href="#">Anesthesia</a></li>
-                            <li><a href="#">Anesthesiology</a></li>
-                            <li><a href="#">Biochemistry</a></li>
-                            <li><a href="#">Dentistry</a></li>
-                            <li><a href="#">Dermatovenerology</a></li>
-                            <li><a href="#">Emergency Medicine</a></li>
-                            <li><a href="#">ENT</a></li>
-                            <li><a href="#">Family Medicine</a></li>
-                            <li><a href="#">Internal Medicine</a></li>
-                            <li><a href="#">Microbiology</a></li>
-                            <li><a href="#">Neurology</a></li>
-                            <li><a href="#">Obstetrics &amp; Gynecology</a></li>
-                            <li><a href="#">Oncology</a></li>
-                            <li><a href="#">Ophthalmology</a></li>
-                            <li><a href="#">Orthopedics</a></li>
-                            <li>
-                                @Html.ActionLink("Pathology", "PathoIndex", "Pathology", null, null)
+					<!--the second navbar list-->
 
-                            </li>
-                            <li><a href="#">Pediatrics &amp; Child Health</a></li>
-                            <li><a href="#">Pharmacology</a></li>
-                            <li><a href="#">Physiology</a></li>
-                            <li><a href="#">psychiatry</a></li>
-                            <li><a href="#">Radiography</a></li>
-                            <li><a href="#">Radiology</a></li>                         
-                            <li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
-                        </ul>
-                    </li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics </a>
+						<ul class="dropdown-menu">
+							<li>
+
+								<a href="#">Curriculum</a>
+							</li>
+							<li><a href="#">Medical Education</a></li>
+							<li><a href="#">MD Admission</a></li>
+							<li><a href="#">Graduate Education</a></li>
+							<li><a href="#">Post Doctoral Training</a></li>
+							<li><a href="#">Continuing Education</a></li>
+							<li><a href="#">Office For External Education</a></li>
+							<li class="divider"></li>
+							<li><a href="#">More</a></li>
+						</ul>
+					</li>
+
+					<!--the third navbar list-->
 
 
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Department</a>
+						<ul class="dropdown-menu">
 
-                    <!--the fourth navbar list-->
+							<li><a href="#">Anatomy</a></li>
+							<li><a href="#">Anesthesia</a></li>
+							<li><a href="#">Anesthesiology</a></li>
+							<li><a href="#">Biochemistry</a></li>
+							<li><a href="#">Dentistry</a></li>
+							<li><a href="#">Dermatovenerology</a></li>
+							<li><a href="#">Emergency Medicine</a></li>
+							<li><a href="#">ENT</a></li>
+							<li><a href="#">Family Medicine</a></li>
+							<li><a href="#">Internal Medicine</a></li>
+							<li><a href="#">Microbiology</a></li>
+							<li><a href="#">Neurology</a></li>
+							<li><a href="#">Obstetrics &amp; Gynecology</a></li>
+							<li><a href="#">Oncology</a></li>
+							<li><a href="#">Ophthalmology</a></li>
+							<li><a href="#">Orthopedics</a></li>
+							<li>
+								@Html.ActionLink("Pathology", "PathoIndex", "Pathology", null, null)
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Center &amp; Institutes</a></li>
-                            <li><a href="#">Global Project</a></li>
-                            <li><a href="#">Faculty Directory</a></li>
-                            <li><a href="#">Funding Institutional</a></li>
-                            <li><a href="#">Pure Research Profile</a></li>
-                            <li><a href="#">HMS Researcher Resource</a></li>
-                            <li><a href="#">Paper Chase</a></li>
-
-                        </ul>
-                    </li>
-
-
-                    <!--the fifth navbar list-->
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Student Life </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Events &amp; Activities</a></li>
-                            <li><a href="#">International Students</a></li>
-                            <li><a href="#">Graduation</a></li>
-                            <li><a href="#">Office Of Student Affairs</a></li>
-                            <li><a href="#">Student Assembly</a></li>
-                            <li><a href="#">Student outreach Resource Center</a></li>
-
-
-                        </ul>
-                    </li>
-
-                    <!--the six navbar list-->
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trainings</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Practice For Faculty</a></li>
-                            <li><a href="#">Practice For Student</a></li>
-                            <li><a href="#">Practice For Proffessionals</a></li>
-                            <li><a href="#">Graduate Training Programs In Clinical Investigation</a></li>
-                            <li><a href="#">Health Training Center</a></li>
-                            <li><a href="#">Other Training</a></li>
-
-
-                        </ul>
-                    </li>
-
-                    <!--the seven navbar list-->
+							</li>
+							<li><a href="#">Pediatrics &amp; Child Health</a></li>
+							<li><a href="#">Pharmacology</a></li>
+							<li><a href="#">Physiology</a></li>
+							<li><a href="#">psychiatry</a></li>
+							<li><a href="#">Radiography</a></li>
+							<li><a href="#">Radiology</a></li>                         
+							<li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
+						</ul>
+					</li>
 
 
 
-                 
+					<!--the fourth navbar list-->
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Center &amp; Institutes</a></li>
+							<li><a href="#">Global Project</a></li>
+							<li><a href="#">Faculty Directory</a></li>
+							<li><a href="#">Funding Institutional</a></li>
+							<li><a href="#">Pure Research Profile</a></li>
+							<li><a href="#">HMS Researcher Resource</a></li>
+							<li><a href="#">Paper Chase</a></li>
+
+						</ul>
+					</li>
+
+
+					<!--the fifth navbar list-->
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Student Life </a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Events &amp; Activities</a></li>
+							<li><a href="#">International Students</a></li>
+							<li><a href="#">Graduation</a></li>
+							<li><a href="#">Office Of Student Affairs</a></li>
+							<li><a href="#">Student Assembly</a></li>
+							<li><a href="#">Student outreach Resource Center</a></li>
+
+
+						</ul>
+					</li>
+
+					<!--the six navbar list-->
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Trainings</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Practice For Faculty</a></li>
+							<li><a href="#">Practice For Student</a></li>
+							<li><a href="#">Practice For Proffessionals</a></li>
+							<li><a href="#">Graduate Training Programs In Clinical Investigation</a></li>
+							<li><a href="#">Health Training Center</a></li>
+							<li><a href="#">Other Training</a></li>
+
+
+						</ul>
+					</li>
+
+					<!--the seven navbar list-->
 
 
 
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">News Releases</a></li>
-                            <li><a href="#">Stories</a></li>
-                            <li><a href="#">Social Media</a></li>
-                            <li><a href="#">Magazine</a></li>
-
-                        </ul>
-                    </li>
-                  
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Centers </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Diabetics center</a></li>
-                            <li><a href="#">Center For ethics &amp; Priority Setting</a></li>
-                            <li><a href="#">Infectious Disease Center</a></li>
-                            <li><a href="#">Cardiac Center</a></li>
-
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Allied Hospital </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Zewditu Memorial Hospital</a></li>
-                            <li><a href="#">Minilik II Hospital</a></li>
-                            <li><a href="#">Ghandi Memorial Hospital</a></li>
-                            <li><a href="#">ALERT Hospital</a></li>
-                            <li><a href="#">Amanuel Hospital</a></li>
-                            <li><a href="#">St.Peter Hospital</a></li>
-
-
-                        </ul>
-                    </li>
-
-                   
-
-                </ul>
-
-               
-
-            </div>
-        </div>
-       
-    </div>
-
-    <div class="header-footer">
-        <div class="headr">
-            <div class="log" style="padding-left:200px;padding-top:15px;padding-bottom:10px;">
-                <img  alt="logo of AAu" src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
-                     class="img-circle" style="width:100px; height:100px;"  />
-            </div>
-            <div class="logtext">
-                <h2>Addis Ababa University</h2>
-                <h2>College Of Health Science</h2>
-                <h2>School Of Medicine</h2>
-            </div>
-
-        </div>
-
-    </div>
+				 
 
 
 
 
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">News </a>
+						<ul class="dropdown-menu">
+							<li><a href="#">News Releases</a></li>
+							<li><a href="#">Stories</a></li>
+							<li><a href="#">Social Media</a></li>
+							<li><a href="#">Magazine</a></li>
+
+						</ul>
+					</li>
+				  
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Centers </a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Diabetics center</a></li>
+							<li><a href="#">Center For ethics &amp; Priority Setting</a></li>
+							<li><a href="#">Infectious Disease Center</a></li>
+							<li><a href="#">Cardiac Center</a></li>
+
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Allied Hospital </a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Zewditu Memorial Hospital</a></li>
+							<li><a href="#">Minilik II Hospital</a></li>
+							<li><a href="#">Ghandi Memorial Hospital</a></li>
+							<li><a href="#">ALERT Hospital</a></li>
+							<li><a href="#">Amanuel Hospital</a></li>
+							<li><a href="#">St.Peter Hospital</a></li>
+
+
+						</ul>
+					</li>
+
+				   
+
+				</ul>
+
+			   
+
+			</div>
+		</div>
+	   
+	</div>
+
+	<div class="header-footer">
+		<div class="headr">
+			<div class="log" style="padding-left:200px;padding-top:15px;padding-bottom:10px;">
+				<img  alt="logo of AAu" src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
+					 class="img-circle" style="width:100px; height:100px;"  />
+			</div>
+			<div class="logtext">
+				<h2>Addis Ababa University</h2>
+				<h2>College Of Health Science</h2>
+				<h2>School Of Medicine</h2>
+			</div>
+
+		</div>
+
+	</div>
 
 
 
@@ -235,25 +238,29 @@
 
 
 
-    <div class="container body-content">
-        
-                    @RenderBody()
-
-           
-     
-
-    </div>
-    @Html.Partial("_footer")
 
 
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/slider")
-    @RenderSection("scripts", required: false)
+
+	<div class="container body-content">
+		
+					@RenderBody()
+
+		   
+	 
+
+	</div>
+	@Html.Partial("_footer")
 
 
-    <script type="text/javascript">
+
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@Scripts.Render("~/bundles/slider")
+	@RenderSection("scripts", required: false)
+
+
+	<script type="text/javascript">
 
 		function htmlbodyHeightUpdate(){
 		var height3 = $( window ).height()
@@ -312,9 +319,9 @@
 
 
 
-    </script>
+	</script>
 
 
 
-    </body>
+	</body>
 </html>
