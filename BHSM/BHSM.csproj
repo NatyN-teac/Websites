@@ -209,6 +209,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
+    <Compile Include="Areas\Admin\Models\ChsRole.cs" />
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
     <Compile Include="Areas\Admin\Models\Department.cs" />
     <Compile Include="Controllers\AboutTabController.cs" />
@@ -236,8 +238,39 @@
     <Compile Include="Migrations\201803081916229_DataAnnotationAdded.Designer.cs">
       <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803121003322_EnqueryTableToClientSide.cs" />
+    <Compile Include="Migrations\201803121003322_EnqueryTableToClientSide.Designer.cs">
+      <DependentUpon>201803121003322_EnqueryTableToClientSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121008437_AddDataAnnotationToTable.cs" />
+    <Compile Include="Migrations\201803121008437_AddDataAnnotationToTable.Designer.cs">
+      <DependentUpon>201803121008437_AddDataAnnotationToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121029580_addAnnotationToEnquery.cs" />
+    <Compile Include="Migrations\201803121029580_addAnnotationToEnquery.Designer.cs">
+      <DependentUpon>201803121029580_addAnnotationToEnquery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121256079_addAnnotationToEnquery1.cs" />
+    <Compile Include="Migrations\201803121256079_addAnnotationToEnquery1.Designer.cs">
+      <DependentUpon>201803121256079_addAnnotationToEnquery1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131750114_AddChsRoleToTable.cs" />
+    <Compile Include="Migrations\201803131750114_AddChsRoleToTable.Designer.cs">
+      <DependentUpon>201803131750114_AddChsRoleToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131752151_PopulateRoleTable.cs" />
+    <Compile Include="Migrations\201803131752151_PopulateRoleTable.Designer.cs">
+      <DependentUpon>201803131752151_PopulateRoleTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803141221265_DateTimeValidation.cs" />
+    <Compile Include="Migrations\201803141221265_DateTimeValidation.Designer.cs">
+      <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnswerTable.cs" />
+    <Compile Include="Models\DateTimeValid.cs" />
+    <Compile Include="Models\EnqueryTable.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -259,6 +292,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\ai.0.22.9-build00167.js" />
     <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -359,6 +394,7 @@
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Enquery\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
@@ -382,6 +418,30 @@
     <EmbeddedResource Include="Migrations\201803081916229_DataAnnotationAdded.resx">
       <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121003322_EnqueryTableToClientSide.resx">
+      <DependentUpon>201803121003322_EnqueryTableToClientSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121008437_AddDataAnnotationToTable.resx">
+      <DependentUpon>201803121008437_AddDataAnnotationToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121029580_addAnnotationToEnquery.resx">
+      <DependentUpon>201803121029580_addAnnotationToEnquery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121256079_addAnnotationToEnquery1.resx">
+      <DependentUpon>201803121256079_addAnnotationToEnquery1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131750114_AddChsRoleToTable.resx">
+      <DependentUpon>201803131750114_AddChsRoleToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131752151_PopulateRoleTable.resx">
+      <DependentUpon>201803131752151_PopulateRoleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141221265_DateTimeValidation.resx">
+      <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

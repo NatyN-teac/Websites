@@ -24,6 +24,9 @@ namespace BHSM.Models
         public DbSet<CHS_Staff> Staffs { get; set; }
 
         public DbSet<Department> Departments { get; set; }
+        public DbSet<EnqueryTable> EnqueryTables { get; set; }
+        public DbSet<AnswerTable> AnswerTables { get; set; }
+        public DbSet<ChsRole> ChsRoles { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

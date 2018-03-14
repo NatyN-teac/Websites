@@ -1,9 +1,19 @@
-﻿using System.Web.Mvc;
+﻿using BHSM.Models;
+using System.Web.Mvc;
 
 namespace BHSM.Controllers
 {
     public class AboutTabController : Controller
     {
+
+        private ApplicationDbContext dbCon;
+
+        public AboutTabController()
+        {
+            dbCon = new ApplicationDbContext();
+        }
+
+
         // GET: AboutTab
         public ActionResult History()
         {
@@ -49,6 +59,42 @@ namespace BHSM.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult Send(EnqueryTable enq)
+        {
+            //if (!ModelState.IsValid)
+            //{
+            //    Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            //    return Json("Failed");
+            //}
+
+            //else
+            //{
+            if(!ModelState.IsValid)
+            {
+                return Content("Error happened");
+                
+
+            }
+                dbCon.EnqueryTables.Add(enq);
+
+                dbCon.SaveChanges();
+            return RedirectToAction("enqury", "AboutTab");
+
+
+            //Response.StatusCode = (int)HttpStatusCode.OK;
+            //return Json("Success");
+
+
+            //}
+
+
+
+
+
+        }
+
         public ActionResult contactUs()
         {
             return View();

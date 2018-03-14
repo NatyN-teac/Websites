@@ -4,5 +4,53 @@
     Layout = "~/Views/Shared/_NotDepartment.cshtml";
 }
 
-<h2>DirectionMap</h2>
 
+
+<div class="aboutTab-head">
+    <h2>Map</h2>
+</div>
+<div class="col-md-12">
+    <div class="guti">
+        @*<img src="~/images/img/slide1.jpg" />*@
+        <div style="height:600px; width:100%;" id="map"></div>
+
+    </div>
+   
+</div>
+
+@section scripts{
+    
+   
+<script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            center: { lat: 8.980603, lng: 38.757761 },
+            zoom: 13
+        });
+        var marker = new google.maps.Marker({
+            position: { lat: 9.020149, lng: 38.749581 },
+            map: map,
+            icon: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHPSURBVGhD7Zm9TgJBFIU31lbWPoG1M0pMRHYIdsYnsKDSxIbCkqCJWvIAJmrtA1hZWJj4AD6AvZ1hlp/CZL0XrhHYKxkHcBZzT/IFMpk99xyYUAyRSCQSib7UivVaEqsmgu9peTH0ViwuJ0ZXbayf4TUdhtaquIe2508dowoQ9Coxyo4XyKIs7sVn6PGweq9srlija3B0XvjADsCz6IFeZPs3ShvRkjXr5STWd/Cp9thwHvS90BO8cQaNm73aRb0KR6JuY/XKBZklgxmqjjNp/PSyZmPHGnUP5h/c0HmCM/uzIQPF8ROc3XNuQAig0BnF+p3gzJY4w5C0Smqb4rkLPoEbziwkcNSuKZ674GfxkTMLCmSieO6Ch55Ys5BAJornrqmLVApp9+R4BFxj97oSokh7L07HhWvcXmekCGfmiBSZhBThzBxZuCK9izrF9Bd6cN4ZpAhnNoYUGVIuirT3y2nn6CBDt3ZIMb+Fa9xe9OC8M8yzyE/Iz+8kpAhn5ogUmUSIIsnuVtprXo6Aa+xeV4IUmQdShDMLiWeR/3EdZI2+Zc0C4nVBl8crU+/LbGvUKWcYhFg3KJaf+n8rwFcKRg8hwNlel9cikUiUY0XRJ3ee7G307Gy6AAAAAElFTkSuQmCC'
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: '<h3 style="color:red">Tikur Ambessa Hospital |<br /> Black Lion Hospital</h3>'
+        });
+
+        marker.addListener('click', function () {
+            infowindow.open(map, marker);
+        });
+
+      
+
+      }
+      
+      
+     
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0SIExR0X9CqSCU8sADk5g9GEcbipdY-4&callback=initMap"
+        async defer></script>
+
+    }
