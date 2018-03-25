@@ -266,6 +266,10 @@
     <Compile Include="Migrations\201803141221265_DateTimeValidation.Designer.cs">
       <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803142009550_AddAnswerToEnquery.cs" />
+    <Compile Include="Migrations\201803142009550_AddAnswerToEnquery.Designer.cs">
+      <DependentUpon>201803142009550_AddAnswerToEnquery.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AnswerTable.cs" />
@@ -307,6 +311,7 @@
     <Content Include="Areas\Admin\Views\Department\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Department\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Enquery\Answer.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -394,7 +399,6 @@
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\Enquery\" />
     <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
@@ -438,6 +442,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803141221265_DateTimeValidation.resx">
       <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803142009550_AddAnswerToEnquery.resx">
+      <DependentUpon>201803142009550_AddAnswerToEnquery.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

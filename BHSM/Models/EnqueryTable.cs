@@ -32,8 +32,13 @@ namespace BHSM.Models
 
         [MaxLength(2000)]
         [Required]
-        [Display(Name ="Enquiries")]
+        [Display(Name = "Enquiries")]
         public string Question { get; set; }
+
+
+        [StringLength(3000)]
+        public string Answer { get; set; }
+
 
 
 
