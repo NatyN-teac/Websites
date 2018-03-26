@@ -58,18 +58,14 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Academics </a>
 						<ul class="dropdown-menu">
-							<li>
+                            <li>@Html.ActionLink("Curriculum", "AcademicsHome", "Academics")</li>
+                            <li>@Html.ActionLink("Medical Education", "medicalEducation", "Academics")</li>
+                            <li>@Html.ActionLink("MD Admission", "mdadmission", "Academics")</li>
+                            <li>@Html.ActionLink("Graduate Education", "graduateEducation", "Academics")</li>
+                            <li>@Html.ActionLink("Post Doctoral Training", "postDocTraining", "Academics")</li>
+                            <li>@Html.ActionLink("Continuing Education", "contedu", "Academics")</li>
 
-								<a href="#">Curriculum</a>
-							</li>
-							<li><a href="#">Medical Education</a></li>
-							<li><a href="#">MD Admission</a></li>
-							<li><a href="#">Graduate Education</a></li>
-							<li><a href="#">Post Doctoral Training</a></li>
-							<li><a href="#">Continuing Education</a></li>
-							<li><a href="#">Office For External Education</a></li>
-							<li class="divider"></li>
-							<li><a href="#">More</a></li>
+                            <li class="divider"></li>
 						</ul>
 					</li>
 
@@ -117,13 +113,11 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Center &amp; Institutes</a></li>
-							<li><a href="#">Global Project</a></li>
-							<li><a href="#">Faculty Directory</a></li>
-							<li><a href="#">Funding Institutional</a></li>
-							<li><a href="#">Pure Research Profile</a></li>
-							<li><a href="#">HMS Researcher Resource</a></li>
-							<li><a href="#">Paper Chase</a></li>
+                            <li>@Html.ActionLink("Research Center & Institutes", "center_institues", "Reseach")</li>
+                            <li>@Html.ActionLink("Sample Research Profile", "sampleReseach", "Reseach")</li>
+                            <li>@Html.ActionLink("HMS Researcher Resource", "reseachResource", "Reseach")</li>
+                            
+							
 
 						</ul>
 					</li>

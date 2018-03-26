@@ -214,10 +214,12 @@
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
     <Compile Include="Areas\Admin\Models\Department.cs" />
     <Compile Include="Controllers\AboutTabController.cs" />
+    <Compile Include="Controllers\AcademicsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PathologyController.cs" />
+    <Compile Include="Controllers\ReseachController.cs" />
     <Compile Include="Controllers\SurgeryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -283,6 +285,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\curriculum.css" />
     <Content Include="Content\DepartOnly.css" />
     <Content Include="Content\deprt.css" />
     <Content Include="Content\foot.css" />
@@ -395,6 +398,15 @@
     <Content Include="Views\AboutTab\factFigures.cshtml" />
     <Content Include="Views\AboutTab\enqury.cshtml" />
     <Content Include="Views\AboutTab\contactUs.cshtml" />
+    <Content Include="Views\Academics\AcademicsHome.cshtml" />
+    <Content Include="Views\Academics\medicalEducation.cshtml" />
+    <Content Include="Views\Academics\mdadmission.cshtml" />
+    <Content Include="Views\Academics\graduateEducation.cshtml" />
+    <Content Include="Views\Academics\postDocTraining.cshtml" />
+    <Content Include="Views\Academics\contedu.cshtml" />
+    <Content Include="Views\Reseach\center_institues.cshtml" />
+    <Content Include="Views\Reseach\sampleReseach.cshtml" />
+    <Content Include="Views\Reseach\reseachResource.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />

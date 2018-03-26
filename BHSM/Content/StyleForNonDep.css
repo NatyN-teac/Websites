@@ -13,11 +13,17 @@
 }
 
 /*body part*/
-.aboutTab-body{
-    margin:0 auto;
+.aboutTab-head-head{
+    /*background-color:#fff;
+    padding:5px 5px;
+    margin:10px 4px;*/
 }
-.aboutTab-body .history-first{
-    width:100%;
+ .history-first{
+  
+   margin:0 auto;
+  
+
+   
 }
 .chs-image-one{
     width:100%;
@@ -706,3 +712,28 @@ width:100%;
     color:#fff;
     text-align:justify;
 }
+
+
+
+.event_holder{
+    margin:5px auto;
+    background-color:#fff;
+
+
+}
+ .allinone{
+    background-color:#fff;
+    padding:10px 20px;
+    font-family:lato;
+    font-size:16px;
+    color:#333;
+
+    
+}
+ .back{
+     background-color:#fff;
+     padding:10px 20px;
+ }
+ .back .image-event-drive{
+     padding:5px 5px;
+ }

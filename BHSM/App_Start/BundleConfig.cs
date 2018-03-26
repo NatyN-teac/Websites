@@ -37,6 +37,7 @@ namespace BHSM
                        "~/Content/indexBodyStyle.css",
                        "~/Content/foot.css",
                        "~/Content/deprt.css",
+                        "~/Content/curriculum.css",
                        "~/Content/DepartOnly.css"));
 
             bundles.Add(new StyleBundle("~/Content/Non").Include(

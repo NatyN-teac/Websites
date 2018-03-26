@@ -1,0 +1,166 @@
+﻿
+.curri{
+    margin-top:-60px;
+   
+    width:100%;
+    height:10vh;
+    background-color:#355f90;
+}
+.curri .curri-head{
+    margin-left:40px;
+    padding-top:10px;
+   
+}
+.curri .curri-head h2{
+    color:#fff;
+}
+.curri .curri_content{
+    background-color:#fff;
+    margin-top:-5px;
+   
+    width:100%;
+}
+
+.mdeduation{
+    margin:0 auto;
+    padding:2px;
+    background-color:#fff;
+    height:800px;
+    margin-top:-28px;
+}
+.mdeduation h2{
+    text-align:center;
+    
+}
+.mdeduation .content-mdeducation h3:before{
+   content: open-quote   "T";
+   font-size:40px;
+   font-weight:800;
+   font-style:oblique;
+   color:#c90032;
+}
+.mdeduation .content-mdeducation h3:after{
+    content: close-quote ".";
+    font-size:40px;
+    font-weight:800;
+    font-style:oblique;
+    color:#c90032;
+}
+.mdeduation .content-mdeducation{
+    font-style:oblique;
+    color:#c90032;
+    text-align:center;
+    margin:10px 10px;
+    padding-top:30px;
+}
+.inner-content-edu h3{
+    text-align:center;
+
+}
+.inner-content-edu p{
+    text-align:justify;
+    font-family:Noto;
+    font-size:16px;
+}
+
+.head_reseach_all {
+   margin-top:-24px;
+    height:10vh;
+  padding-bottom:50px;
+    background-color:rgb(11, 29, 52);
+}
+.head_reseach_all h2{
+    color:#fff;
+   text-align:center;
+}
+
+.vody_reserach{
+    margin-top:10px;
+    padding:2px;
+}
+
+
+.cont_applicants_res{
+     margin-top:10px;
+     margin-bottom:20px;
+  
+    width:100%;
+}
+.full-detail_re{
+  padding:10px;  
+    background-color:#702C5A;
+    width:100%;
+    color:#efefef;
+    height:500px;
+}
+#second-color-res{
+    background-color:#702C5A;
+}
+
+#middle-colr_re{
+    background-color:#0E6DAF;
+}
+#third-reseach-res{
+   background-color: #873E19;
+
+}
+#last-color-res{
+    
+   background-color: #0b5283;
+}
+
+
+.full-detail_re h4{
+    text-transform:uppercase;
+    text-align:justify;
+    font-size:14px;
+    font-weight:700;
+}
+
+.full-detail_re img{
+    width:100%;
+    
+}
+.full-detail_re.list-enqury{
+    margin:0 auto;
+}
+.full-detail_re .list-enqury ul{
+    margin: 10px auto;
+}
+
+.full-detail_re .list-enqury ul li {
+    color:#fff;
+    padding-top:10px;
+    list-style:none;
+    padding:2px;
+}
+
+.full-detail_re .list-enqury ul li p {
+    color:#fff;
+    font-weight:600;
+    width:100%;
+}
+ 
+
+.full-detail .list-enqury ul li:before {    
+font-family: 'FontAwesome';
+content: '\f067';
+margin:0 5px 0 -15px;
+color: #fff;
+}
+
+/*this for the reseach sample reseach page*/
+
+.existing_reseach_image{
+    width:100%;
+    padding:2px;
+    margin:10px auto;
+}
+.existing_reseach_image img{
+   width:100%;
+}
+
+.hol-d{
+    margin:10px auto;
+    padding:3px;
+}
