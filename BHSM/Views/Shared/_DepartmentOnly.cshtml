@@ -8,6 +8,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
@@ -126,12 +128,10 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Student Life </a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Events &amp; Activities</a></li>
-							<li><a href="#">International Students</a></li>
-							<li><a href="#">Graduation</a></li>
-							<li><a href="#">Office Of Student Affairs</a></li>
-							<li><a href="#">Student Assembly</a></li>
-							<li><a href="#">Student outreach Resource Center</a></li>
+                            <li>@Html.ActionLink("Events & Activities", "eventsActivity", "StudentLife")</li>
+                            <li>@Html.ActionLink("International Students", "internationalstu", "StudentLife")</li>
+                            <li>@Html.ActionLink("Graduation", "graduationGallery", "StudentLife")</li>
+                            <li>@Html.ActionLink("Student Exchange Program", "outreachprogram", "StudentLife")</li>
 
 
 						</ul>
@@ -142,7 +142,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Trainings</a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Practice For Faculty</a></li>
+                            <li>@Html.ActionLink("Practice For Faculty", "facultyTraining", "Trainings")</li>
+
+							
 							<li><a href="#">Practice For Student</a></li>
 							<li><a href="#">Practice For Proffessionals</a></li>
 							<li><a href="#">Graduate Training Programs In Clinical Investigation</a></li>
@@ -165,10 +167,9 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">News </a>
 						<ul class="dropdown-menu">
-							<li><a href="#">News Releases</a></li>
-							<li><a href="#">Stories</a></li>
-							<li><a href="#">Social Media</a></li>
-							<li><a href="#">Magazine</a></li>
+                            <li>@Html.ActionLink("News Releases", "news", "News")</li>
+                            <li>@Html.ActionLink("Magazine", "socialmedias", "News")</li>
+							
 
 						</ul>
 					</li>
@@ -176,22 +177,27 @@
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Centers </a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Diabetics center</a></li>
-							<li><a href="#">Center For ethics &amp; Priority Setting</a></li>
-							<li><a href="#">Infectious Disease Center</a></li>
-							<li><a href="#">Cardiac Center</a></li>
+
+                            <li>@Html.ActionLink("Diabetics center", "diabetics", "Centers")</li>
+                            <li>@Html.ActionLink("Center For ethics & Priority Setting", "ethicCenter", "Centers")</li>
+                            <li>@Html.ActionLink("Infectious Disease Center", "infectiosDes", "Centers")</li>
+                            <li>@Html.ActionLink("Cardiac Center", "cardiacCenter", "Centers")</li>
+							
 
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Allied Hospital </a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Zewditu Memorial Hospital</a></li>
-							<li><a href="#">Minilik II Hospital</a></li>
-							<li><a href="#">Ghandi Memorial Hospital</a></li>
-							<li><a href="#">ALERT Hospital</a></li>
-							<li><a href="#">Amanuel Hospital</a></li>
-							<li><a href="#">St.Peter Hospital</a></li>
+                            <li>@Html.ActionLink("Zewditu Memorial Hospital", "zewditu", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("Minilik II Hospital", "menilik", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("Ghandi Memorial Hospital", "Ghandi", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("ALERT Hospital", "alert", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("Amanuel Hospital", "Amanuel", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("St.Peter Hospital", "peter", "AlliedHospitals")</li>
+
+
+							
 
 
 						</ul>

@@ -6,23 +6,22 @@ using System.Web.Mvc;
 
 namespace BHSM.Controllers
 {
-    public class StudentLifeController : Controller
+    public class CentersController : Controller
     {
-        // GET: StudentLife
-        public ActionResult eventsActivity()
+        // GET: Centers
+        public ActionResult diabetics()
         {
             return View();
         }
-        public ActionResult internationalstu()
+        public ActionResult ethicCenter()
         {
             return View();
         }
-        public ActionResult graduationGallery()
+        public ActionResult infectiosDes()
         {
             return View();
-
         }
-        public ActionResult outreachprogram()
+        public ActionResult cardiacCenter()
         {
             return View();
         }

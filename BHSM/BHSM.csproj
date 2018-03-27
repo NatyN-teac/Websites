@@ -216,12 +216,16 @@
     <Compile Include="Controllers\AboutTabController.cs" />
     <Compile Include="Controllers\AcademicsController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlliedHospitalsController.cs" />
+    <Compile Include="Controllers\CentersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Controllers\PathologyController.cs" />
     <Compile Include="Controllers\ReseachController.cs" />
     <Compile Include="Controllers\StudentLifeController.cs" />
     <Compile Include="Controllers\SurgeryController.cs" />
+    <Compile Include="Controllers\TrainingsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -409,6 +413,22 @@
     <Content Include="Views\Reseach\sampleReseach.cshtml" />
     <Content Include="Views\Reseach\reseachResource.cshtml" />
     <Content Include="Views\StudentLife\eventsActivity.cshtml" />
+    <Content Include="Views\StudentLife\internationalstu.cshtml" />
+    <Content Include="Views\StudentLife\graduationGallery.cshtml" />
+    <Content Include="Views\StudentLife\outreachprogram.cshtml" />
+    <Content Include="Views\Trainings\facultyTraining.cshtml" />
+    <Content Include="Views\Centers\diabetics.cshtml" />
+    <Content Include="Views\Centers\ethicCenter.cshtml" />
+    <Content Include="Views\Centers\infectiosDes.cshtml" />
+    <Content Include="Views\Centers\cardiacCenter.cshtml" />
+    <Content Include="Views\AlliedHospitals\zewditu.cshtml" />
+    <Content Include="Views\AlliedHospitals\menilik.cshtml" />
+    <Content Include="Views\AlliedHospitals\Ghandi.cshtml" />
+    <Content Include="Views\AlliedHospitals\alert.cshtml" />
+    <Content Include="Views\AlliedHospitals\Amanuel.cshtml" />
+    <Content Include="Views\AlliedHospitals\peter.cshtml" />
+    <Content Include="Views\News\news.cshtml" />
+    <Content Include="Views\News\socialmedias.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
