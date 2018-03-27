@@ -737,3 +737,55 @@ width:100%;
  .back .image-event-drive{
      padding:5px 5px;
  }
+
+
+/*this is second time editing*/
+
+
+.historic{
+    width:100%;
+    margin:10px auto;
+
+}
+.historic img{
+    width:100%;
+
+}
+.wust{
+    float:left;
+    padding:10px;
+}
+.wust_body{
+    margin:5px 6px; 
+    padding:10px;
+}
+.wust #image-wust{
+    
+    height:100px;
+    width:140px;
+}
+.right_history{
+    width:100%;
+    margin:10px auto;
+
+}
+.right_history img{
+    width:100%;
+
+}
+
+.gra-gold{
+    width:100%;
+    margin:10px auto;
+
+}
+.gra-gold img{
+    width:100%;
+}
+.gra-gold-right {
+    width:100%;
+    margin:10px auto;
+}
+.gra-gold-right img{
+    width:100%;
+}

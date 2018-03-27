@@ -220,6 +220,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PathologyController.cs" />
     <Compile Include="Controllers\ReseachController.cs" />
+    <Compile Include="Controllers\StudentLifeController.cs" />
     <Compile Include="Controllers\SurgeryController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -407,6 +408,7 @@
     <Content Include="Views\Reseach\center_institues.cshtml" />
     <Content Include="Views\Reseach\sampleReseach.cshtml" />
     <Content Include="Views\Reseach\reseachResource.cshtml" />
+    <Content Include="Views\StudentLife\eventsActivity.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
