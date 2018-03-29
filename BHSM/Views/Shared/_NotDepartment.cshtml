@@ -81,33 +81,28 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department</a>
                         <ul class="dropdown-menu">
 
-                            <li><a href="#">Anatomy</a></li>
-                            <li><a href="#">Anesthesia</a></li>
-                            <li><a href="#">Anesthesiology</a></li>
-                            <li><a href="#">Biochemistry</a></li>
-                            <li><a href="#">Dentistry</a></li>
-                            <li><a href="#">Dermatovenerology</a></li>
-                            <li><a href="#">Emergency Medicine</a></li>
-                            <li><a href="#">ENT</a></li>
-                            <li><a href="#">Family Medicine</a></li>
+                            <li>@Html.ActionLink("Anatomy", "Home", "Anathomy")</li>
+                            <li>@Html.ActionLink("Anesthesia", "Home", "Anesthesia")</li>
+                            <li>@Html.ActionLink("Anesthesiology", "Home", "Anesthesiology")</li>
+                            <li>@Html.ActionLink("Biochemistry", "Home", "Biochemistry")</li>
+                            <li>@Html.ActionLink("Dentistry", "Home", "Dentistry")</li>
+                            <li>@Html.ActionLink("Dermatovenerology", "Home", "Dermatovenerolgy")</li>
+                            <li>@Html.ActionLink("Emergency Medicine", "Home", "EmergencyMedicine")</li>
+                            <li>@Html.ActionLink("ENT", "Home", "ENT")</li>
+                            <li>@Html.ActionLink("Family Medicine", "Home", "FamilyMedicine")</li>
                             <li>@Html.ActionLink("Internal Medicine", "internalHome", "InternalMedicine")</li>
-                            <li><a href="#">Microbiology</a></li>
+                            <li>@Html.ActionLink("Microbiology", "Home", "Microbiology")</li>
                             <li>@Html.ActionLink("Neurology", "Home", "Neurology")</li>
-                           
                             <li>@Html.ActionLink("Obstetrics & Gynecology", "Home", "ObstetricsGyne")</li>
-                            <li><a href="#">Oncology</a></li>
-                            <li><a href="#">Ophthalmology</a></li>
+                            <li>@Html.ActionLink("Oncology", "Home", "Oncology")</li>
+                            <li>@Html.ActionLink("Ophthalmology", "Home", "Ophtalmology")</li>
                             <li>@Html.ActionLink("Orthopedics", "Home", "Orthopedics")</li>
-                            <li>
-                                @Html.ActionLink("Pathology", "PathoIndex", "Pathology", null, null)
-
-                            </li>
+                            <li>@Html.ActionLink("Pathology", "Home", "Pathology")</li>
                             <li>@Html.ActionLink("Pediatrics & Child Health", "Home", "Pediatric")</li>
-                            <li><a href="#">Pharmacology</a></li>
-                            <li><a href="#">Physiology</a></li>
-                            <li><a href="#">psychiatry</a></li>
-                            <li><a href="#">Radiography</a></li>
-                            <li><a href="#">Radiology</a></li>                         
+                            <li>@Html.ActionLink("Physiology", "Home", "Physiology")</li>
+                            <li>@Html.ActionLink("Psychiatry", "Home", "Psychiatry")</li>
+                            <li>@Html.ActionLink("Radiography", "Home", "Radiography")</li>
+                            <li>@Html.ActionLink("Radiology", "Home", "Radiology")</li>
                             <li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
                         </ul>
                     </li>
@@ -134,7 +129,7 @@
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Events & Activities", "eventsActivity", "StudentLife")</li>
                             <li>@Html.ActionLink("International Students", "internationalstu", "StudentLife")</li>
-                            <li>@Html.ActionLink("Graduation", "graduationGallery", "StudentLife")</li>
+                            <li>@Html.ActionLink("Gallery", "graduationGallery", "StudentLife")</li>
                             <li>@Html.ActionLink("Student Exchange Program", "outreachprogram", "StudentLife")</li>
 
 

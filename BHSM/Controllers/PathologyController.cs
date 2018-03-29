@@ -9,12 +9,23 @@ namespace BHSM.Controllers
     public class PathologyController : Controller
     {
         // GET: Pathology
-        public ActionResult PathoIndex()
+        public ActionResult Home()
         {
             return View();
         }
-
-       public ActionResult History()
+        public ActionResult History()
+        {
+            return View();
+        }
+        public ActionResult About()
+        {
+            return View();
+        }
+        public ActionResult Contact()
+        {
+            return View();
+        }
+        public ActionResult staff()
         {
             return View();
         }
