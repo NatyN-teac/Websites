@@ -107,16 +107,17 @@
                                 <li><a href="#">Emergency Medicine</a></li>
                                 <li><a href="#">ENT</a></li>
                                 <li><a href="#">Family Medicine</a></li>
-                                <li><a href="#">Internal Medicine</a></li>
+                                <li>@Html.ActionLink("Internal Medicine", "internalHome", "InternalMedicine")</li>
                                 <li><a href="#">Microbiology</a></li>
-                                <li><a href="#">Neurology</a></li>
-                                <li><a href="#">Obstetrics &amp; Gynecology</a></li>
+                                <li>@Html.ActionLink("Neurology", "Home", "Neurology")</li>
+                                <li>@Html.ActionLink("Obstetrics & Gynecology", "Home", "ObstetricsGyne")</li>
                                 <li><a href="#">Oncology</a></li>
                                 <li><a href="#">Ophthalmology</a></li>
-                                <li><a href="#">Orthopedics</a></li>
-                                <li>@Html.ActionLink("Pathology", "PathoIndex", "Pathology",null,null)
-</li>
-                                <li><a href="#">Pediatrics &amp; Child Health</a></li>
+                              
+                                <li>@Html.ActionLink("Orthopedics", "Home", "Orthopedics")</li>
+                                <li>@Html.ActionLink("Pathology", "PathoIndex", "Pathology")</li>
+                                <li>@Html.ActionLink("Pediatrics & Child Health", "Home", "Pediatric")</li>
+                                
                                 <li><a href="#">Pharmacology</a></li>
                                 <li><a href="#">Physiology</a></li>
                                 <li><a href="#">psychiatry</a></li>
@@ -163,19 +164,7 @@
 
                         <!--the six navbar list-->
 
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Trainings</a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Practice For Faculty", "facultyTraining", "Trainings")</li>
-                                <li><a href="#">Practice For Student</a></li>
-                                <li><a href="#">Practice For Proffessionals</a></li>
-                                <li><a href="#">Graduate Training Programs In Clinical Investigation</a></li>
-                                <li><a href="#">Health Training Center</a></li>
-                                <li><a href="#">Other Training</a></li>
-
-
-                            </ul>
-                        </li>
+                  
 
                         <!--the seven navbar list-->
 
@@ -217,6 +206,9 @@
 
                             </ul>
                         </li>
+
+
+                        <li>@Html.ActionLink("Enquiry", "enqury", "AboutTab")</li>
 
                       
                     </ul>
