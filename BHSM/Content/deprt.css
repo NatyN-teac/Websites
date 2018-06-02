@@ -1,0 +1,595 @@
+﻿.container .contra{
+    background-color:#fff;   
+    margin-top:-135px;
+    width:100%;
+}
+
+
+.allor{
+    position:relative;
+    width: 100%;
+    left: 0;
+    
+}
+.sub-header{
+    background-color:#386392;
+    width:100%;
+    height:8vh;
+    padding-bottom:2px;
+    
+    
+}
+.sub-header h3{
+    padding-left:20px;
+    padding-top:15px;
+    margin-bottom:10px;
+
+
+}
+
+.cover{
+    background-color:#fff;
+    width:100%;
+    margin-top:5px;
+}
+
+
+.sidebar{
+    float:left;
+    width:27%;
+    
+    
+}
+.sidebar .side-head{
+    width:100%;
+}
+.sidebar .side-head ul{
+    width:100%;
+    margin-left:0px;
+    margin-top:-9px;
+    background-color:#f3f3f3;
+    
+    border-bottom:1px solid #fff;
+ 
+
+
+}
+.side-head ul >li{
+    list-style:none;
+    padding-top:8px;
+    padding-bottom:8px;
+    text-align:left;
+}
+ .side-head ul li a{
+    font-size:19px;
+    text-decoration:none;
+    color:gray;
+
+}
+.sidebar .side-head ul:hover,
+.sidebar .side-head ul:active{
+    font-size:19px;
+    
+
+    background: #DDE4EC;
+
+}
+.sidebar .side-head ul li a:hover,
+.sidebar .side-head ul li a:active{
+  
+color: #0B1D34;
+
+}
+
+
+.bodypart{
+    float:right;
+    width:73%;
+    height:100%;
+    background-color:#fff;
+    padding-left:10px;
+    margin-top:-9px;
+    padding-right:10px;
+}
+
+.breadcump{
+    margin-top:-57px;
+}
+.body-head h2{
+    text-align:center;
+
+}
+
+.body-body p{
+   text-align:justify;
+   padding:20px;
+}
+.vision {
+    margin-top:50px;
+    margin-bottom:20px;
+}
+.vision > h2#liness{
+    padding-top:20px;
+    text-align:center;
+    padding-bottom:10px;
+    text-decoration:underline;
+    color:#ff6a00;
+    font-weight:400;
+    
+
+}
+
+
+.chair-alafi{
+    background:#edf0f3;
+    width:100%;
+    padding:10px;
+
+
+}
+.chair-alafi .imgery {
+    width:80%;
+    margin-left: 29px;
+}
+
+.chair-alafi .imgery img {
+    width:100%;
+}
+
+.chair-alafi .explains{
+    width:80%;
+    margin-left:29px;
+    margin-top:-20px;
+    background-color:#386392;
+    padding-bottom:20px;
+    margin-bottom:20px;
+}
+.chair-alafi .explains h3{
+    text-align:center;
+    color:#fff;
+    padding-top:10px;
+
+}
+.chair-alafi .explains a{
+    text-decoration:none;
+    color:aliceblue;
+    margin-left:60px;
+
+}
+.chair-alafi .explains a:hover{
+    color:#ff6a00;
+}
+
+
+/*external css code*/
+.hide-bullets {
+    list-style:none;
+    margin-left: -40px;
+    margin-top:20px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    width: 100%;
+}
+
+.breadcumps{
+    margin-top:30px;
+    padding-bottom:20px;
+    padding-left:100px;
+}
+
+
+/*Contact Us page style*/
+
+#whattt{
+    width:80%;
+}
+
+
+.contact-head {
+    background: linear-gradient(rgba(3, 3, 3, 0.44),rgba(3, 3, 3, 0.50)),url('../images/Contact.jpg');
+    height:40vh;
+    background-size:cover;
+    background-position:right;
+    width:100%;
+   
+   
+    position:relative;
+}
+
+.contact-head  h1{
+    position:absolute;
+    top:70px;
+    left:125px;
+    font-weight:600;
+    color:#f5f5f5;
+}
+
+.contact-head  h5{
+    position:absolute;
+    top:150px;
+    left:35px;
+    text-align:center;
+    color:#fff;
+}
+
+.std-affairs{
+    width:100%;
+
+}
+
+
+.contact-detail-desc{
+    border:1px solid #016701;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-right-radius:50px;
+    border-top-left-radius:90px;
+
+
+}
+.contact-detail-desc ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+.contact-detail-desc ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#016701;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+.contact-detail-desc ul li i{
+     padding:0px;
+}
+ #depart{
+    border:1px solid #681974;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-right-radius:90px;
+    border-top-left-radius:90px;
+
+
+}
+ #depart ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+ #depart ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#681974;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+#depart ul li i{
+    padding:0px;
+}
+
+
+
+ #leyet{
+    border:1px solid #ff6a00;
+    margin-top:40px;
+    padding:5px;
+    border-radius:5px;
+    border-bottom-left-radius:50px;
+    border-top-right-radius:90px;
+
+   
+
+}
+ #leyet ul{
+    margin-top:30px;
+    margin-left:0px;
+    margin-right:4px;
+    
+}
+ #leyet ul li{
+    padding-top:10px;
+    list-style:none;
+    color:#ff6a00;
+    font-size:15px;
+    font-weight:200;
+    text-align:start;
+
+
+    
+}
+#leyet ul li i{
+     padding:0px;
+}
+
+
+.enqu {
+    margin-top:100px;
+    margin-left:150px;
+    padding:20px;
+    
+    width:50%;
+    border-radius:30px;
+
+}
+.enqu a{
+    text-decoration:none;
+    margin-left:40px;
+    border:1px solid #064494;
+    border-radius:40px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:50px;
+    padding-right:50px;
+    background-color:#e8f0fa;
+    color:#064494;
+    font-size:17px;
+    text-transform:uppercase;
+}
+.enqu a:hover,
+.enqu a:active{
+    color:#fff;
+    background-color:#064494;
+   box-shadow:20px,inset;
+}
+
+.mapss {
+    margin-top:50px;
+    width:100%;
+}
+.mapss img{
+    width:90%;
+    height:300px;
+}
+.our-seniour{
+    margin-top:100px;
+    width:100%;
+}
+
+
+.det{
+    width:100%;
+    border:1px solid gray;
+    position:relative;
+    padding-left:5px;
+    padding-right:5px;
+    border-radius:20px;
+    background-color:#d7d3d3;
+}
+.det .dtttl{
+    position:absolute;
+    top:-40px;
+    left:33px;
+
+    
+    
+    
+}
+.det .dtttl img {
+        border-radius: 50%;
+        width:100px;
+        height:93px;
+        background-color:#d7d3d3;
+        padding:5px;
+       border:1px solid gray;
+       border-bottom:none;
+      
+
+}
+.det .detl{
+    background-color:#f5f2f2;
+    margin-top:56px;
+    border-radius:20px;
+}
+.det .detl h5{
+    color:green;
+    text-align:center;
+    font-size:16px;
+}
+.det .detl h6{
+    text-align:center;
+    padding:10px;
+}
+
+/*this is for Unit page*/
+.unit{
+    width:100%;
+    padding:20px;
+}
+.unit .des{
+    border:1px solid gray;
+    margin-top:50px;
+    padding:30px;
+    border-radius:10px;
+    
+}
+.unit h2{
+    color:#084662;
+    text-align:center;
+}
+.unit-detail{
+    margin-top:40px;
+    padding:20px;
+    background-color:#eeeded;
+    box-shadow:2px 7px 8px gray;
+}
+.unit-detail-one{
+    background-color:#f3f3f3;
+      box-shadow:2px 7px 8px gray;
+      padding:20px;
+      margin-top:40px;
+
+}
+.one h4{
+    text-align:left;
+
+}
+.surgery-details {
+   
+    margin:2px;
+    border-radius:20px;
+    padding:7px;
+    background-color:#b8dcdb;
+}
+
+/*Research Center*/
+
+#second-research{
+    background-color:#431A36;
+}
+
+#three-research{
+    background-color:#AA4800;
+}
+
+#sec-sec-sec{
+    background-color:#545713;
+}
+#sec-sec-res{
+    background-color:#992D33;
+}
+#sec-res{
+    background-color:#0E6DAF;
+}
+
+.res-box{
+    width:100%;
+    padding:15px;
+    background-color:#5A7715;
+    color:#fff;
+    margin-top:20px;
+
+
+}
+
+.res-box .phot{
+    width:100%;
+    padding:20px;
+}
+.res-box .phot img {
+    width: 100%;
+    height: 140px;
+}
+.res-box h4{
+   text-transform:uppercase;
+   font-size:14px;
+}
+
+.res-box  h3{
+    
+    padding-left:20px;
+}
+
+/*History*/
+.hi{
+    margin-top:30px;
+}
+
+
+/*Staff page*/
+.glyphicon {  margin-bottom: 10px;margin-right: 10px;}
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #386392;
+}
+#idd{
+    background-color:#eef1f3;
+}
+
+
+
+/*this is surgery homepage*/
+.body-head h1{
+    text-align:left;
+    font-weight:600;
+    color:#3b3a3a;
+    margin-bottom:20px;
+}
+.hom{
+    width:100%;
+    margin-top:20px;
+    padding-top:20px;
+    margin-bottom:30px;
+
+}
+.hom img{
+    width:100%;
+    height:350px;
+}
+
+.new-dep{
+    border:1px solid #a5a2a2;
+    padding:5px;
+    border-top-width:4px;
+    overflow:scroll;
+    height:350px;
+    
+}
+.new-dep ul li{
+   list-style:none;
+   padding:0px;
+   margin:0 auto;
+}
+.new-dep ul li a{
+    padding:0;
+}
+
+
+
+/*Program page*/
+
+#col-r{
+    background-color:#992D33;
+}
+#col-w{
+    background-color:#702C5A;}
+
+.lis-pro{
+    background-color:#0E6DAF;
+    color:#fff;
+    width:100%;
+    padding:5px 10px;
+    margin-bottom:20px;
+}
+.lis-pro .pro{
+    width:100%;
+
+}
+.lis-pro .pro img{
+    width:100%;
+}
+
+.lis-pro .de h5{
+    text-decoration:underline;
+}
+.lis-pro .de p{
+    padding:2px 2px;
+}
+.lis-pro h4{
+    text-transform:uppercase;
+    color:#e1dfdf;
+}
+
+.dig{
+    margin-top:30px;
+}

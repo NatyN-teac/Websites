@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B85B79FD-0272-4543-976C-292C34361828}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BHSM</RootNamespace>
+    <AssemblyName>BHSM</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcSiteMapProvider, Version=4.6.22.0, Culture=neutral, PublicKeyToken=1923abe4657913cc, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.Core.4.6.22\lib\net45\MvcSiteMapProvider.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MvcSiteMapProvider.WebActivator, Version=4.6.22.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcSiteMapProvider.MVC5.4.6.22\lib\net45\MvcSiteMapProvider.WebActivator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0.1\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.3.0.1\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.3.0.1\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.3.0.1\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.3.0.1\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
+    <Compile Include="Areas\Admin\Models\ChsRole.cs" />
+    <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
+    <Compile Include="Areas\Admin\Models\Department.cs" />
+    <Compile Include="Controllers\AboutTabController.cs" />
+    <Compile Include="Controllers\AcademicsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AlliedHospitalsController.cs" />
+    <Compile Include="Controllers\AnathomyController.cs" />
+    <Compile Include="Controllers\AnesthesiaController.cs" />
+    <Compile Include="Controllers\AnesthesiologyController.cs" />
+    <Compile Include="Controllers\BiochemistryController.cs" />
+    <Compile Include="Controllers\CentersController.cs" />
+    <Compile Include="Controllers\DentistryController.cs" />
+    <Compile Include="Controllers\DermatovenerolgyController.cs" />
+    <Compile Include="Controllers\EmergencyMedicineController.cs" />
+    <Compile Include="Controllers\ENTController.cs" />
+    <Compile Include="Controllers\FamilyMedicineController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InternalMedicineController.cs" />
+    <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MicrobiologyController.cs" />
+    <Compile Include="Controllers\NeurologyController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\ObstetricsGyneController.cs" />
+    <Compile Include="Controllers\OncologyController.cs" />
+    <Compile Include="Controllers\OphtalmologyController.cs" />
+    <Compile Include="Controllers\OrthopedicsController.cs" />
+    <Compile Include="Controllers\PathologyController.cs" />
+    <Compile Include="Controllers\PediatricController.cs" />
+    <Compile Include="Controllers\PhysiologyController.cs" />
+    <Compile Include="Controllers\PsychiatryController.cs" />
+    <Compile Include="Controllers\RadiographyController.cs" />
+    <Compile Include="Controllers\RadiologyController.cs" />
+    <Compile Include="Controllers\ReseachController.cs" />
+    <Compile Include="Controllers\StudentLifeController.cs" />
+    <Compile Include="Controllers\SurgeryController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080148522_AddedStaffModel.cs" />
+    <Compile Include="Migrations\201803080148522_AddedStaffModel.Designer.cs">
+      <DependentUpon>201803080148522_AddedStaffModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803080155510_DepartmentAdded.cs" />
+    <Compile Include="Migrations\201803080155510_DepartmentAdded.Designer.cs">
+      <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081247038_addDataAnnotation.cs" />
+    <Compile Include="Migrations\201803081247038_addDataAnnotation.Designer.cs">
+      <DependentUpon>201803081247038_addDataAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803081916229_DataAnnotationAdded.cs" />
+    <Compile Include="Migrations\201803081916229_DataAnnotationAdded.Designer.cs">
+      <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121003322_EnqueryTableToClientSide.cs" />
+    <Compile Include="Migrations\201803121003322_EnqueryTableToClientSide.Designer.cs">
+      <DependentUpon>201803121003322_EnqueryTableToClientSide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121008437_AddDataAnnotationToTable.cs" />
+    <Compile Include="Migrations\201803121008437_AddDataAnnotationToTable.Designer.cs">
+      <DependentUpon>201803121008437_AddDataAnnotationToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121029580_addAnnotationToEnquery.cs" />
+    <Compile Include="Migrations\201803121029580_addAnnotationToEnquery.Designer.cs">
+      <DependentUpon>201803121029580_addAnnotationToEnquery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803121256079_addAnnotationToEnquery1.cs" />
+    <Compile Include="Migrations\201803121256079_addAnnotationToEnquery1.Designer.cs">
+      <DependentUpon>201803121256079_addAnnotationToEnquery1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131750114_AddChsRoleToTable.cs" />
+    <Compile Include="Migrations\201803131750114_AddChsRoleToTable.Designer.cs">
+      <DependentUpon>201803131750114_AddChsRoleToTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803131752151_PopulateRoleTable.cs" />
+    <Compile Include="Migrations\201803131752151_PopulateRoleTable.Designer.cs">
+      <DependentUpon>201803131752151_PopulateRoleTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803141221265_DateTimeValidation.cs" />
+    <Compile Include="Migrations\201803141221265_DateTimeValidation.Designer.cs">
+      <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803142009550_AddAnswerToEnquery.cs" />
+    <Compile Include="Migrations\201803142009550_AddAnswerToEnquery.Designer.cs">
+      <DependentUpon>201803142009550_AddAnswerToEnquery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AnswerTable.cs" />
+    <Compile Include="Models\DateTimeValid.cs" />
+    <Compile Include="Models\EnqueryTable.cs" />
+    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\curriculum.css" />
+    <Content Include="Content\DepartOnly.css" />
+    <Content Include="Content\deprt.css" />
+    <Content Include="Content\foot.css" />
+    <Content Include="Content\indexBodyStyle.css" />
+    <Content Include="Content\sharedstyle.css" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\StyleForNonDep.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\ai.0.22.9-build00167.js" />
+    <Content Include="Scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Scripts\bootbox.js" />
+    <Content Include="Scripts\bootbox.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mvc.sitemap" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Shared\_DepartmentOnly.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Enquery\Answer.cshtml" />
+    <None Include="MvcSiteMapSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\immersive.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\OfficePageScript.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
+    <Content Include="Views\Account\ConfirmEmail.cshtml" />
+    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Account\ForgotPassword.cshtml" />
+    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\ResetPassword.cshtml" />
+    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
+    <Content Include="Views\Account\SendCode.cshtml" />
+    <Content Include="Views\Account\VerifyCode.cshtml" />
+    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
+    <Content Include="Views\Manage\ChangePassword.cshtml" />
+    <Content Include="Views\Manage\Index.cshtml" />
+    <Content Include="Views\Manage\ManageLogins.cshtml" />
+    <Content Include="Views\Manage\SetPassword.cshtml" />
+    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
+    <Content Include="Views\Shared\Lockout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_footer.cshtml" />
+    <Content Include="Views\Shared\_slider.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapPathHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModelList.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapNodeModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\SiteMapHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MetaRobotsHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\MenuHelperModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\CanonicalHelperModel.cshtml" />
+    <Content Include="Views\Shared\_DepartmentOnly.cshtml" />
+    <Content Include="Views\Surgery\surgeryHome.cshtml" />
+    <Content Include="Views\Surgery\About.cshtml" />
+    <Content Include="Views\Surgery\History.cshtml" />
+    <Content Include="Views\Surgery\Unit.cshtml" />
+    <Content Include="Views\Surgery\staff.cshtml" />
+    <Content Include="Views\Surgery\research.cshtml" />
+    <Content Include="Views\Surgery\program.cshtml" />
+    <Content Include="Views\Surgery\contact.cshtml" />
+    <Content Include="Views\Surgery\calendar.cshtml" />
+    <Content Include="Views\Shared\_NotDepartment.cshtml" />
+    <Content Include="Views\AboutTab\History.cshtml" />
+    <Content Include="Views\AboutTab\SchoolAtGlance.cshtml" />
+    <Content Include="Views\AboutTab\SchoolAdmin.cshtml" />
+    <Content Include="Views\AboutTab\OfficeAndService.cshtml" />
+    <Content Include="Views\AboutTab\DirectionMap.cshtml" />
+    <Content Include="Views\AboutTab\EventCalendar.cshtml" />
+    <Content Include="Views\AboutTab\Graduation.cshtml" />
+    <Content Include="Views\AboutTab\cultureCampus.cshtml" />
+    <Content Include="Views\AboutTab\factFigures.cshtml" />
+    <Content Include="Views\AboutTab\enqury.cshtml" />
+    <Content Include="Views\AboutTab\contactUs.cshtml" />
+    <Content Include="Views\Academics\AcademicsHome.cshtml" />
+    <Content Include="Views\Academics\medicalEducation.cshtml" />
+    <Content Include="Views\Academics\mdadmission.cshtml" />
+    <Content Include="Views\Academics\graduateEducation.cshtml" />
+    <Content Include="Views\Academics\postDocTraining.cshtml" />
+    <Content Include="Views\Academics\contedu.cshtml" />
+    <Content Include="Views\Reseach\center_institues.cshtml" />
+    <Content Include="Views\Reseach\sampleReseach.cshtml" />
+    <Content Include="Views\Reseach\reseachResource.cshtml" />
+    <Content Include="Views\StudentLife\eventsActivity.cshtml" />
+    <Content Include="Views\StudentLife\internationalstu.cshtml" />
+    <Content Include="Views\StudentLife\graduationGallery.cshtml" />
+    <Content Include="Views\StudentLife\outreachprogram.cshtml" />
+    <Content Include="Views\Centers\diabetics.cshtml" />
+    <Content Include="Views\Centers\ethicCenter.cshtml" />
+    <Content Include="Views\Centers\infectiosDes.cshtml" />
+    <Content Include="Views\Centers\cardiacCenter.cshtml" />
+    <Content Include="Views\AlliedHospitals\zewditu.cshtml" />
+    <Content Include="Views\AlliedHospitals\menilik.cshtml" />
+    <Content Include="Views\AlliedHospitals\Ghandi.cshtml" />
+    <Content Include="Views\AlliedHospitals\alert.cshtml" />
+    <Content Include="Views\AlliedHospitals\Amanuel.cshtml" />
+    <Content Include="Views\AlliedHospitals\peter.cshtml" />
+    <Content Include="Views\News\news.cshtml" />
+    <Content Include="Views\News\socialmedias.cshtml" />
+    <Content Include="Views\InternalMedicine\internalHome.cshtml" />
+    <Content Include="Views\InternalMedicine\About.cshtml" />
+    <Content Include="Views\InternalMedicine\History.cshtml" />
+    <Content Include="Views\InternalMedicine\Unit.cshtml" />
+    <Content Include="Views\InternalMedicine\staff.cshtml" />
+    <Content Include="Views\InternalMedicine\research.cshtml" />
+    <Content Include="Views\InternalMedicine\program.cshtml" />
+    <Content Include="Views\InternalMedicine\contact.cshtml" />
+    <Content Include="Views\InternalMedicine\calendar.cshtml" />
+    <Content Include="Views\ObstetricsGyne\About.cshtml" />
+    <Content Include="Views\ObstetricsGyne\calendar.cshtml" />
+    <Content Include="Views\ObstetricsGyne\contact.cshtml" />
+    <Content Include="Views\ObstetricsGyne\History.cshtml" />
+    <Content Include="Views\ObstetricsGyne\home.cshtml" />
+    <Content Include="Views\ObstetricsGyne\program.cshtml" />
+    <Content Include="Views\ObstetricsGyne\research.cshtml" />
+    <Content Include="Views\ObstetricsGyne\staff.cshtml" />
+    <Content Include="Views\ObstetricsGyne\Unit.cshtml" />
+    <Content Include="Views\Pediatric\About.cshtml" />
+    <Content Include="Views\Pediatric\calendar.cshtml" />
+    <Content Include="Views\Pediatric\contact.cshtml" />
+    <Content Include="Views\Pediatric\History.cshtml" />
+    <Content Include="Views\Pediatric\home.cshtml" />
+    <Content Include="Views\Pediatric\program.cshtml" />
+    <Content Include="Views\Pediatric\research.cshtml" />
+    <Content Include="Views\Pediatric\staff.cshtml" />
+    <Content Include="Views\Pediatric\Unit.cshtml" />
+    <Content Include="Views\Orthopedics\About.cshtml" />
+    <Content Include="Views\Orthopedics\calendar.cshtml" />
+    <Content Include="Views\Orthopedics\contact.cshtml" />
+    <Content Include="Views\Orthopedics\History.cshtml" />
+    <Content Include="Views\Orthopedics\home.cshtml" />
+    <Content Include="Views\Orthopedics\program.cshtml" />
+    <Content Include="Views\Orthopedics\research.cshtml" />
+    <Content Include="Views\Orthopedics\staff.cshtml" />
+    <Content Include="Views\Orthopedics\Unit.cshtml" />
+    <Content Include="Views\Neurology\About.cshtml" />
+    <Content Include="Views\Neurology\calendar.cshtml" />
+    <Content Include="Views\Neurology\contact.cshtml" />
+    <Content Include="Views\Neurology\History.cshtml" />
+    <Content Include="Views\Neurology\home.cshtml" />
+    <Content Include="Views\Neurology\Unit.cshtml" />
+    <Content Include="Views\Neurology\staff.cshtml" />
+    <Content Include="Views\Neurology\research.cshtml" />
+    <Content Include="Views\Neurology\program.cshtml" />
+    <Content Include="Views\Anesthesia\About.cshtml" />
+    <Content Include="Views\Anesthesia\contact.cshtml" />
+    <Content Include="Views\Anesthesia\home.cshtml" />
+    <Content Include="Views\Anesthesia\staff.cshtml" />
+    <Content Include="Views\Anesthesia\History.cshtml" />
+    <Content Include="Views\Anesthesiology\About.cshtml" />
+    <Content Include="Views\Anesthesiology\contact.cshtml" />
+    <Content Include="Views\Anesthesiology\History.cshtml" />
+    <Content Include="Views\Anesthesiology\home.cshtml" />
+    <Content Include="Views\Anesthesiology\staff.cshtml" />
+    <Content Include="Views\Biochemistry\About.cshtml" />
+    <Content Include="Views\Biochemistry\contact.cshtml" />
+    <Content Include="Views\Biochemistry\History.cshtml" />
+    <Content Include="Views\Biochemistry\home.cshtml" />
+    <Content Include="Views\Biochemistry\staff.cshtml" />
+    <Content Include="Views\Dermatovenerolgy\About.cshtml" />
+    <Content Include="Views\Dermatovenerolgy\contact.cshtml" />
+    <Content Include="Views\Dermatovenerolgy\History.cshtml" />
+    <Content Include="Views\Dermatovenerolgy\home.cshtml" />
+    <Content Include="Views\Dermatovenerolgy\staff.cshtml" />
+    <Content Include="Views\EmergencyMedicine\About.cshtml" />
+    <Content Include="Views\EmergencyMedicine\contact.cshtml" />
+    <Content Include="Views\EmergencyMedicine\History.cshtml" />
+    <Content Include="Views\EmergencyMedicine\home.cshtml" />
+    <Content Include="Views\EmergencyMedicine\staff.cshtml" />
+    <Content Include="Views\ENT\About.cshtml" />
+    <Content Include="Views\ENT\contact.cshtml" />
+    <Content Include="Views\ENT\History.cshtml" />
+    <Content Include="Views\ENT\home.cshtml" />
+    <Content Include="Views\ENT\staff.cshtml" />
+    <Content Include="Views\FamilyMedicine\About.cshtml" />
+    <Content Include="Views\FamilyMedicine\contact.cshtml" />
+    <Content Include="Views\FamilyMedicine\History.cshtml" />
+    <Content Include="Views\FamilyMedicine\home.cshtml" />
+    <Content Include="Views\FamilyMedicine\staff.cshtml" />
+    <Content Include="Views\Microbiology\About.cshtml" />
+    <Content Include="Views\Microbiology\contact.cshtml" />
+    <Content Include="Views\Microbiology\History.cshtml" />
+    <Content Include="Views\Microbiology\home.cshtml" />
+    <Content Include="Views\Microbiology\staff.cshtml" />
+    <Content Include="Views\Oncology\About.cshtml" />
+    <Content Include="Views\Oncology\contact.cshtml" />
+    <Content Include="Views\Oncology\History.cshtml" />
+    <Content Include="Views\Oncology\home.cshtml" />
+    <Content Include="Views\Oncology\staff.cshtml" />
+    <Content Include="Views\Ophtalmology\About.cshtml" />
+    <Content Include="Views\Ophtalmology\contact.cshtml" />
+    <Content Include="Views\Ophtalmology\History.cshtml" />
+    <Content Include="Views\Ophtalmology\home.cshtml" />
+    <Content Include="Views\Ophtalmology\staff.cshtml" />
+    <Content Include="Views\Physiology\About.cshtml" />
+    <Content Include="Views\Physiology\contact.cshtml" />
+    <Content Include="Views\Physiology\History.cshtml" />
+    <Content Include="Views\Physiology\home.cshtml" />
+    <Content Include="Views\Physiology\staff.cshtml" />
+    <Content Include="Views\Psychiatry\About.cshtml" />
+    <Content Include="Views\Psychiatry\contact.cshtml" />
+    <Content Include="Views\Psychiatry\History.cshtml" />
+    <Content Include="Views\Psychiatry\home.cshtml" />
+    <Content Include="Views\Psychiatry\staff.cshtml" />
+    <Content Include="Views\Radiography\About.cshtml" />
+    <Content Include="Views\Radiography\contact.cshtml" />
+    <Content Include="Views\Radiography\History.cshtml" />
+    <Content Include="Views\Radiography\home.cshtml" />
+    <Content Include="Views\Radiography\staff.cshtml" />
+    <Content Include="Views\Radiology\About.cshtml" />
+    <Content Include="Views\Radiology\contact.cshtml" />
+    <Content Include="Views\Radiology\History.cshtml" />
+    <Content Include="Views\Radiology\home.cshtml" />
+    <Content Include="Views\Radiology\staff.cshtml" />
+    <Content Include="Views\Anathomy\About.cshtml" />
+    <Content Include="Views\Anathomy\contact.cshtml" />
+    <Content Include="Views\Anathomy\History.cshtml" />
+    <Content Include="Views\Anathomy\home.cshtml" />
+    <Content Include="Views\Anathomy\staff.cshtml" />
+    <Content Include="Views\Pathology\staff.cshtml" />
+    <Content Include="Views\Pathology\home.cshtml" />
+    <Content Include="Views\Pathology\History.cshtml" />
+    <Content Include="Views\Pathology\contact.cshtml" />
+    <Content Include="Views\Pathology\About.cshtml" />
+    <Content Include="Views\Dentistry\About.cshtml" />
+    <Content Include="Views\Dentistry\calendar.cshtml" />
+    <Content Include="Views\Dentistry\contact.cshtml" />
+    <Content Include="Views\Dentistry\History.cshtml" />
+    <Content Include="Views\Dentistry\home.cshtml" />
+    <Content Include="Views\Dentistry\program.cshtml" />
+    <Content Include="Views\Dentistry\research.cshtml" />
+    <Content Include="Views\Dentistry\staff.cshtml" />
+    <Content Include="Views\Dentistry\Unit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppFiles\Images\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201803080148522_AddedStaffModel.resx">
+      <DependentUpon>201803080148522_AddedStaffModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803080155510_DepartmentAdded.resx">
+      <DependentUpon>201803080155510_DepartmentAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081247038_addDataAnnotation.resx">
+      <DependentUpon>201803081247038_addDataAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803081916229_DataAnnotationAdded.resx">
+      <DependentUpon>201803081916229_DataAnnotationAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121003322_EnqueryTableToClientSide.resx">
+      <DependentUpon>201803121003322_EnqueryTableToClientSide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121008437_AddDataAnnotationToTable.resx">
+      <DependentUpon>201803121008437_AddDataAnnotationToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121029580_addAnnotationToEnquery.resx">
+      <DependentUpon>201803121029580_addAnnotationToEnquery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803121256079_addAnnotationToEnquery1.resx">
+      <DependentUpon>201803121256079_addAnnotationToEnquery1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131750114_AddChsRoleToTable.resx">
+      <DependentUpon>201803131750114_AddChsRoleToTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803131752151_PopulateRoleTable.resx">
+      <DependentUpon>201803131752151_PopulateRoleTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803141221265_DateTimeValidation.resx">
+      <DependentUpon>201803141221265_DateTimeValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803142009550_AddAnswerToEnquery.resx">
+      <DependentUpon>201803142009550_AddAnswerToEnquery.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>22043</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:22043/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BHSM.Models.EnqueryTable>
+@{
+    ViewBag.Title = "Answer";
+    Layout = "~/Views/Shared/_NotDepartment.cshtml";
+}
+
+<h2>Answer</h2>
+@foreach(var mod in Model)
+{
+    <h2>@mod.SecondName</h2>
+}
+

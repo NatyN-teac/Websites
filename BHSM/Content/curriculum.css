@@ -1,0 +1,473 @@
+﻿
+.curri {
+    margin-top: -60px;
+    width: 100%;
+    height: 10vh;
+    background-color: #355f90;
+}
+
+    .curri .curri-head {
+        margin-left: 40px;
+        padding-top: 10px;
+    }
+
+        .curri .curri-head h2 {
+            color: #fff;
+        }
+
+    .curri .curri_content {
+        background-color: #fff;
+        margin-top: -5px;
+        width: 100%;
+    }
+
+.mdeduation {
+    margin: 0 auto;
+    padding: 2px;
+    background-color: #fff;
+    height: 800px;
+    margin-top: -28px;
+}
+
+    .mdeduation h2 {
+        text-align: center;
+    }
+
+    .mdeduation .content-mdeducation h3:before {
+        content: open-quote "T";
+        font-size: 40px;
+        font-weight: 800;
+        font-style: oblique;
+        color: #c90032;
+    }
+
+    .mdeduation .content-mdeducation h3:after {
+        content: close-quote ".";
+        font-size: 40px;
+        font-weight: 800;
+        font-style: oblique;
+        color: #c90032;
+    }
+
+    .mdeduation .content-mdeducation {
+        font-style: oblique;
+        color: #c90032;
+        text-align: center;
+        margin: 10px 10px;
+        padding-top: 30px;
+    }
+
+.inner-content-edu h3 {
+    text-align: center;
+}
+
+.inner-content-edu p {
+    text-align: justify;
+    font-family: Noto;
+    font-size: 16px;
+}
+
+.head_reseach_all {
+    margin-top: -24px;
+    height: 10vh;
+    padding-bottom: 50px;
+    background-color: rgb(11, 29, 52);
+}
+
+    .head_reseach_all h2 {
+        color: #fff;
+        text-align: center;
+    }
+
+.vody_reserach {
+    margin-top: 10px;
+    padding: 2px;
+}
+
+
+.cont_applicants_res {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.full-detail_re {
+    padding: 10px;
+    background-color: #702C5A;
+    width: 100%;
+    color: #efefef;
+    height: 500px;
+}
+
+#second-color-res {
+    background-color: #702C5A;
+}
+
+#middle-colr_re {
+    background-color: #0E6DAF;
+}
+
+#third-reseach-res {
+    background-color: #873E19;
+}
+
+#last-color-res {
+    background-color: #0b5283;
+}
+
+
+.full-detail_re h4 {
+    text-transform: uppercase;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.full-detail_re img {
+    width: 100%;
+}
+
+.full-detail_re.list-enqury {
+    margin: 0 auto;
+}
+
+    .full-detail_re .list-enqury ul {
+        margin: 10px auto;
+    }
+
+        .full-detail_re .list-enqury ul li {
+            color: #fff;
+            padding-top: 10px;
+            list-style: none;
+            padding: 2px;
+        }
+
+            .full-detail_re .list-enqury ul li p {
+                color: #fff;
+                font-weight: 600;
+                width: 100%;
+            }
+
+
+.full-detail .list-enqury ul li:before {
+    font-family: 'FontAwesome';
+    content: '\f067';
+    margin: 0 5px 0 -15px;
+    color: #fff;
+}
+
+/*this for the reseach sample reseach page*/
+
+.existing_reseach_image {
+    width: 100%;
+    padding: 2px;
+    margin: 10px auto;
+}
+
+    .existing_reseach_image img {
+        width: 100%;
+    }
+
+.hol-d {
+    margin: 10px auto;
+    padding: 3px;
+}
+
+/*student life page events and activities page style*/
+
+.all_studnet_life {
+    background-color: #fff;
+    height: 1300px;
+    margin-top: -18px;
+    padding-top: 30px;
+}
+
+.std-life_img {
+    width: 100%;
+    margin: 10px auto;
+}
+
+    .std-life_img img {
+        width: 100%;
+    }
+
+.img-stu-inner {
+    float: left;
+    padding: 10px;
+    margin: 3px auto;
+}
+
+    .img-stu-inner img {
+        width: 150px;
+        height: 150px;
+    }
+
+.desc-st-life {
+    padding-top: 40px;
+}
+/*this is international studen page style*/
+
+.inter-national_student {
+    background-color: #fff;
+    height: 800px;
+    margin-top: -18px;
+}
+
+.inter_nation_studn-lifeTip {
+    margin-top: 20px;
+    padding: 5px;
+}
+
+.main_stud_inter_life {
+    margin-top: 20px;
+}
+
+/*this is for graduation page of student life*/
+
+.gra_gallery {
+    background-color: #fff;
+    height: 2300px;
+    margin-top: -19px;
+}
+.body-gra_gallery{
+    padding:10px;
+}
+
+
+.gal-container {
+    padding: 12px;
+}
+
+.gal-item {
+    overflow: hidden;
+    padding: 3px;
+}
+
+    .gal-item .box {
+        height: 350px;
+        overflow: hidden;
+    }
+
+.box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.gal-item a:focus {
+    outline: none;
+}
+
+.gal-item a:after {
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    right: 3px;
+    left: 3px;
+    top: 3px;
+    bottom: 3px;
+    text-align: center;
+    line-height: 350px;
+    font-size: 30px;
+    color: #fff;
+    -webkit-transition: all 0.5s ease-in-out 0s;
+    -moz-transition: all 0.5s ease-in-out 0s;
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.gal-item a:hover:after {
+    opacity: 1;
+}
+
+.modal-open .gal-container .modal {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-open .gal-item .modal-body {
+    padding: 0px;
+}
+
+.modal-open .gal-item button.close {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #000;
+    opacity: 1;
+    color: #fff;
+    z-index: 999;
+    right: -12px;
+    top: -12px;
+    border-radius: 50%;
+    font-size: 15px;
+    border: 2px solid #fff;
+    line-height: 25px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.35);
+}
+
+    .modal-open .gal-item button.close:focus {
+        outline: none;
+    }
+
+    .modal-open .gal-item button.close span {
+        position: relative;
+        top: -3px;
+        font-weight: lighter;
+        text-shadow: none;
+    }
+
+.gal-container .modal-dialogue {
+    width: 80%;
+}
+
+.gal-container .description {
+    position: relative;
+    height: 40px;
+    top: -40px;
+    padding: 10px 25px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    text-align: left;
+}
+
+    .gal-container .description h4 {
+        margin: 0px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 20px;
+    }
+
+.gal-container .modal.fade .modal-dialog {
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    transform: scale(0.1);
+    top: 100px;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.gal-container .modal.fade.in .modal-dialog {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform: translate3d(0, -100px, 0);
+    transform: translate3d(0, -100px, 0);
+    opacity: 1;
+}
+
+@media (min-width: 768px) {
+    .gal-container .modal-dialog {
+        width: 55%;
+        margin: 155px auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gal-container .modal-content {
+        height: 250px;
+    }
+}
+
+/*this one is for training pages*/
+.train-all-form{
+    background-color:#fff;
+    margin-top:-18px;
+    padding:2px;
+    height:800px;
+}
+.body_det_desc{
+    margin:2px auto;
+    
+}
+.body_det_desc .col_img_left{
+    float:left;
+    padding:20px;
+
+}
+
+.body_det_desc .col_img_left img{
+    width:200px;
+    height:200px;
+
+}
+
+.body_det_desc .body_train_det{
+  padding-top:50px;
+}
+
+/*this is for center style page*/
+
+.center_sty{
+    background-color:#fff;
+    height:1000px;
+    margin-top:-20px;
+}
+.center_sty .head_center{
+    padding-top:20px;
+    padding-left:20px;
+
+}
+.center_sty .head_center h2{
+    text-align:center;
+    color:#0E6DAF;
+    font-weight:500;
+}
+.center_img{
+    padding:10px;
+    float:left;
+
+}
+.center_img h3{
+    text-align:center;
+
+}
+
+.center_img img{
+    width:200px;
+    height:200px;
+}
+.addre_deta_center{
+    margin-top:20px;
+
+}
+/*this is for news pagel,...*/
+
+.news_page{
+    height:2000px;
+    background-color:#fff;
+    margin-top:-20px;
+}
+#megaz{
+  height:1200px;
+    background-color:#fff;
+    margin-top:-20px;
+}
+.new_photo_de{
+    padding:10px;
+    float:left;
+
+}
+.hed_news{
+    padding-top:30px;
+}
+.new_photo_de img{
+    width:110px;
+    height:120px;
+}
+.new_detail_note{
+    padding-top:4px;
+}
+.md_older_new{
+    padding:12px;
+}
+.olre_new{
+    padding:10px;
+    float:left;
+}

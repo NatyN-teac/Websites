@@ -1,0 +1,54 @@
+﻿footer{
+    width: 100%;
+    background-color: rgb(28,72,130);
+    height: 341px;
+    color:#fff;
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+footer .footer-header {
+    padding-top:0px;
+}
+
+footer .footer-part1 {
+       
+    }
+
+footer .footer-part1 ul li{
+    list-style:none;
+    padding-bottom:5px;
+}
+footer .footer-part1 ul li a{
+   color: rgba(255, 255, 255, 0.5);
+   font-size: 14px;
+   text-decoration:none;
+   text-transform:uppercase;    
+}
+footer .footer-part1 ul li a:hover{
+    color:#fff;
+}
+
+.footrr{
+    position:relative;
+  
+}
+
+.footrr .logtext {
+     position:absolute;
+    top:30px;
+    left:130px;
+}
+.footrr .logtext h2{
+    color:#e0e0e0;
+    font-size:19px;
+    text-align:left;
+}
+
+/*Admin footer*/
+#adminfooter{
+    margin-top:297px;
+    height:200px;
+
+}

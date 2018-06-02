@@ -1,0 +1,241 @@
+﻿    body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #e9e9e9;
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+/*Only for overrriding the bootstrap css*/
+.navbar{
+    border-bottom:1px solid rgb(11, 29, 52);
+   background: rgb(11, 29, 52);
+   height: 42px;
+   margin-top: -50px;
+   position: relative;
+    
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff;
+    color:rgba(0,0,0,.6);
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    border-left: 5px solid #c90032;
+}
+
+
+.navbar-nav > li > a {
+   font-family: 'Noto Serif', serif;
+   font-weight:400;
+   text-transform: uppercase;
+   color:#fff;
+   font-size:120%;
+}
+
+.full-width-div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+}
+
+
+
+.header-main {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.39),rgba(0,0,0,0.3)),url(../images/black.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    margin-top: -50px;
+    padding-left: 250px;
+}
+.header-container{
+    /*position: relative;*/
+    padding-left: 50px;
+}
+.logo{
+
+    padding-top: 90px;
+    padding-left: 35px;
+    margin-left:-260px;
+   
+   
+}
+ .logo-2{
+     position:absolute;
+      top: 89px;
+
+    padding-right: 35px;
+    margin-left:1050px;
+    
+ }
+
+ .logo  img {
+    height: 140px;
+    opacity: 0.9;
+
+}
+ .logo-2  img {
+    height: 130px;
+    width:70%;
+    opacity: 0.9;
+
+}
+
+
+ .header-container .logo-title{
+     position:absolute;
+     top: 13px;
+    left: 122px;
+     text-align:center;
+ }
+
+.header-container .logo-title  h1 {
+
+    color: #fff;
+}
+.header-container .logo-title  h2 {
+     text-align: center;
+    color: #fff;
+}
+.header-container .logo-title  h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 250%;
+    font-family: 'Felipa', cursive;
+}
+
+.heck{
+    position:absolute;
+    width:100%;
+    left:0;
+    z-index:-1;
+}
+
+.headr{
+    background-color:#1C4882;
+    
+    height: 30vh;
+    margin-top: -20px;
+    margin-bottom:30px;
+    position:relative;
+    z-index:-1;
+   
+
+}
+.headr .logtext{
+    position:absolute;
+    top:31px;
+    left:330px;
+
+}
+.headr .logtext h2{
+    color:#cccaca;
+    font-size:16px;
+    text-align:left;
+}
+
+
+.navbar-collapse.in {
+    background-color: rgb(42, 82, 118);
+  
+}
+
+.dropdown-menu > li > a:hover, 
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(99, 117, 134);
+    font-family: 'Lato',sans-serif;
+ 
+
+}
+
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-left: -20px;
+}
+
+
+
+.navbar-nav > li > .dropdown-menu {
+
+    margin-top: -1px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+}
+
+.dropdown-menu > li > a {   
+    padding: 5px 20px;   
+    font-size: 17px;
+   
+}
+
+
+
+
+
+
+.navbar-default .navbar-nav > li.dropdown:hover > a, 
+.navbar-default .navbar-nav > li.dropdown:hover > a:hover,
+.navbar-default .navbar-nav > li.dropdown:hover > a:focus {
+    background-color: rgb(231, 231, 231);
+    color: rgb(85, 85, 85);
+}
+li.dropdown:hover > .dropdown-menu {
+    display: block;
+}
+
+.navbar-toggle {
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+label {
+   
+    color: #e9e9e9;
+}
+
+.field-validation-error{
+    color:#ff4848;
+    font-weight:bold;
+    margin:3px auto;
+}
