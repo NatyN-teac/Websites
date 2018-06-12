@@ -1,7 +1,7 @@
 ﻿footer{
     width: 100%;
     background-color: rgb(28,72,130);
-    height: 341px;
+    height: auto;
     color:#fff;
     padding-top:20px;
     padding-left:20px;
@@ -14,7 +14,7 @@ footer .footer-header {
 
 footer .footer-part1 {
        
-    }
+}
 
 footer .footer-part1 ul li{
     list-style:none;
@@ -32,6 +32,7 @@ footer .footer-part1 ul li a:hover{
 
 .footrr{
     position:relative;
+    padding-bottom:50px;
   
 }
 

@@ -32,13 +32,16 @@ textarea {
 .navbar{
     border-bottom:1px solid rgb(11, 29, 52);
    background: rgb(11, 29, 52);
-   height: 42px;
+   /*height: 42px;*/
+   height:auto;
    margin-top: -50px;
    position: relative;
     
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
+.nav > li > a:hover,
+ .nav > li > a:focus,
+ .nav>li >a:active {
     text-decoration: none;
     background-color: #fff;
     color:rgba(0,0,0,.6);
@@ -238,4 +241,9 @@ label {
     color:#ff4848;
     font-weight:bold;
     margin:3px auto;
+}
+
+
+.caret{
+border-top: 4px solid #bc3030;
 }

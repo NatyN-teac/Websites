@@ -22,11 +22,10 @@
 
     <div class="container-fill">
         <div class="row">
-            <header class="header-main">
-                <div class="header-container">
+            <!--  <div class="header-container">
 
                     <div class="logo">
-                        <img src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png" alt="" class="img-circle img-responsive" />
+                       <img src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png" alt="" class="img-circle img-responsive" />
                     </div>
 
                     <div class="logo-2 pull-right">
@@ -35,9 +34,11 @@
                    
                    
 
-                </div>
+                </div> -->
+           <header class="header-main">
+               
 
-            </header>
+            </header> 
         </div>
 
         </div>
@@ -236,7 +237,7 @@
 
 
 
-        @Html.Partial("_slider")
+       @Html.Partial("_slider")
 
 
 
@@ -248,44 +249,56 @@
     @Html.Partial("_footer")
 
 
+
+
+
+
         <script>
 
             $(document).ready(function () {
-                $('#media').carousel({
-                    pause: true,
-                    interval: false,
-                });
-            });
 
-
-            $(document).ready(function () {
+            //image slider css
                 $("#immersive_slider").immersive_slider({
                     container: ".main"
                 });
+                //our people profile
+
+                   $('#media').carousel({
+                       pause: true,
+                      interval: false,
+                  });
+
             });
+
+            //$(document).ready(function () {
+            
+            //});
+
+
+           
 
 
             //window.alert = function () { };
-            var defaultCSS = document.getElementById('bootstrap-css');
-            function changeCSS(css) {
-                if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
-                else $('head > link').filter(':first').replaceWith(defaultCSS);
-            }
-            $(document).ready(function () {
-                var iframe_height = parseInt($('html').height());
+            //var defaultCSS = document.getElementById('bootstrap-css');
+            //function changeCSS(css) {
+                //if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
+                //else $('head > link').filter(':first').replaceWith(defaultCSS);
+            //}
+            //$(document).ready(function () {
+                //var iframe_height = parseInt($('html').height());
                 //  window.parent.postMessage(iframe_height, 'http://bootsnipp.com');
                 
                
-            });
+            //});
 
-            $(document).ready(function () {
-                $("#link-dep").on("click", function () {
-                    //place where to put dropdown things.
+            //$(document).ready(function () {
+            //    $("#link-dep").on("click", function () {
+            //        //place where to put dropdown things.
 
 
-                });
+            //    });
 
-            })
+            //})
 
 
         </script>
