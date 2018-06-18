@@ -4,15 +4,16 @@ namespace BHSM.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
+    
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BHSM.Models.ApplicationDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<BHSM.Areas.Admin.Models.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(BHSM.Models.ApplicationDbContext context)
+        protected override void Seed(BHSM.Areas.Admin.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 

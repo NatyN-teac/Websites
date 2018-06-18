@@ -1,0 +1,173 @@
+﻿    body {
+    padding-top: 50px;
+    /*padding-bottom: 20px;*/
+    /*background-color: #e9e9e9;*/
+
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+
+/*Only for overrriding the bootstrap css*/
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #fff;
+    color:green;
+
+}
+
+#land{
+ background-image: linear-gradient(rgb(169, 75, 8),rgb(183, 65, 65));
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    margin-top: 50px;
+    padding-left: 250px;
+}
+
+
+.navbar-inverse {
+    background-color:#be5e38;
+    border-color: #be5e38;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+.nav a:hover .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+.nav .caret {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+/*this is for admin page landing page*/
+
+
+.pricing-table .plan {
+  margin-top:50px;
+  margin-left:0px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #f3f3f3;
+  -moz-box-shadow: 0 0 6px 2px #b0b2ab;
+  -webkit-box-shadow: 0 0 6px 2px #b0b2ab;
+  box-shadow: 0 0 6px 2px #b0b2ab;
+}
+ 
+ .plan:hover {
+  background-color: #fff;
+  -moz-box-shadow: 0 0 12px 3px #b0b2ab;
+  -webkit-box-shadow: 0 0 12px 3px #b0b2ab;
+  box-shadow: 0 0 12px 3px #b0b2ab;
+}
+ 
+ .plan {
+  padding: 20px;
+  margin-left:0px;
+  color: #ff;
+  background-color: #5e5f59;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+  
+.plan-name-bronze {
+  padding: 20px;
+  color: #fff;
+  background-color: #665D1E;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+ }
+  
+.plan-name-silver {
+  padding: 20px;
+  color: #fff;
+  background-color: #C0C0C0;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+ }
+  
+.plan-name-gold {
+  padding: 20px;
+  color: #fff;
+  background-color: #FFD700;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  } 
+  
+.pricing-table-bronze  {
+  padding: 20px;
+  color: #fff;
+  background-color: #f89406;
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+}
+  
+.pricing-table .plan .plan-name span {
+  font-size: 20px;
+}
+ 
+.pricing-table .plan ul {
+  list-style: none;
+  margin: 0;
+  -moz-border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+ 
+.pricing-table .plan ul li.plan-feature {
+  padding: 15px 10px;
+  border-top: 1px solid #c5c8c0;
+  margin-right: 35px;
+}
+ 
+.pricing-three-column {
+  margin: 0 auto;
+  width: 80%;
+}
+ 
+.pricing-variable-height .plan {
+  float: none;
+  margin-left: 2%;
+  vertical-align: bottom;
+  display: inline-block;
+  zoom:1;
+  *display:inline;
+}
+ 
+.plan-mouseover .plan-name {
+  background-color: #4e9a06 !important;
+}
+ 
+.btn-plan-select {
+  padding: 8px 25px;

@@ -1,5 +1,6 @@
 ﻿using BHSM.Models;
 using System.Web.Mvc;
+using BHSM.Areas.Admin.Models;
 
 namespace BHSM.Areas.Admin.Controllers
 {

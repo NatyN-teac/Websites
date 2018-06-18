@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace BHSM.Models
+namespace BHSM.Areas.Admin.Models
 {
     public class ExternalLoginConfirmationViewModel
     {

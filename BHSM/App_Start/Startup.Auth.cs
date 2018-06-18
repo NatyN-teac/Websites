@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using BHSM.Models;
+using BHSM.Areas.Admin.Models;
 
 namespace BHSM
 {

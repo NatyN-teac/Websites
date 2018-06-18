@@ -7,6 +7,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BHSM.Models;
+using BHSM.Areas.Admin.Models;
+using BHSM.Areas.Admin.Controllers;
 
 namespace BHSM.Controllers
 {
@@ -72,7 +74,7 @@ namespace BHSM.Controllers
                 Logins = await UserManager.GetLoginsAsync(userId),
                 BrowserRemembered = await AuthenticationManager.TwoFactorBrowserRememberedAsync(userId)
             };
-            return View(model);
+            return View("Index",model);
         }
 
         //
