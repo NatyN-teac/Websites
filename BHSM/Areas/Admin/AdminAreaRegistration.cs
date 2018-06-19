@@ -17,7 +17,7 @@ namespace BHSM.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { Controller = "AdminHome", action = "Index", id = UrlParameter.Optional }
+                new { Controller = "AdminHome", action = "LandingPage", id = UrlParameter.Optional }
             );
         }
     }

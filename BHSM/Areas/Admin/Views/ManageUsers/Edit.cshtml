@@ -1,29 +1,24 @@
-﻿ @model BHSM.Areas.Admin.Models.RegisterViewModel
+﻿@model BHSM.Areas.Admin.Models.RegisterViewModel
 @{
-    ViewBag.Title = "Register";
-    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-
-
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
-@Styles.Render("~/Content/admin")
-@Scripts.Render("~/bundles/modernizr")
 
-
-
+<h2>Edit</h2>
 <div class="container">
 
 
     <div class="col-md-3">
 
     </div>
-    <div class="col-md-6" 
+    <div class="col-md-6"
          style="background-color:#efefef;margin-top:100px; border:solid 1px #fff;border-radius:25px;padding-left:5px;box-shadow:1px 2px 5px;">
         <h2 style="text-align:center">Create a New Account.</h2>
 
         @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
         {
         @Html.AntiForgeryToken()
-            
+
             <hr />
             @Html.ValidationSummary("", new { @class = "text-danger" })
 
@@ -60,7 +55,7 @@
         }
     </div>
     <div class="col-md-3"></div>
-   
+
 </div>
 
 
@@ -68,3 +63,7 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+
+
+

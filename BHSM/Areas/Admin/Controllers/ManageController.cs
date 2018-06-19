@@ -10,7 +10,7 @@ using BHSM.Models;
 using BHSM.Areas.Admin.Models;
 using BHSM.Areas.Admin.Controllers;
 
-namespace BHSM.Controllers
+namespace BHSM.Areas.Admin.Controllers
 {
     [Authorize]
     public class ManageController : Controller

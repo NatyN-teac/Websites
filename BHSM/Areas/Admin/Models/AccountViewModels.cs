@@ -64,6 +64,11 @@ namespace BHSM.Areas.Admin.Models
 
     public class RegisterViewModel
     {
+
+        [Required]
+        [Display(Name ="User Name")]
+        public string Name { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

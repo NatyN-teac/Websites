@@ -1,0 +1,44 @@
+﻿@model IEnumerable<BHSM.Areas.Admin.Models.ApplicationUser>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+    <div class="row">
+
+        <h2>List Of All Users</h2>
+        <br />
+        
+        @Html.ActionLink("Create New User", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink",@class="btn btn-primary" })
+       
+
+        <br />
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>User Name</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+
+                <tr>
+                    <td>
+                        @Html.ActionLink(@item.Name, "Edit", "ManageUsers", new {id = item.Id })
+
+                    </td>
+                    <td>
+                        @Html.ActionLink("Delete", "Remove", "ManageUser", new { id = item.Id, @class = "btn btn-danger" })
+                    </td>
+                </tr>
+                }
+            </tbody>
+
+        </table>
+
+</div>
+
