@@ -9,8 +9,11 @@
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <!-- or -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 
 
@@ -201,11 +204,11 @@
 
 	<div class="header-footer">
 		<div class="headr">
-			<div class="log" style="padding-left:200px;padding-top:15px;padding-bottom:10px;">
+			<div class="log">
 				<img  alt="logo of AAu" src="http://www.aau.edu.et/wp-content/uploads/2016/05/logo-Copy-300x300.png"
-					 class="img-circle" style="width:100px; height:100px;"  />
+					 class="img-circle img-responsive"  />
 			</div>
-			<div class="logtext">
+			<div class="logtext row">
 				<h2>Addis Ababa University</h2>
 				<h2>College Of Health Science</h2>
 				<h2>School Of Medicine</h2>
@@ -260,6 +263,8 @@
 		}
 
 	}
+
+
 	$(document).ready(function () {
 		htmlbodyHeightUpdate()
 		$( window ).resize(function() {
@@ -270,37 +275,32 @@
 			htmlbodyHeightUpdate()
 		});
 
-
-
-	});
-
-	jQuery(document).ready(function($) {
+	    //alsd
 
 		$('#myCarousel').carousel({
-				interval: 5000
+		    interval: 5000
 		});
 
-		//Handles the carousel thumbnails
+	    //Handles the carousel thumbnails
 		$('[id^=carousel-selector-]').click(function () {
-		var id_selector = $(this).attr("id");
-		try {
-			var id = /-(\d+)$/.exec(id_selector)[1];
-			console.log(id_selector, id);
-			jQuery('#myCarousel').carousel(parseInt(id));
-		} catch (e) {
-			console.log('Regex failed!', e);
-		}
-	});
-		// When the carousel slides, auto update the text
+		    var id_selector = $(this).attr("id");
+		    try {
+		        var id = /-(\d+)$/.exec(id_selector)[1];
+		        console.log(id_selector, id);
+		        jQuery('#myCarousel').carousel(parseInt(id));
+		    } catch (e) {
+		        console.log('Regex failed!', e);
+		    }
+		});
+	    // When the carousel slides, auto update the text
 		$('#myCarousel').on('slid.bs.carousel', function (e) {
-				 var id = $('.item.active').data('slide-number');
-				$('#carousel-text').html($('#slide-content-'+id).html());
+		    var id = $('.item.active').data('slide-number');
+		    $('#carousel-text').html($('#slide-content-' + id).html());
 		});
 
 
-});
-
-
+	});
+	
 
 	</script>
 

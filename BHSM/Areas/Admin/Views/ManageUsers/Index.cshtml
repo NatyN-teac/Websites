@@ -18,7 +18,8 @@
             <thead>
                 <tr>
                     <th>User Name</th>
-                    <th>Delete</th>
+                    <th>Email</th>
+                    
                 </tr>
             </thead>
 
@@ -28,11 +29,12 @@
 
                 <tr>
                     <td>
-                        @Html.ActionLink(@item.Name, "Edit", "ManageUsers", new {id = item.Id })
+                        @item.Name
 
                     </td>
+
                     <td>
-                        @Html.ActionLink("Delete", "Remove", "ManageUser", new { id = item.Id, @class = "btn btn-danger" })
+                      @item.Email
                     </td>
                 </tr>
                 }

@@ -875,7 +875,7 @@ var Microsoft;
                     ApplicationInsights._InternalLogging.throwInternalUserActionable(ApplicationInsights.LoggingSeverity.WARNING, new ApplicationInsights._InternalLogMessage(ApplicationInsights._InternalMessageId.USRACT_CircularReferenceDetected, "Circular reference detected while serializing object", { name: name }));
                     return output;
                 }
-                if (!source.aiDataContract) {
+                if (!source.aiDatacontra containerct) {
                     if (name === "measurements") {
                         output = Serializer._serializeStringMap(source, "number", name);
                     }
@@ -901,11 +901,11 @@ var Microsoft;
                     return output;
                 }
                 source[circularReferenceCheck] = true;
-                for (var field in source.aiDataContract) {
-                    var contract = source.aiDataContract[field];
-                    var isRequired = (typeof contract === "function") ? (contract() & FieldType.Required) : (contract & FieldType.Required);
-                    var isHidden = (typeof contract === "function") ? (contract() & FieldType.Hidden) : (contract & FieldType.Hidden);
-                    var isArray = contract & FieldType.Array;
+                for (var field in source.aiDatacontra containerct) {
+                    var contra containerct = source.aiDatacontra containerct[field];
+                    var isRequired = (typeof contra containerct === "function") ? (contra containerct() & FieldType.Required) : (contra containerct & FieldType.Required);
+                    var isHidden = (typeof contra containerct === "function") ? (contra containerct() & FieldType.Hidden) : (contra containerct & FieldType.Hidden);
+                    var isArray = contra containerct & FieldType.Array;
                     var isPresent = source[field] !== undefined;
                     var isObject = typeof source[field] === "object" && source[field] !== null;
                     if (isRequired && !isPresent && !isArray) {
@@ -938,7 +938,7 @@ var Microsoft;
                 var output = undefined;
                 if (!!sources) {
                     if (!ApplicationInsights.Util.isArray(sources)) {
-                        ApplicationInsights._InternalLogging.throwInternalUserActionable(ApplicationInsights.LoggingSeverity.CRITICAL, new ApplicationInsights._InternalLogMessage(ApplicationInsights._InternalMessageId.USRACT_ItemNotInArray, "This field was specified as an array in the contract but the item is not an array.\r\n", { name: name }));
+                        ApplicationInsights._InternalLogging.throwInternalUserActionable(ApplicationInsights.LoggingSeverity.CRITICAL, new ApplicationInsights._InternalLogMessage(ApplicationInsights._InternalMessageId.USRACT_ItemNotInArray, "This field was specified as an array in the contra containerct but the item is not an array.\r\n", { name: name }));
                     }
                     else {
                         output = [];
@@ -1031,8 +1031,8 @@ var Microsoft;
         Telemetry.Envelope = Envelope;
     })(Telemetry = Microsoft.Telemetry || (Microsoft.Telemetry = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../../Contracts/Generated/Envelope.ts" />
-/// <reference path="../../Contracts/Generated/Base.ts" />
+/// <reference path="../../contra containercts/Generated/Envelope.ts" />
+/// <reference path="../../contra containercts/Generated/Base.ts" />
 /// <reference path="../../Util.ts"/>
 var __extends = (this && this.__extends) || function (d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
@@ -1057,7 +1057,7 @@ var Microsoft;
                         this.name = name;
                         this.data = data;
                         this.time = ApplicationInsights.Util.toISOStringForIE8(new Date());
-                        this.aiDataContract = {
+                        this.aiDatacontra containerct = {
                             time: ApplicationInsights.FieldType.Required,
                             iKey: ApplicationInsights.FieldType.Required,
                             name: ApplicationInsights.FieldType.Required,
@@ -1075,7 +1075,7 @@ var Microsoft;
         })(Telemetry = ApplicationInsights.Telemetry || (ApplicationInsights.Telemetry = {}));
     })(ApplicationInsights = Microsoft.ApplicationInsights || (Microsoft.ApplicationInsights = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../../Contracts/Generated/Base.ts"/>
+/// <reference path="../../contra containercts/Generated/Base.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -1089,7 +1089,7 @@ var Microsoft;
                     __extends(Base, _super);
                     function Base() {
                         _super.apply(this, arguments);
-                        this.aiDataContract = {};
+                        this.aiDatacontra containerct = {};
                     }
                     return Base;
                 })(Microsoft.Telemetry.Base);
@@ -1327,7 +1327,7 @@ var AI;
     var SessionState = AI.SessionState;
 })(AI || (AI = {}));
 /// <reference path="../util.ts" />
-/// <reference path="../Contracts/Generated/SessionState.ts"/>
+/// <reference path="../contra containercts/Generated/SessionState.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -1623,7 +1623,7 @@ var Microsoft;
 /// <reference path="serializer.ts" />
 /// <reference path="Telemetry/Common/Envelope.ts"/>
 /// <reference path="Telemetry/Common/Base.ts" />
-/// <reference path="Contracts/Generated/ContextTagKeys.ts"/>
+/// <reference path="contra containercts/Generated/ContextTagKeys.ts"/>
 /// <reference path="Context/Application.ts"/>
 /// <reference path="Context/Device.ts"/>
 /// <reference path="Context/Internal.ts"/>
@@ -1947,7 +1947,7 @@ var Microsoft;
         })(Telemetry = ApplicationInsights.Telemetry || (ApplicationInsights.Telemetry = {}));
     })(ApplicationInsights = Microsoft.ApplicationInsights || (Microsoft.ApplicationInsights = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../Contracts/Generated/MessageData.ts" />
+/// <reference path="../contra containercts/Generated/MessageData.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
 var Microsoft;
 (function (Microsoft) {
@@ -1960,7 +1960,7 @@ var Microsoft;
                 __extends(Trace, _super);
                 function Trace(message, properties) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         message: ApplicationInsights.FieldType.Required,
                         severityLevel: ApplicationInsights.FieldType.Default,
@@ -1995,7 +1995,7 @@ var AI;
     })(Microsoft.Telemetry.Domain);
     AI.EventData = EventData;
 })(AI || (AI = {}));
-/// <reference path="../Contracts/Generated/EventData.ts" />
+/// <reference path="../contra containercts/Generated/EventData.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
 var Microsoft;
 (function (Microsoft) {
@@ -2008,7 +2008,7 @@ var Microsoft;
                 __extends(Event, _super);
                 function Event(name, properties, measurements) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         name: ApplicationInsights.FieldType.Required,
                         properties: ApplicationInsights.FieldType.Default,
@@ -2067,8 +2067,8 @@ var AI;
     })();
     AI.StackFrame = StackFrame;
 })(AI || (AI = {}));
-/// <reference path="../Contracts/Generated/ExceptionData.ts" />
-/// <reference path="../Contracts/Generated/StackFrame.ts" />
+/// <reference path="../contra containercts/Generated/ExceptionData.ts" />
+/// <reference path="../contra containercts/Generated/StackFrame.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
 var Microsoft;
 (function (Microsoft) {
@@ -2081,7 +2081,7 @@ var Microsoft;
                 __extends(Exception, _super);
                 function Exception(exception, handledAt, properties, measurements) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         handledAt: ApplicationInsights.FieldType.Required,
                         exceptions: ApplicationInsights.FieldType.Required,
@@ -2125,7 +2125,7 @@ var Microsoft;
                 __extends(_ExceptionDetails, _super);
                 function _ExceptionDetails(exception) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         id: ApplicationInsights.FieldType.Default,
                         outerId: ApplicationInsights.FieldType.Default,
                         typeName: ApplicationInsights.FieldType.Required,
@@ -2188,7 +2188,7 @@ var Microsoft;
                 function _StackFrame(frame, level) {
                     _super.call(this);
                     this.sizeInBytes = 0;
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         level: ApplicationInsights.FieldType.Required,
                         method: ApplicationInsights.FieldType.Required,
                         assembly: ApplicationInsights.FieldType.Default,
@@ -2256,7 +2256,7 @@ var AI;
     })();
     AI.DataPoint = DataPoint;
 })(AI || (AI = {}));
-/// <reference path="../../Contracts/Generated/DataPoint.ts"/>
+/// <reference path="../../contra containercts/Generated/DataPoint.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -2270,7 +2270,7 @@ var Microsoft;
                     __extends(DataPoint, _super);
                     function DataPoint() {
                         _super.apply(this, arguments);
-                        this.aiDataContract = {
+                        this.aiDatacontra containerct = {
                             name: ApplicationInsights.FieldType.Required,
                             kind: ApplicationInsights.FieldType.Default,
                             value: ApplicationInsights.FieldType.Required,
@@ -2287,7 +2287,7 @@ var Microsoft;
         })(Telemetry = ApplicationInsights.Telemetry || (ApplicationInsights.Telemetry = {}));
     })(ApplicationInsights = Microsoft.ApplicationInsights || (Microsoft.ApplicationInsights = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../Contracts/Generated/MetricData.ts" />
+/// <reference path="../contra containercts/Generated/MetricData.ts" />
 /// <reference path="./Common/DataSanitizer.ts" />
 /// <reference path="./Common/DataPoint.ts" />
 var Microsoft;
@@ -2301,7 +2301,7 @@ var Microsoft;
                 __extends(Metric, _super);
                 function Metric(name, value, count, min, max, properties) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         metrics: ApplicationInsights.FieldType.Required,
                         properties: ApplicationInsights.FieldType.Default
@@ -2339,7 +2339,7 @@ var AI;
     })(AI.EventData);
     AI.PageViewData = PageViewData;
 })(AI || (AI = {}));
-/// <reference path="../Contracts/Generated/PageViewData.ts" />
+/// <reference path="../contra containercts/Generated/PageViewData.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
 var Microsoft;
 (function (Microsoft) {
@@ -2352,7 +2352,7 @@ var Microsoft;
                 __extends(PageView, _super);
                 function PageView(name, url, durationMs, properties, measurements) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         name: ApplicationInsights.FieldType.Default,
                         url: ApplicationInsights.FieldType.Default,
@@ -2392,7 +2392,7 @@ var AI;
     })(AI.PageViewData);
     AI.PageViewPerfData = PageViewPerfData;
 })(AI || (AI = {}));
-/// <reference path="../Contracts/Generated/PageViewPerfData.ts"/>
+/// <reference path="../contra containercts/Generated/PageViewPerfData.ts"/>
 /// <reference path="./Common/DataSanitizer.ts"/>
 /// <reference path="../Util.ts"/>
 var Microsoft;
@@ -2406,7 +2406,7 @@ var Microsoft;
                 __extends(PageViewPerformance, _super);
                 function PageViewPerformance(name, url, unused, properties, measurements) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         ver: ApplicationInsights.FieldType.Required,
                         name: ApplicationInsights.FieldType.Default,
                         url: ApplicationInsights.FieldType.Default,
@@ -2497,7 +2497,7 @@ var Microsoft;
 /// <reference path="telemetry/pageview.ts" />
 /// <reference path="telemetry/pageviewperformance.ts" />
 /// <reference path="./Util.ts"/>
-/// <reference path="./Contracts/Generated/SessionState.ts"/>
+/// <reference path="./contra containercts/Generated/SessionState.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -2733,7 +2733,7 @@ var Microsoft;
         Telemetry.Data = Data;
     })(Telemetry = Microsoft.Telemetry || (Microsoft.Telemetry = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../../Contracts/Generated/Data.ts"/>
+/// <reference path="../../contra containercts/Generated/Data.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -2747,7 +2747,7 @@ var Microsoft;
                     __extends(Data, _super);
                     function Data(type, data) {
                         _super.call(this);
-                        this.aiDataContract = {
+                        this.aiDatacontra containerct = {
                             baseType: ApplicationInsights.FieldType.Required,
                             baseData: ApplicationInsights.FieldType.Required
                         };
@@ -2761,7 +2761,7 @@ var Microsoft;
         })(Telemetry = ApplicationInsights.Telemetry || (ApplicationInsights.Telemetry = {}));
     })(ApplicationInsights = Microsoft.ApplicationInsights || (Microsoft.ApplicationInsights = {}));
 })(Microsoft || (Microsoft = {}));
-/// <reference path="../Contracts/Generated/PageViewData.ts" />
+/// <reference path="../contra containercts/Generated/PageViewData.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
 var Microsoft;
 (function (Microsoft) {
@@ -2974,9 +2974,9 @@ var AI;
     })(Microsoft.Telemetry.Domain);
     AI.RemoteDependencyData = RemoteDependencyData;
 })(AI || (AI = {}));
-/// <reference path="../Contracts/Generated/PageViewData.ts" />
+/// <reference path="../contra containercts/Generated/PageViewData.ts" />
 /// <reference path="./Common/DataSanitizer.ts"/>
-/// <reference path="../Contracts/Generated/RemoteDependencyData.ts"/>
+/// <reference path="../contra containercts/Generated/RemoteDependencyData.ts"/>
 var Microsoft;
 (function (Microsoft) {
     var ApplicationInsights;
@@ -2988,7 +2988,7 @@ var Microsoft;
                 __extends(RemoteDependencyData, _super);
                 function RemoteDependencyData(id, name, commandName, value, success, resultCode) {
                     _super.call(this);
-                    this.aiDataContract = {
+                    this.aiDatacontra containerct = {
                         id: ApplicationInsights.FieldType.Required,
                         ver: ApplicationInsights.FieldType.Required,
                         name: ApplicationInsights.FieldType.Default,
@@ -3027,7 +3027,7 @@ var Microsoft;
 /// <reference path="telemetrycontext.ts" />
 /// <reference path="./Telemetry/Common/Data.ts"/>
 /// <reference path="./Util.ts"/>
-/// <reference path="./Contracts/Generated/SessionState.ts"/>
+/// <reference path="./contra containercts/Generated/SessionState.ts"/>
 /// <reference path="./Telemetry/PageViewManager.ts"/>
 /// <reference path="./Telemetry/PageVisitTimeManager.ts"/>
 /// <reference path="./Telemetry/RemoteDependencyData.ts"/>

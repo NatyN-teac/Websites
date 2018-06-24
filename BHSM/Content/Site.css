@@ -28,6 +28,16 @@ textarea {
 
 
 
+.carousel-control .icon-prev,
+ .carousel-control .icon-next, 
+ .carousel-control .glyphicon-chevron-left, 
+ .carousel-control .glyphicon-chevron-right {
+  
+    left: 0%;
+    
+}
+
+
 /*Only for overrriding the bootstrap css*/
 .navbar{
     border-bottom:1px solid rgb(11, 29, 52);
@@ -144,14 +154,19 @@ blockquote {
 .headr{
     background-color:#1C4882;
     
-    height: 30vh;
+    height: 33vh;
     margin-top: -20px;
     margin-bottom:30px;
     position:relative;
     z-index:-1;
    
 
+
 }
+.headr .log{
+padding-left:200px;padding-top:15px;padding-bottom:10px;
+}
+
 .headr .logtext{
     position:absolute;
     top:31px;
@@ -162,6 +177,39 @@ blockquote {
     color:#cccaca;
     font-size:16px;
     text-align:left;
+}
+.headr .log img{
+width:100px; height:100px;
+}
+
+@media screen and (max-width:756px){
+.bodypart{
+    width:auto;
+   
+}
+
+.headr .log{
+padding-left:10px;
+padding-top:10px;
+padding-bottom:5px;
+}
+
+.headr .log img{
+width:70px; height:70px;
+}
+
+.headr .logtext{
+    position:absolute;
+    top:20px;
+    left:120px;
+
+}
+
+.headr .logtext h2{
+   
+    font-size:12px;
+   
+}
 }
 
 
