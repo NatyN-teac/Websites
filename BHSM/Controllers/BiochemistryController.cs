@@ -29,5 +29,12 @@ namespace BHSM.Controllers
         {
             return View();
         }
+
+        public ActionResult staffDetail() 
+        {
+
+
+            return View();
+        }
     }
 }

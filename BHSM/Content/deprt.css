@@ -127,10 +127,21 @@ color: #0B1D34;
 
 }
 
+
 .body-body p{
    text-align:justify;
    padding:20px;
 }
+.body-body .vision_stm{
+ list-style:square;
+
+}
+
+.body-body .vision_stm li{
+padding:2px 3px;
+
+}
+
 .vision {
     margin-top:50px;
     margin-bottom:20px;

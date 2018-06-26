@@ -32,6 +32,7 @@ namespace BHSM
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
+                      "~/Content/profile.css",
                       "~/Content/site.css",
                       "~/Content/slider.css",
                        "~/Content/indexBodyStyle.css",

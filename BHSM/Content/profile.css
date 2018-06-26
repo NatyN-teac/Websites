@@ -1,0 +1,92 @@
+﻿.whole_container{
+ position:relative;
+ 
+
+}
+.whole_container > .prof_pic{
+  height:30vh;
+  background-image: linear-gradient(rgba(4, 21, 43, 0.28),rgba(0, 0, 0, 0.34)),url(../images/biochem.jpg);
+  background-size:cover;
+  background-position:center;
+  margin-top:-125px;
+  
+
+ 
+}
+
+.profilos{
+margin-top:-105px;
+}
+
+.fullView{
+margin-left:-10px;
+width:100%;
+height:auto;
+box-shadow: #bdbdbd 2px 4px 9px;
+margin-bottom:30px;
+background-color:#fff;
+}
+.fullView img{
+width:100%;
+
+
+
+}
+.personnel_prof{
+  width:100%;
+
+}
+.personnel_prof h3{
+ text-transform:uppercase;
+ color:gray;
+ font-size:15px;
+ padding:3px;
+}
+.personnel_prof p{
+color:gray;
+padding:5px;
+text-align:left;
+}
+.personnel_prof a{
+padding:10px;
+
+}
+.personnel_prof i{
+padding:10px;
+
+}
+
+.body_per_one{
+margin-top:105px;  
+background-color:#fff; 
+padding-bottom:40px;
+
+height:auto;  
+}
+.body_per_one .per_one_det{
+margin-top:50px;
+}
+.body_per_one .Bithaods{
+margin-top:50px;
+}
+.body_per_one .Bithaods p{
+margin-top:20px;
+}
+
+.Bithaods p{
+font-family: 'Open Sans', sans-serif;
+}
+
+.ma_pro{
+width:100%;
+padding:8px;
+
+}
+.ma_pro > p{
+ text-align:center;
+ color:#6b1313;
+ font-weight:bold;
+ font-size:19px;
+ 
+}
+
