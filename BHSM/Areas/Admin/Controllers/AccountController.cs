@@ -18,15 +18,18 @@ namespace BHSM.Areas.Admin.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext _context;
 
         public AccountController()
         {
+            _context = new ApplicationDbContext();
         }
 
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
             SignInManager = signInManager;
+           
         }
 
         public ApplicationSignInManager SignInManager
@@ -62,6 +65,7 @@ namespace BHSM.Areas.Admin.Controllers
             return View();
         }
 
+      
         //
         // POST: /Account/Login
         [HttpPost]
@@ -163,9 +167,9 @@ namespace BHSM.Areas.Admin.Controllers
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
-                    // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-                    // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                    // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                     string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                     var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                     await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
                     return RedirectToAction("Index", "ManageUsers");
                 }
@@ -197,6 +201,42 @@ namespace BHSM.Areas.Admin.Controllers
             return View();
         }
 
+        //edit User
+
+        //public ActionResult EditUser(string id) {
+
+        //    var updateUser = _context.Users.FirstOrDefault(u => u.Id == id);
+
+        //    var viewModel = new RegisterViewModel
+        //    {
+        //        Name = updateUser.Name,
+        //        Email = updateUser.Email,
+        //        Password = updateUser.PasswordHash
+                
+        //    };
+
+        //    return View("Register",viewModel);
+
+        //}
+
+
+        //remove
+
+        public ActionResult Remove(string id)
+        {
+            var user = _context.Users.FirstOrDefault(a =>a.Id == id);
+            if (user == null)
+            {
+                return Content("there  is no record");
+            }
+            else
+            {
+                return Content("there is record");
+            }
+
+
+        }
+
         //
         // POST: /Account/ForgotPassword
         [HttpPost]
@@ -206,7 +246,7 @@ namespace BHSM.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindByNameAsync(model.Email);
+                var user = await UserManager.FindByEmailAsync(model.Email);
                 if (user == null || !(await UserManager.IsEmailConfirmedAsync(user.Id)))
                 {
                     // Don't reveal that the user does not exist or is not confirmed
@@ -215,10 +255,10 @@ namespace BHSM.Areas.Admin.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
+                 await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form
@@ -252,7 +292,7 @@ namespace BHSM.Areas.Admin.Controllers
             {
                 return View(model);
             }
-            var user = await UserManager.FindByNameAsync(model.Email);
+            var user = await UserManager.FindByEmailAsync(model.Email);
             if (user == null)
             {
                 // Don't reveal that the user does not exist
@@ -274,6 +314,23 @@ namespace BHSM.Areas.Admin.Controllers
         {
             return View();
         }
+
+        //this is to edit
+        //[HttpGet]
+        //public ActionResult EditUser(string id)
+        //{
+        //    var user = AsyncManager UserManager.FindById(id);
+        //    if(user == null) {
+        //        return Content("not found");
+        //    }
+        //    else {
+
+        //        return Content(user.Email);
+        //    }
+          
+        //}
+
+
 
         //
         // POST: /Account/ExternalLogin

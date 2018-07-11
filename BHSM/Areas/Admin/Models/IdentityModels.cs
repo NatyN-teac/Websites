@@ -38,6 +38,7 @@ namespace  BHSM.Areas.Admin.Models
         public DbSet<AnswerTable> AnswerTables { get; set; }
         public DbSet<ChsRole> ChsRoles { get; set; }
         public DbSet<DepartmentList> DepartmentLists { get; set; }
+      
 
 
         public ApplicationDbContext()

@@ -9,13 +9,14 @@
         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
             <div class="main-holder">
                 <div class="sub-main-holder">
-                    <span class="handle-fix" id="high_dep_show"  onClick="onSelectedDepartment(event);" >Department Highlights <i class="caret"></i></span>
+                    <span class="handle-fix" data-dep-menu >Department Highlights <i class="caret"></i></span>
 
 
 
 
-                    <img src="~/images/img/slide1.jpg" alt="checkup" />
-                    
+                   @* <img src="~/images/img/slide1.jpg" alt="checkup" />*@
+
+                    <img src="~/images/bioC.jpg" />
                     
 
                 </div>
@@ -414,6 +415,9 @@
             //    $(".handle-fix").append("<ul><li>hello</li></ul>");
 
             //});
+            $('[data-dep-menu]').hover(function () {
+                $('[data-dep-menu]').toggleClass('open');
+            });
 
             
            

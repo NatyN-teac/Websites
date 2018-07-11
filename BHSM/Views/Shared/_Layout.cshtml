@@ -56,7 +56,7 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About</a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("History", "History", "AboutTab")</li>
                                 <li>@Html.ActionLink("School At Glance", "SchoolAtGlance", "AboutTab")</li>
@@ -92,35 +92,63 @@
                             </ul>
                         </li>
 
+
+                     
+
                         <!--the third navbar list-->
 
 
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department</a>
-                            <ul class="dropdown-menu">
-                                <li>@Html.ActionLink("Anatomy", "Home", "Anathomy")</li>
-                                <li>@Html.ActionLink("Anesthesia", "Home", "Anesthesia")</li>
-                                <li>@Html.ActionLink("Anesthesiology", "Home", "Anesthesiology")</li>
-                                <li>@Html.ActionLink("Biochemistry", "Home", "Biochemistry")</li>
-                                <li>@Html.ActionLink("Dentistry", "Home", "Dentistry")</li>
-                                <li>@Html.ActionLink("Dermatovenerology", "Home", "Dermatovenerolgy")</li>
-                                <li>@Html.ActionLink("Emergency Medicine", "Home", "EmergencyMedicine")</li>
-                                <li>@Html.ActionLink("ENT", "Home", "ENT")</li>
-                                <li>@Html.ActionLink("Family Medicine", "Home", "FamilyMedicine")</li>
-                                <li>@Html.ActionLink("Internal Medicine", "internalHome", "InternalMedicine")</li>
-                                <li>@Html.ActionLink("Microbiology", "Home", "Microbiology")</li>
-                                <li>@Html.ActionLink("Neurology", "Home", "Neurology")</li>
-                                <li>@Html.ActionLink("Obstetrics & Gynecology", "Home", "ObstetricsGyne")</li>
-                                <li>@Html.ActionLink("Oncology", "Home", "Oncology")</li>
-                                <li>@Html.ActionLink("Ophthalmology", "Home", "Ophtalmology")</li>
-                                <li>@Html.ActionLink("Orthopedics", "Home", "Orthopedics")</li>
-                                <li>@Html.ActionLink("Pathology", "Home", "Pathology")</li>
-                                <li>@Html.ActionLink("Pediatrics & Child Health", "Home", "Pediatric")</li>
-                                <li>@Html.ActionLink("Physiology", "Home", "Physiology")</li>
-                                <li>@Html.ActionLink("Psychiatry", "Home", "Psychiatry")</li>
-                                <li>@Html.ActionLink("Radiography", "Home", "Radiography")</li>
-                                <li>@Html.ActionLink("Radiology", "Home", "Radiology")</li>
-                                <li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Department </a>
+                            <ul class="dropdown-menu multi-column columns-3">
+
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>@Html.ActionLink("Anatomy", "Home", "Anathomy")</li>
+                                            <li>@Html.ActionLink("Anesthesia", "Home", "Anesthesia")</li>
+                                            <li>@Html.ActionLink("Anesthesiology", "Home", "Anesthesiology")</li>
+                                            <li>@Html.ActionLink("Biochemistry", "Home", "Biochemistry")</li>
+                                            <li>@Html.ActionLink("Dentistry", "Home", "Dentistry")</li>
+                                            <li>@Html.ActionLink("Dermatovenerology", "Home", "Dermatovenerolgy")</li>
+
+                                            <li>@Html.ActionLink("Emergency Medicine", "Home", "EmergencyMedicine")</li>
+                                            <li>@Html.ActionLink("ENT", "Home", "ENT")</li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>@Html.ActionLink("Family Medicine", "Home", "FamilyMedicine")</li>
+                                            <li>@Html.ActionLink("Internal Medicine", "internalHome", "InternalMedicine")</li>
+                                            <li>@Html.ActionLink("Microbiology", "Home", "Microbiology")</li>
+                                            <li>@Html.ActionLink("Neurology", "Home", "Neurology")</li>
+                                            <li>@Html.ActionLink("Obstetrics & Gynecology", "Home", "ObstetricsGyne")</li>
+                                            <li>@Html.ActionLink("Oncology", "Home", "Oncology")</li>
+                                            <li>@Html.ActionLink("Ophthalmology", "Home", "Ophtalmology")</li>
+                                            <li>@Html.ActionLink("Orthopedics", "Home", "Orthopedics")</li>
+                                            
+                                         
+
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-sm-4">
+                                        <ul class="multi-column-dropdown">
+                                            <li>@Html.ActionLink("Pathology", "Home", "Pathology")</li>
+                                            <li>@Html.ActionLink("Pediatrics & Child Health", "Home", "Pediatric")</li>
+                                            <li>@Html.ActionLink("Physiology", "Home", "Physiology")</li>
+                                            <li>@Html.ActionLink("Psychiatry", "Home", "Psychiatry")</li>
+                                            <li>@Html.ActionLink("Radiography", "Home", "Radiography")</li>
+                                            <li>@Html.ActionLink("Radiology", "Home", "Radiology")</li>
+                                            <li>@Html.ActionLink("Surgery", "surgeryHome", "Surgery")</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                           
 
 
 
@@ -190,7 +218,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Allied Hospital </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Affiliate Hospital </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Zewditu Memorial Hospital", "zewditu", "AlliedHospitals")</li>
                                 <li>@Html.ActionLink("Minilik II Hospital", "menilik", "AlliedHospitals")</li>
@@ -237,7 +265,7 @@
 
 
 
-       @Html.Partial("_slider")
+       @Html.Partial("Slide")
 
 
 
@@ -266,8 +294,10 @@
                    $('#media').carousel({
                        pause: true,
                       interval: false,
-                  });
+                   });
 
+
+                  
             });
 
             //$(document).ready(function () {

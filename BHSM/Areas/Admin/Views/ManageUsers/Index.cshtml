@@ -14,11 +14,12 @@
        
 
         <br />
+        <br />  
         <table class="table table-bordered table-hover">
             <thead>
                 <tr>
                     <th>User Name</th>
-                    <th>Email</th>
+                    <th>Delete</th>
                     
                 </tr>
             </thead>
@@ -29,12 +30,13 @@
 
                 <tr>
                     <td>
-                        @item.Name
+                        <p>@item.Name</p>
+                       
 
                     </td>
 
                     <td>
-                      @item.Email
+                      @Html.ActionLink("Delete","Remove","Account",new { id = item.Id} , null)
                     </td>
                 </tr>
                 }

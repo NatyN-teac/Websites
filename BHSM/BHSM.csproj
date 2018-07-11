@@ -402,6 +402,7 @@
     <Content Include="Areas\Admin\Views\AdminHome\LandingPage.cshtml" />
     <Content Include="Areas\Admin\Views\ManageUsers\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ManageUsers\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\EditUser.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -633,6 +634,7 @@
     <Content Include="Views\Dentistry\staff.cshtml" />
     <Content Include="Views\Dentistry\Unit.cshtml" />
     <Content Include="Views\Biochemistry\staffDetail.cshtml" />
+    <Content Include="Views\Shared\Slide.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />

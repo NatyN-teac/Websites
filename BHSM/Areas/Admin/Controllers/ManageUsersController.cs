@@ -29,9 +29,27 @@ namespace BHSM.Areas.Admin.Controllers
             return View();
 
         }
+
+        [HttpGet]
         public ActionResult Edit(string id) {
+
+            var result = _context.Users.Where(u => u.Id == id).FirstOrDefault();
+            //var result = _context.Users.ToList();
+            if(result != null) {
+                Console.WriteLine(result);
+
+                var data = new RegisterViewModel
+                {
+                    Email = result.Email,
+                    Name = "hi man"
+                };
+
+                return View(data);
+            }
+            else {
+                return Content("not found");
+            }
            
-            return View();
 
         }
     }
