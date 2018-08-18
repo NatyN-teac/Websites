@@ -1,0 +1,82 @@
+﻿@model BHSM.Areas.Admin.ViewModel.NewDepartmentViewModel
+@{
+    ViewBag.Title = "Create Department";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+}
+
+
+
+
+<div class="row">
+    <h2>Create Department</h2>
+    <hr />
+   
+        <div class="col-md-2 col-lg-2"></div>
+        <div class="col-md-8 col-lg-8">
+
+            <form method="post" enctype="multipart/form-data" onsubmit="return AjaxPost(this)">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+
+                <label>Department Name</label> <br />
+
+                <input type="text" name="DepartmentName" id="DepartmentName" class="form-control" placeholder="Enter Department Name" required /> <br />
+
+                <label>Department Moto</label> <br />
+                <input type="text" name="DepatmentMoto" id="DepatmentMoto" class="form-control" placeholder="Enter Department Moto" required /><br />
+
+                <label>Department Description</label> <br />
+                <textarea name="DepartmentDescription" id="DepartmentDescription" class="form-control" placeholder="Department Summary Description" required></textarea><br />
+
+                <label>Department Image</label> <br />
+
+                <input  name="DepartmentImage" id="DepartmentImage" class="form-control-file" placeholder="Select Image" type="file"  required /><br />
+                <br />
+                <button class="btn btn-danger" type="submit">Create Department</button>
+
+
+            </form>
+
+        </div>
+        <div class="col-md-2 col-lg-2"></div>
+   
+   
+
+
+</div>
+
+
+    @section Scripts{
+      @Scripts.Render("~/bundles/jqueryval")  
+      
+    <script>
+        function AjaxPost(formData) {
+            var ajaxConfig = {
+                type: "post",
+                url: "/Department/CreateDepar",
+                data: new FormData(formData),
+                success: function (result) {
+
+                    console.log(result);
+                   
+                },
+                fail: function (result) {
+                    console.log(result);
+                }
+            }
+            
+
+            if ($(formData).attr('enctype') == "multipart/form-data") {
+                ajaxConfig["contentType"] = false;
+                ajaxConfig["processData"] = false;
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+           
+    </script>
+
+    }
+    
+  
+

@@ -5,28 +5,25 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
-namespace BHSM.Areas.Admin.Models
+namespace BHSM.Areas.Admin.ViewModel
 {
-    public class Department
+
+    public class NewDepartmentViewModel
     {
-        public int Id { get; set; }
-
         [Required]
+        [Display(Name ="Department Name")]
         public string DepartmentName { get; set; }
-
 
 
         [Required]
         public string DepatmentMoto { get; set; }
 
-        
         [Required]
         public string DepartmentDescription { get; set; }
 
-        
+        [Required]
         public string DepartmentImageUrl { get; set; }
 
-        [NotMapped]
-        public HttpPostedFileBase DepartmentImage { get; set; }
+       
     }
 }

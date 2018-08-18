@@ -144,6 +144,7 @@ namespace BHSM.Areas.Admin.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            var dep = _context.Departments.ToList();
             return View();
         }
 

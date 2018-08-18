@@ -1,0 +1,149 @@
+﻿@model BHSM.Areas.Admin.ViewModel.StaffViewModel
+@{
+    ViewBag.Title = "NewStaff";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+}
+<div>
+    <h2>NewStaff</h2>
+
+    <div class="row">
+        <div class="col-md-2 col-lg-2"></div>
+
+        <div class="col-md-8 col-lg-8">
+
+            <form method="post" enctype="multipart/form-data" onsubmit="return sendData(this);">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary()
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>First Name</label> <br />
+                        <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name" required /> <br />
+
+                        <label>Middle Name</label> <br />
+                        <input type="text" name="SecondName" id="SecondName" class="form-control" placeholder="Enter Middle Name" required /> <br />
+
+                        <label>Last Name</label> <br />
+                        <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name" required /> <br />
+
+
+                        @Html.LabelFor(s => s.DepartmentId)
+                        @Html.DropDownListFor(m => m.DepartmentId, new SelectList(Model.Departments, "Id", "DepartmentName"), "Select Department", new { @class = "form-control" })
+
+                        <br />
+
+                        <label>Staff Image</label> <br />
+
+                        <input name="ProfileImage" id="ProfileImage" class="form-control-file" placeholder="Select Image" type="file" required /><br />
+                        <div>
+                            <label>Male</label>   @Html.RadioButton("Gender", "Male")
+                            <label>Female</label> @Html.RadioButton("Gender", "Female")
+                        </div>
+
+
+                       
+
+                    </div>
+                    <div class="col-md-6">
+                        <label>Nationality</label> <br />
+                        <input name="Nationality" id="Nationality" class="form-control" placeholder="Enter your Nationality" type="text" required />
+
+                        <label>Specialization</label> <br />
+                        <input name="Specialization" id="Specialization" class="form-control" placeholder="Enter your Specilization" type="text" required />
+
+                        <label>Academic Rank</label> <br />
+                        <input name="AcademicRank" id="AcademicRank" class="form-control" placeholder="Enter Your Academic Rank" type="text" required />
+
+                        <label>Status</label> <br />
+                        <input name="Status" id="Status" class="form-control" placeholder="Enter Your Status" type="text" required />
+
+                        <label>Personal Statement</label> <br />
+                        <textarea name="PersonalStatement" id="PersonalStatement" class="form-control" placeholder="Enter Your Personal Statement" required></textarea><br />
+                        
+                       
+
+
+
+                    </div>
+                </div>
+
+
+
+
+                <br />
+                <div class="col-md-offset-2">
+                    <button class="btn btn-danger" type="submit">Submit</button>
+                </div>
+
+
+                @*
+            <label>Profile Image</label> <br />
+            <input type="text" name="StaffImage" id="StaffImage" class="form-control" placeholder="Enter Department Moto" required /><br />
+
+
+            <label>Department Description</label> <br />
+            <textarea name="DepartmentDescription" id="DepartmentDescription" class="form-control" placeholder="Department Summary Description" required></textarea><br />
+                *@
+            </form>
+
+        </div>
+        <div class="col-md-2 col-lg-2"></div>
+    </div>
+</div>
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script>
+        function sendData(formData) {
+            var ajaxConfig = {
+                type: "post",
+                url: "/StaffProfile/Create",
+                data: new FormData(formData),
+                success: function (result) {
+
+                    console.log(result);
+
+                },
+                fail: function (result) {
+                    console.log(result);
+                }
+            }
+
+
+            if ($(formData).attr('enctype') == "multipart/form-data") {
+                ajaxConfig["contentType"] = false;
+                ajaxConfig["processData"] = false;
+            }
+            $.ajax(ajaxConfig);
+            return false;
+        }
+
+    </script>
+
+}
+
+
+
+@* @using(@Html.BeginForm("Create","StaffProfile",FormMethod.Post , new { enctype = "multipart/form-data",onSubmit="return sendData(this);"})){
+
+            @Html.LabelFor( s => s.FirstName)
+            @Html.TextBoxFor(s=>s.FirstName, new { @class="form-control",placeholder="Enter First Name"})
+            @Html.LabelFor(s=>s.SecondName)
+            @Html.TextBoxFor(s=>s.SecondName,new { @class = "form-control",placeholder="Enter Second Name" })
+
+            @Html.LabelFor(s =>s.LastName)
+            @Html.TextBoxFor(s => s.LastName,new { @class="form-control" ,placeholder="Enter Last Name" })
+
+
+            @Html.LabelFor(s => s.DepartmentImage)
+            @Html.TextBoxFor(s => s.DepartmentImage,new { @class="form-control ",type="file",id="DepartmentImage"})
+         <br />
+      <button class="btn btn-danger" > Submit</button >
+
+
+
+
+    } *@

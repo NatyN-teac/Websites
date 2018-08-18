@@ -215,12 +215,16 @@
     <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StaffProfileController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SuperController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\ChsRole.cs" />
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
     <Compile Include="Areas\Admin\Models\Department.cs" />
-    <Compile Include="Areas\Admin\Models\DepartmentList.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
+    <Compile Include="Areas\Admin\Models\StaffProfile.cs" />
+    <Compile Include="Areas\Admin\ViewModel\NewDepartmentViewModel.cs" />
+    <Compile Include="Areas\Admin\ViewModel\StaffViewModel.cs" />
     <Compile Include="Controllers\AboutTabController.cs" />
     <Compile Include="Controllers\AcademicsController.cs" />
     <Compile Include="Controllers\AlliedHospitalsController.cs" />
@@ -315,6 +319,54 @@
     <Compile Include="Migrations\201806191626094_AddForeignKeyToApplicationUser.Designer.cs">
       <DependentUpon>201806191626094_AddForeignKeyToApplicationUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807212115032_AddDepartmentTable.cs" />
+    <Compile Include="Migrations\201807212115032_AddDepartmentTable.Designer.cs">
+      <DependentUpon>201807212115032_AddDepartmentTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807212122228_updateModelOFDepartment.cs" />
+    <Compile Include="Migrations\201807212122228_updateModelOFDepartment.Designer.cs">
+      <DependentUpon>201807212122228_updateModelOFDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807221154593_RetryingtofixModel.cs" />
+    <Compile Include="Migrations\201807221154593_RetryingtofixModel.Designer.cs">
+      <DependentUpon>201807221154593_RetryingtofixModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807221532075_RetryingtofixModel1.cs" />
+    <Compile Include="Migrations\201807221532075_RetryingtofixModel1.Designer.cs">
+      <DependentUpon>201807221532075_RetryingtofixModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807281229249_PropertiesAddedToUserTable.cs" />
+    <Compile Include="Migrations\201807281229249_PropertiesAddedToUserTable.Designer.cs">
+      <DependentUpon>201807281229249_PropertiesAddedToUserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201807310243425_AddStaffProfileTable.cs" />
+    <Compile Include="Migrations\201807310243425_AddStaffProfileTable.Designer.cs">
+      <DependentUpon>201807310243425_AddStaffProfileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808021605066_isThereAnyPendingMigration.cs" />
+    <Compile Include="Migrations\201808021605066_isThereAnyPendingMigration.Designer.cs">
+      <DependentUpon>201808021605066_isThereAnyPendingMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808021612197_ImageBaseFile.cs" />
+    <Compile Include="Migrations\201808021612197_ImageBaseFile.Designer.cs">
+      <DependentUpon>201808021612197_ImageBaseFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808162148544_ChangingStaffTable.cs" />
+    <Compile Include="Migrations\201808162148544_ChangingStaffTable.Designer.cs">
+      <DependentUpon>201808162148544_ChangingStaffTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808162346291_LetMeSeeCahnge.cs" />
+    <Compile Include="Migrations\201808162346291_LetMeSeeCahnge.Designer.cs">
+      <DependentUpon>201808162346291_LetMeSeeCahnge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808172200531_AddPropertyToStaffProfileTable.cs" />
+    <Compile Include="Migrations\201808172200531_AddPropertyToStaffProfileTable.Designer.cs">
+      <DependentUpon>201808172200531_AddPropertyToStaffProfileTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808172328025_AddPropertyToStaffTable.cs" />
+    <Compile Include="Migrations\201808172328025_AddPropertyToStaffTable.Designer.cs">
+      <DependentUpon>201808172328025_AddPropertyToStaffTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -358,11 +410,6 @@
     <Content Include="Mvc.sitemap" />
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\Shared\_DepartmentOnly.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Enquery\Answer.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_footer.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_LoginPartial.cshtml" />
@@ -403,6 +450,12 @@
     <Content Include="Areas\Admin\Views\ManageUsers\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ManageUsers\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Account\EditUser.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\Department.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_Super.cshtml" />
+    <Content Include="Areas\Admin\Views\Super\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Super\Department.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\CreateDepartment.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffProfile\NewStaff.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -640,7 +693,9 @@
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\DepartmentList\" />
-    <Folder Include="images\" />
+    <Folder Include="images\DepartmentImage\" />
+    <Folder Include="images\Departmen\" />
+    <Folder Include="images\staff\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -695,6 +750,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806191626094_AddForeignKeyToApplicationUser.resx">
       <DependentUpon>201806191626094_AddForeignKeyToApplicationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807212115032_AddDepartmentTable.resx">
+      <DependentUpon>201807212115032_AddDepartmentTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807212122228_updateModelOFDepartment.resx">
+      <DependentUpon>201807212122228_updateModelOFDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807221154593_RetryingtofixModel.resx">
+      <DependentUpon>201807221154593_RetryingtofixModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807221532075_RetryingtofixModel1.resx">
+      <DependentUpon>201807221532075_RetryingtofixModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807281229249_PropertiesAddedToUserTable.resx">
+      <DependentUpon>201807281229249_PropertiesAddedToUserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807310243425_AddStaffProfileTable.resx">
+      <DependentUpon>201807310243425_AddStaffProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808021605066_isThereAnyPendingMigration.resx">
+      <DependentUpon>201808021605066_isThereAnyPendingMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808021612197_ImageBaseFile.resx">
+      <DependentUpon>201808021612197_ImageBaseFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808162148544_ChangingStaffTable.resx">
+      <DependentUpon>201808162148544_ChangingStaffTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808162346291_LetMeSeeCahnge.resx">
+      <DependentUpon>201808162346291_LetMeSeeCahnge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808172200531_AddPropertyToStaffProfileTable.resx">
+      <DependentUpon>201808172200531_AddPropertyToStaffProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808172328025_AddPropertyToStaffTable.resx">
+      <DependentUpon>201808172328025_AddPropertyToStaffTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

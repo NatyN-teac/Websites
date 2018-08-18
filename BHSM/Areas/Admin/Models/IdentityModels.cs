@@ -15,9 +15,12 @@ namespace  BHSM.Areas.Admin.Models
 
         [Required]
         public string Name { get; set; }
-        
-        public int? DepartmentListId { get; set; }
-        public DepartmentList DepartmentList { get; set; }
+
+        [Required]
+        public string DepartmentType { get; set; }
+
+
+
 
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
@@ -37,8 +40,10 @@ namespace  BHSM.Areas.Admin.Models
         public DbSet<EnqueryTable> EnqueryTables { get; set; }
         public DbSet<AnswerTable> AnswerTables { get; set; }
         public DbSet<ChsRole> ChsRoles { get; set; }
-        public DbSet<DepartmentList> DepartmentLists { get; set; }
-      
+
+        public DbSet<StaffProfile> StaffProfiles { get; set; }
+
+
 
 
         public ApplicationDbContext()

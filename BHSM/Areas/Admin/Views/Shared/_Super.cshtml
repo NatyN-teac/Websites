@@ -1,4 +1,5 @@
-﻿@using Microsoft.AspNet.Identity
+﻿
+@using Microsoft.AspNet.Identity
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,14 +15,14 @@
 
     <title>School Of Medicine,Admin Dashboard</title>
 
- 
 
-  
+
+
 
     <!-- Custom Fonts -->
 
     <link href="~/Areas/Admin/Content/font-awesome.min.css" rel="stylesheet" />
-   
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -70,8 +71,8 @@
                 </li>
                 <li class="dropdown">
 
-                @Html.Partial("_LoginPartial")   
-                
+                    @Html.Partial("_LoginPartial")
+
 
                 </li>
             </ul>
@@ -80,25 +81,25 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav" id="clickholder">
                     <li class="active">
-                        <a href="@Url.Action("Index","AdminHome")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                        <a href="@Url.Action("Index","Super")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Department","AdminHome")">Manage Department</a>
+                        <a href="@Url.Action("Department","Super")">Manage Department</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("newsAndEvents","AdminHome")"><i class="fa fa-newspaper-o"></i> News &amp; Events</a>
+                        <a href="@Url.Action("newsAndEvents","Super")"><i class="fa fa-newspaper-o"></i> News &amp; Events</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("AnswerEnquery","AdminHome")"><i class="fa fa-fw fa-question-circle"></i> Enquries</a>
+                        <a href="@Url.Action("AnswerEnquery","Super")"><i class="fa fa-fw fa-question-circle"></i> Enquries</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("DirectMessage","AdminHome")"><i class="fa fa-fw fa-envelope"></i> Direct Message</a>
+                        <a href="@Url.Action("DirectMessage","Super")"><i class="fa fa-fw fa-envelope"></i> Direct Message</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Blog","AdminHome")"><i class="fa fa-fw fa-desktop"></i> Blog</a>
+                        <a href="@Url.Action("Blog","Super")"><i class="fa fa-fw fa-desktop"></i> Blog</a>
                     </li>
                     <li>
-                        <a href="@Url.Action("Staff","AdminHome")"><i class="fa fa-fw fa-users"></i>Staff</a>
+                        <a href="@Url.Action("Staff","Super")"><i class="fa fa-fw fa-users"></i>Staff</a>
                     </li>
 
                     <li>
@@ -113,9 +114,9 @@
             @RenderBody()
             <hr />
 
-            
 
-               
+
+
 
 
 
@@ -126,18 +127,14 @@
         <!-- jQuery -->
 
 
-      
+
 
         @Scripts.Render("~/bundles/jquery")
         @Scripts.Render("~/bundles/jqueryval")
         @Scripts.Render("~/bundles/bootstrap")
         @RenderSection("scripts", required: false)
 
-        <script>
-            $(document).ready(function () {
-                console.log("hello world jquery to add css class");
-            });
-        </script>
+    
 
 </body>
 

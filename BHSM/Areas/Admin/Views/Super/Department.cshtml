@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Department";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+}
+
+<h2>Manage Department</h2>
+
+<br />
+@Html.ActionLink("Create New Department","CreateDepartment","Department",null, new { @class="btn btn-primary"})
+
+<br />
+
+
+
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+
+    <tbody>  
+        <tr>
+            <td>
+                <p>Name</p>
+            </td>
+            <td>
+               @Html.ActionLink("Delete","","")
+            </td>
+        </tr>
+      
+    </tbody>
+
+</table>
+
+
+
