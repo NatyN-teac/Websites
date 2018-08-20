@@ -18,12 +18,15 @@ namespace BHSM.Areas.Admin.ViewModel
         public HttpPostedFileBase ProfileImage { get; set; }
 
         [Required]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
+        [Display(Name ="Middle Name")]
         public string SecondName { get; set; }
 
         [Required]
+        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
         [Required]
@@ -46,10 +49,22 @@ namespace BHSM.Areas.Admin.ViewModel
         public string PersonalStatement { get; set; }
 
 
+        public string AdditionalResponsibility { get; set; }
+
+        public string EducationalBackground { get; set; }
+        public string WorkHistory { get; set; }
+        public string ContributionToScienceAndResearch { get; set; }
+
+        public string LinkdenLink { get; set; }
+        
+
+
         public int DepartmentId { get; set; }
 
         [Required]
         public string imageUrl { get; set; }
+
+        //staffEducationHistoryVM
 
 
         

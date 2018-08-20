@@ -35,16 +35,29 @@ namespace BHSM.Areas.Admin.Models
         [Required]
         public string Status { get; set; }
 
-        [Required]
+       [Required]
         public string Specialization { get; set; }
+
+       
+        public string AdditionalResponsibility { get; set; }
 
 
         [Required]
         public string PersonalStatement { get; set; }
 
+        public string EducationalBackground { get; set; }
+        public string WorkHistory { get; set; }
+        public string ContributionToScienceAndResearch { get; set; }
+
+        [Display(Name = "Web Link")]
+        public string LinkdenLink { get; set; }
 
 
+
+       
         public Department Department { get; set; }
+
+    
         public int DepartmentId { get; set; }
 
 

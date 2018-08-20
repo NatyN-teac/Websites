@@ -34,6 +34,7 @@ namespace BHSM.Areas.Admin.Controllers
 
 
         [HttpPost]
+        [ValidateInput(false)]
         public ActionResult Create(StaffViewModel staff) {
 
             string fileName = Path.GetFileNameWithoutExtension(staff.ProfileImage.FileName);

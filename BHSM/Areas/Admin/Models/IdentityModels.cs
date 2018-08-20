@@ -34,7 +34,7 @@ namespace  BHSM.Areas.Admin.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-        public DbSet<CHS_Staff> Staffs { get; set; }
+     
 
         public DbSet<Department> Departments { get; set; }
         public DbSet<EnqueryTable> EnqueryTables { get; set; }
