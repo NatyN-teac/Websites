@@ -213,6 +213,7 @@
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageUsersController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffProfileController.cs" />
@@ -221,8 +222,10 @@
     <Compile Include="Areas\Admin\Models\ChsRole.cs" />
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
     <Compile Include="Areas\Admin\Models\Department.cs" />
+    <Compile Include="Areas\Admin\Models\Event.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
     <Compile Include="Areas\Admin\Models\StaffProfile.cs" />
+    <Compile Include="Areas\Admin\ViewModel\EventViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModel\NewDepartmentViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModel\StaffViewModel.cs" />
     <Compile Include="Controllers\AboutTabController.cs" />
@@ -387,6 +390,14 @@
     <Compile Include="Migrations\201808201653103_updateStaffProfileTable.Designer.cs">
       <DependentUpon>201808201653103_updateStaffProfileTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808211144279_AddEmailToStaffTable.cs" />
+    <Compile Include="Migrations\201808211144279_AddEmailToStaffTable.Designer.cs">
+      <DependentUpon>201808211144279_AddEmailToStaffTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808211534018_AddEventTable.cs" />
+    <Compile Include="Migrations\201808211534018_AddEventTable.Designer.cs">
+      <DependentUpon>201808211534018_AddEventTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -476,6 +487,9 @@
     <Content Include="Areas\Admin\Views\Super\Department.cshtml" />
     <Content Include="Areas\Admin\Views\Department\CreateDepartment.cshtml" />
     <Content Include="Areas\Admin\Views\StaffProfile\NewStaff.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\successPage.cshtml" />
+    <Content Include="Areas\Admin\Views\Event\EventIndex.cshtml" />
+    <Content Include="Areas\Admin\Views\Event\CreateEvent.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1060,6 +1074,7 @@
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Controllers\API\" />
     <Folder Include="Areas\Admin\Views\DepartmentList\" />
     <Folder Include="images\DepartmentImage\" />
     <Folder Include="images\Departmen\" />
@@ -1169,6 +1184,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808201653103_updateStaffProfileTable.resx">
       <DependentUpon>201808201653103_updateStaffProfileTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808211144279_AddEmailToStaffTable.resx">
+      <DependentUpon>201808211144279_AddEmailToStaffTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808211534018_AddEventTable.resx">
+      <DependentUpon>201808211534018_AddEventTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -51,13 +51,14 @@ namespace BHSM.Areas.Admin.Controllers
 
                 result += "Successfully Added";
             }
-              
-           
-         
-               
 
-            
-            return Json(result, JsonRequestBehavior.AllowGet);
+
+
+
+
+            //at this point redirect to index page of department to show newly added valu
+           return Json(result, JsonRequestBehavior.AllowGet);
+           // return View("successPage");
             
 
         }

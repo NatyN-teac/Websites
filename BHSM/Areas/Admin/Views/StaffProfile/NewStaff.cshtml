@@ -10,6 +10,7 @@
     </style>
 }
 
+
 <script src="~/Scripts/ckeditor/ckeditor.js"></script> 
 <div>
     <h2 style="text-align:center">Register New Staff</h2>
@@ -18,6 +19,7 @@
     <br />
     <br />
 
+
     <div class="row">
         <div class="col-md-2 col-lg-2"></div>
 
@@ -25,7 +27,7 @@
 
             <form method="post" enctype="multipart/form-data" onsubmit="return sendData(this);">
                 @Html.AntiForgeryToken()
-               
+
 
                 <div class="row">
                     <div class="col-md-6">
@@ -34,13 +36,15 @@
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "Enter First Name" })
                                 @Html.ValidationMessageFor(m => m.FirstName)
+                                <br />
                             </div>
                         </div>
+
                         <div class="form-group">
                             @Html.LabelFor(m => m.SecondName, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.SecondName, new { @class = "form-control", placeholder = "Enter Middle Name" })
-                                @Html.ValidationMessageFor(m => m.SecondName)
+                                @Html.ValidationMessageFor(m => m.SecondName)   <br />
                             </div>
                         </div>
 
@@ -48,7 +52,7 @@
                             @Html.LabelFor(m => m.LastName, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Enter Last Name" })
-                                @Html.ValidationMessageFor(m => m.LastName)
+                                @Html.ValidationMessageFor(m => m.LastName)   <br />
                             </div>
                         </div>
 
@@ -56,45 +60,36 @@
                             @Html.LabelFor(m => m.Departments, new { @class = "col-md-8 control-label" })
                             <div class="col-md-12">
                                 @Html.DropDownListFor(m => m.DepartmentId, new SelectList(Model.Departments, "Id", "DepartmentName"), "Select Department", new { @class = "form-control" })
-                                @Html.ValidationMessageFor(m => m.Departments)
+                                @Html.ValidationMessageFor(m => m.Departments)<br />
                             </div>
                         </div>
                         <div class="form-group">
                             @Html.LabelFor(m => m.Gender, new { @class = "col-md-4 control-label" }) <br />
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-md-offset-4">
                                 <label>Male</label>   @Html.RadioButton("Gender", "Male")
-                                <label>Female</label> @Html.RadioButton("Gender", "Female")
+                                <label>Female</label> @Html.RadioButton("Gender", "Female")<br />
+                                @Html.ValidationMessageFor(m => m.Gender)
+                                <br />
+
                             </div>
-                            @Html.ValidationMessageFor(m => m.Gender)
+
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(m => m.LinkdenLink, new { @class = "col-md-8 control-label" })
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
-                                @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "enter your Linkdln username or reseach gator link" })
-                                @Html.ValidationMessageFor(m => m.LinkdenLink)
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email Address" })
+                                @Html.ValidationMessageFor(m => m.Email)   <br />
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Office, new { @class = "col-md-5 control-label" })
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.Office, new { @class = "form-control", placeholder = "eg. blg,office Number" })
+                                @Html.ValidationMessageFor(m => m.Office)   <br />
+                            </div>
+                        </div>
 
-                        @*<label>First Name</label> <br />
-                    <input type="text" name="FirstName" id="FirstName" class="form-control" placeholder="Enter First Name" required /> <br />*@
-
-                        @*<label>Middle Name</label> <br />
-                    <input type="text" name="SecondName" id="SecondName" class="form-control" placeholder="Enter Middle Name" required /> <br />
-
-                    <label>Last Name</label> <br />
-                    <input type="text" name="LastName" id="LastName" class="form-control" placeholder="Enter Last Name" required /> <br />*@
-
-
-                        @*@Html.LabelFor(s => s.Departments)
-                    @Html.DropDownListFor(m => m.DepartmentId, new SelectList(Model.Departments, "Id", "DepartmentName"), "Select Department", new { @class = "form-control" })*@
-
-                        @*<br />
-                    <div>
-                        <label>Male</label>   @Html.RadioButton("Gender", "Male")
-                        <label>Female</label> @Html.RadioButton("Gender", "Female")
-                    </div>
-                    <br />*@
 
 
 
@@ -103,41 +98,60 @@
                     <div class="col-md-6">
 
                         <div class="form-group">
-                            @Html.LabelFor(m => m.Nationality, new { @class = "col-md-4 control-label" })
+                            @Html.LabelFor(m => m.Nationality, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.Nationality, new { @class = "form-control", placeholder = "eg. Ethiopian" })
-                                @Html.ValidationMessageFor(m => m.Nationality)
+                                @Html.ValidationMessageFor(m => m.Nationality)<br />
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(m => m.Specialization, new { @class = "col-md-4 control-label" })
+                            @Html.LabelFor(m => m.Specialization, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.Specialization, new { @class = "form-control", placeholder = "Enter Your Specialization" })
-                                @Html.ValidationMessageFor(m => m.Specialization)
+                                @Html.ValidationMessageFor(m => m.Specialization)<br />
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(m => m.AcademicRank, new { @class = "col-md-4 control-label" })
+                            @Html.LabelFor(m => m.AcademicRank, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.AcademicRank, new { @class = "form-control", placeholder = "eg. Professor" })
-                                @Html.ValidationMessageFor(m => m.AcademicRank)
+                                @Html.ValidationMessageFor(m => m.AcademicRank)<br />
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(m => m.Status, new { @class = "col-md-4 control-label" })
+                            @Html.LabelFor(m => m.Status, new { @class = "col-md-5 control-label" })
                             <div class="col-md-12">
                                 @Html.TextBoxFor(m => m.Status, new { @class = "form-control", placeholder = "eg. Full time" })
-                                @Html.ValidationMessageFor(m => m.Status)
+                                @Html.ValidationMessageFor(m => m.Status)<br />
                             </div>
+                            <br />
+                        </div>
+                        <div class="form-group">
+
+                            @Html.LabelFor(m => m.LinkdenLink, new { @class = "col-md-8 control-label" })
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.LinkdenLink, new { @class = "form-control", placeholder = "enter your Linkdln username or reseach gator link" })
+                                @Html.ValidationMessageFor(m => m.LinkdenLink)<br />
+                            </div>
+                            <br />
                         </div>
 
-                        <label>Staff Image</label> <br />
+                        <div class="form-group">
 
-                        <input name="ProfileImage" id="ProfileImage" class="form-control-file " placeholder="Select Image" type="file" required /><br />
+                            @Html.LabelFor(m => m.ProfileImage, new { @class = "col-md-8 control-label" })
+                            <div class="col-md-12">
 
-                        @Html.ValidationMessageFor(m => m.ProfileImage)
+                                @* <input name="ProfileImage" id="ProfileImage" class="form-control-file " placeholder="Select Image" type="file" required /><br />*@
+                                @Html.TextBoxFor(m => m.ProfileImage, new { @class = "form-control-file", placeholder = "Select Image", type = "file" })
 
-                        <br />
+                                @Html.ValidationMessageFor(m => m.ProfileImage) <br />
+                                <br />
+                            </div>
+                            <br />
+                        </div>
+
+
+
 
                     </div>
 
@@ -145,80 +159,78 @@
                 </div>
 
 
+                <div class="form-group">
 
-
-
-                <label> Additional Responsibility </label>
-                <br />
-                <textarea name="AdditionalResponsibility" id="AdditionalResponsibility" class="form-control" placeholder="Additional Responsibility"></textarea>
-                <br />
-
-                <label>Personal Statement</label> <br />
-                <textarea name="PersonalStatement" id="PersonalStatement" class="form-control" placeholder="Enter Your Personal Statement" required></textarea><br />
-                <br />
-                <label> Work History </label>
-                <br />
-                <textarea name="WorkHistory" id="WorkHistory" class="form-control" placeholder="Enter Your Work Experience"></textarea>
-                <br />
-
-
-
-                <br />
-                <label>Educational Background</label>
-                <br />
-                <textarea name="EducationalBackground" class="ckeditor"></textarea><br />
-
-                <br />
-
-                <label>Contribution to Science</label>
-                <br />
-                <textarea name="ContributionToScienceAndResearch" class="ckeditor"></textarea><br />
-
-                <br />
-
-
-
-
-
-
-                <br />
-                <div class="">
-                    <button class="btn btn-success btn-block" type="submit">Submit</button>
+                    @Html.LabelFor(m => m.AdditionalResponsibility, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.AdditionalResponsibility, new { @class = "form-control", placeholder = "enter your Linkdln username or reseach gator link", style = "min-width: 100%!important;" })
+                        @Html.ValidationMessageFor(m => m.AdditionalResponsibility)<br />
+                    </div>
+                    <br />
                 </div>
-                @*<label>Nationality</label> <br />
-            <input name="Nationality" id="Nationality" class="form-control" placeholder="Enter your Nationality" type="text" required /> <br />
 
-            <label>Specialization</label> <br />
-            <input name="Specialization" id="Specialization" class="form-control" placeholder="Enter your Specilization" type="text" required /> <br />
+                <div class="form-group">
 
-            <label>Academic Rank</label> <br />
-            <input name="AcademicRank" id="AcademicRank" class="form-control" placeholder="Enter Your Academic Rank" type="text" required /> <br />
-
-            <label>Status</label> <br />
-            <input name="Status" id="Status" class="form-control" placeholder="Enter Your Status" type="text" required /> <br />*@
-
-
-
-
-                @*<div class="form-group">
-                @Html.LabelFor(m => m.AdditionalResponsibility, new { @class = "col-md-12 control-label" })
-                <div class="col-md-12">
-                    @Html.TextAreaFor(m => m.AdditionalResponsibility, new { @class = "form-control col-md-10 ", placeholder = "Additional Responsibility" })
+                    @Html.LabelFor(m => m.PersonalStatement, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.PersonalStatement, new
+                   {
+                       @class = "form-control",
+                       placeholder = "Your Personal statement. eg. interest,motivation...etc",
+                       style = "min-width: 100%!important;"
+                   })
+                        @Html.ValidationMessageFor(m => m.PersonalStatement)<br />
+                    </div>
+                    <br />
                 </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.PersonalStatement, new { @class = "col-md-12 control-label" })
-                <div class="col-md-12">
-                    @Html.TextAreaFor(m => m.PersonalStatement, new { @class = "form-control col-md-10 ", placeholder = "Personal statement" })
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.WorkHistory, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.WorkHistory, new
+                   {
+                       @class = "form-control",
+                       placeholder = "Enter Your work experience until today",
+                       style = "min-width: 100%!important;"
+                   })
+                        @Html.ValidationMessageFor(m => m.WorkHistory)<br />
+                    </div>
+                    <br />
                 </div>
-            </div>
-            <div class="form-group">
-                @Html.LabelFor(m => m.WorkHistory, new { @class = "col-md-12 control-label" })
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.EducationalBackground, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.EducationalBackground, new
+                   {
+                       @class = "form-control",
+                       placeholder = "Your Educational Background",
+                       style = "min-width: 100%!important;"
+                   })
+                        @Html.ValidationMessageFor(m => m.EducationalBackground)<br />
+                    </div>
+                    <br />
+                </div>
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.ContributionToScienceAndResearch, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.ContributionToScienceAndResearch, new
+                   {
+                       @class = "form-control",
+                       placeholder = "Enter your contribution to science and all related researches....",
+                       style = "min-width: 100%!important;"
+                   })
+                        @Html.ValidationMessageFor(m => m.ContributionToScienceAndResearch)<br />
+                    </div>
+                    <br />
+                </div>
+
+
+                <br />
                 <div class="col-md-12">
-                    @Html.TextAreaFor(m => m.WorkHistory, new { @class = "form-control col-md-10 ", placeholder = "your experience" })
-                </div>*@
-
-
+                    <button class="btn btn-success btn-block glyphicon glyphicon-plus-sign" type="submit"> Submit</button>
+                </div>
 
             </form>
 
@@ -234,17 +246,20 @@
 
     <script>
         function sendData(formData) {
+            
+      
             var ajaxConfig = {
                 type: "post",
                 url: "/StaffProfile/Create",
                 data: new FormData(formData),
                 success: function (result) {
 
-                    console.log(result);
+                    alert("successfully Registered")
 
                 },
                 fail: function (result) {
                     console.log(result);
+                    alert("oops,some error happed try again!");
                 }
             }
 
@@ -254,7 +269,10 @@
                 ajaxConfig["processData"] = false;
             }
             $.ajax(ajaxConfig);
+
+            console.log("hello there", formData);
             return false;
+            console.log("hello there", formData);
         }
 
     </script>

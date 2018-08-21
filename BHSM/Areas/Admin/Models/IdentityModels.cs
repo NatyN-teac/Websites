@@ -36,12 +36,14 @@ namespace  BHSM.Areas.Admin.Models
     {
      
 
-        public DbSet<Department> Departments { get; set; }
+       
         public DbSet<EnqueryTable> EnqueryTables { get; set; }
         public DbSet<AnswerTable> AnswerTables { get; set; }
         public DbSet<ChsRole> ChsRoles { get; set; }
-
+        //newly created
+        public DbSet<Department> Departments { get; set; }
         public DbSet<StaffProfile> StaffProfiles { get; set; }
+        public DbSet<Event> Events { get; set; }
 
 
 

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace BHSM.Areas.Admin.Models
 {
@@ -46,15 +47,25 @@ namespace BHSM.Areas.Admin.Models
         public string PersonalStatement { get; set; }
 
         public string EducationalBackground { get; set; }
+
         public string WorkHistory { get; set; }
+
+       
         public string ContributionToScienceAndResearch { get; set; }
 
-        [Display(Name = "Web Link")]
+       
         public string LinkdenLink { get; set; }
 
 
+        [Required]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public string Email { get; set; }
 
-       
+        [Required]
+
+        public string Office { get; set; }
+
+
         public Department Department { get; set; }
 
     

@@ -1,0 +1,53 @@
+﻿@model BHSM.Areas.Admin.ViewModel.EventViewModel
+@{
+    ViewBag.Title = "CreateEvent";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Create New Event</h2>
+
+<div class="alert alert-info">All Fields Required!</div>
+
+<div class="col-md-12 well well-lg">
+    <div class="form-group">
+        @Html.LabelFor(e => e.Title)
+
+        <div class="col-md-12">
+            @Html.TextBoxFor(e => e.Title, new { @class = "form-control block", style = "min-width: 100%!important;", placeholder = "enter Event title" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(e => e.HostedBy)
+
+        <div class="col-md-12">
+            @Html.TextBoxFor(e => e.HostedBy, new { @class = "form-control block", style = "min-width: 100%!important;", placeholder = "Who host the event?" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(e => e.Description)
+
+        <div class="col-md-12">
+            @Html.TextAreaFor(e => e.Title, new
+           {
+               @class = "form-control block",
+               style = "min-width: 100%!important;",
+               placeholder = "enter detail description about the event"
+           })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(e => e.EventImage)
+
+        <div class="col-md-12">
+            @Html.TextBoxFor(e => e.EventImage, new { @class = "form-control-file block", style = "min-width: 100%!important;", type = "file" })
+        </div>
+    </div>
+    <br />
+    <div class="form-group col-md-3">
+        <br />
+      
+        <button class="btn btn-warning btn-block">Submit</button>
+
+    </div>
+</div>
