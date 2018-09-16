@@ -1,8 +1,10 @@
 ﻿@model BHSM.Areas.Admin.ViewModel.EventViewModel
 @{
-    ViewBag.Title = "CreateEvent";
+    ViewBag.Title = "Create";
     Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
 }
+
+<h2>Create</h2>
 
 <h2>Create New Event</h2>
 
@@ -11,41 +13,41 @@
 <div class="col-md-12 well well-lg">
     <form id="eventForm">
         <div class="form-group">
-           
+
             <label>Title</label>
 
             <div class="col-md-12">
-                <input type="text"   value="" name="Title" id="Title" style="min-width:100%!important;"  class="form-control" placeholder="Enter Events Title" />
-               
+                <input type="text" value="" name="Title" id="Title" style="min-width:100%!important;" class="form-control" placeholder="Enter Events Title" />
+
             </div>
         </div>
         <div class="form-group">
-            
+
             <label>Hosted By</label>
 
             <div class="col-md-12">
                 <input type="text" value="" name="HostedBy" id="HostedBy" style="min-width:100%!important;" class="form-control" placeholder="Hosted By..." />
 
-               
+
             </div>
         </div>
         <div class="form-group">
-            @Html.LabelFor(e => e.Description)
+           
             <label>Description</label>
 
             <div class="col-md-12">
-                <textarea name="Description" id="Description" style="min-width:100%!important;" class="form-control"  ></textarea>
-        
+                <textarea name="Description" id="Description" style="min-width:100%!important;" class="form-control"></textarea>
+
             </div>
         </div>
 
         <div class="form-group">
-          
+
             <label>Event Image</label>
 
             <div class="col-md-12">
-                <input type="file"  id="EventImage" name="EventImage" class="form-control-file"  />
-               
+                <input type="file" id="EventImage" name="EventImage" class="form-control-file" />
+
             </div>
         </div>
         <br />
@@ -59,7 +61,7 @@
 </div>
 
 @section  Scripts{
-    
+
     <script>
     $(document).ready(function () {
         $("#eventForm").submit(function (e) {
@@ -87,7 +89,11 @@
 
         })
     });
-</script>
-    
-    }
+    </script>
+
+}
+
+
+
+
 

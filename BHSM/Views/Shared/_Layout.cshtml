@@ -282,55 +282,67 @@
 
 
         <script>
-
             $(document).ready(function () {
+                var holder;
+
+                var hightObj = {
+                    "surgery": {
+                        "name": "department Name",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad               minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in                            reprehenderitin voluptate velit esse cillum dolore eu fugiat nulla pariatur",
+                        "article": "this is the article side of the deprt",
+                        "moto":"Calm down We All Are Surgens",
+                        "imageUrl": "/images/black.jpg"
+                    },
+                    "Biochemistry": {
+                        "name": "department Name",
+                        "description": "this is the description of the department",
+                        "article": "this is the article side of the dep",
+                        "imageUrl": ".../source/image/im.png"
+                    }
+
+                }
 
             //image slider css
                 $("#immersive_slider").immersive_slider({
                     container: ".main"
                 });
                 //our people profile
-
                    $('#media').carousel({
                        pause: true,
                       interval: false,
                    });
 
 
+                   
+                   $('ul[id*=sampleDepartments] li a').click(function () {
+                       var obj = $(this);
+                       //alert("hello click");
+                       //alert($(this).html()); // gets innerHTML of clicked li
+                       //alert($(this).text());
+                       alert($(this).attr('value'));
+                       console.log(obj.text());
+                       holder = $(this).attr('value');
+                      
+                       var imgg = hightObj[holder]['imageUrl'];
+                       var depDesc = hightObj[holder]['description'];
+                       var moto = hightObj[holder]['moto'];
+                       var article = hightObj[holder]['article'];
+                       console.log(imgg);
+                       
+                       // $('#departmentOverHead').html.replace("hello world");
+                       $("#imgId").attr("src", imgg).load();
+                      
+                       $("#depo #departmentOverHead").text(obj.text());
+                       $("#department_description").text(depDesc);
+                       $("#subArtDep #department_moto").text(moto);
+                       $("#subArtDep #department_article").text(article);
+                   });
+
+                  
                   
             });
 
-            //$(document).ready(function () {
-            
-            //});
-
-
-           
-
-
-            //window.alert = function () { };
-            //var defaultCSS = document.getElementById('bootstrap-css');
-            //function changeCSS(css) {
-                //if (css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="' + css + '" type="text/css" />');
-                //else $('head > link').filter(':first').replaceWith(defaultCSS);
-            //}
-            //$(document).ready(function () {
-                //var iframe_height = parseInt($('html').height());
-                //  window.parent.postMessage(iframe_height, 'http://bootsnipp.com');
-                
-               
-            //});
-
-            //$(document).ready(function () {
-            //    $("#link-dep").on("click", function () {
-            //        //place where to put dropdown things.
-
-
-            //    });
-
-            //})
-
-
+          
         </script>
 
 
