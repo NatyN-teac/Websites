@@ -12,21 +12,22 @@ namespace BHSM.Areas.Admin.Models
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Department Name")]
         public string DepartmentName { get; set; }
 
 
 
         [Required]
+        [Display(Name = "Department Moto")]
         public string DepatmentMoto { get; set; }
 
         
         [Required]
+        [StringLength(1000)]
+        [Display(Name = "Description")]
         public string DepartmentDescription { get; set; }
 
         
-        public string DepartmentImageUrl { get; set; }
-
-        [NotMapped]
-        public HttpPostedFileBase DepartmentImage { get; set; }
+      
     }
 }

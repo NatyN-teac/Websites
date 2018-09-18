@@ -225,11 +225,13 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageUsersController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\SuperController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
@@ -238,6 +240,7 @@
     <Compile Include="Areas\Admin\Models\Department.cs" />
     <Compile Include="Areas\Admin\Models\Event.cs" />
     <Compile Include="Areas\Admin\Models\IdentityModels.cs" />
+    <Compile Include="Areas\Admin\Models\News.cs" />
     <Compile Include="Areas\Admin\Models\StaffProfile.cs" />
     <Compile Include="Areas\Admin\ViewModel\EventViewModel.cs" />
     <Compile Include="Areas\Admin\ViewModel\NewDepartmentViewModel.cs" />
@@ -412,6 +415,26 @@
     <Compile Include="Migrations\201808211534018_AddEventTable.Designer.cs">
       <DependentUpon>201808211534018_AddEventTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809182051043_UpdateDepartmentModel.cs" />
+    <Compile Include="Migrations\201809182051043_UpdateDepartmentModel.Designer.cs">
+      <DependentUpon>201809182051043_UpdateDepartmentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809182210139_AddNewsTable.cs" />
+    <Compile Include="Migrations\201809182210139_AddNewsTable.Designer.cs">
+      <DependentUpon>201809182210139_AddNewsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809182231302_updateNewsTable.cs" />
+    <Compile Include="Migrations\201809182231302_updateNewsTable.Designer.cs">
+      <DependentUpon>201809182231302_updateNewsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809182237367_updateNewsTable1.cs" />
+    <Compile Include="Migrations\201809182237367_updateNewsTable1.Designer.cs">
+      <DependentUpon>201809182237367_updateNewsTable1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809182255354_UpdateNewsModel.cs" />
+    <Compile Include="Migrations\201809182255354_UpdateNewsModel.Designer.cs">
+      <DependentUpon>201809182255354_UpdateNewsModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -505,6 +528,16 @@
     <Content Include="Areas\Admin\Views\Event\EventIndex.cshtml" />
     <Content Include="Areas\Admin\Views\Event\CreateEvent.cshtml" />
     <Content Include="Areas\Admin\Views\Event\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Departments\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Index.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1090,6 +1123,7 @@
     <Folder Include="AppFiles\Images\" />
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\DepartmentList\" />
+    <Folder Include="Areas\Admin\Views\ManageDepartments\" />
     <Folder Include="images\DepartmentImage\" />
     <Folder Include="images\Departmen\" />
     <Folder Include="images\staff\" />
@@ -1204,6 +1238,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808211534018_AddEventTable.resx">
       <DependentUpon>201808211534018_AddEventTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809182051043_UpdateDepartmentModel.resx">
+      <DependentUpon>201809182051043_UpdateDepartmentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809182210139_AddNewsTable.resx">
+      <DependentUpon>201809182210139_AddNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809182231302_updateNewsTable.resx">
+      <DependentUpon>201809182231302_updateNewsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809182237367_updateNewsTable1.resx">
+      <DependentUpon>201809182237367_updateNewsTable1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809182255354_UpdateNewsModel.resx">
+      <DependentUpon>201809182255354_UpdateNewsModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

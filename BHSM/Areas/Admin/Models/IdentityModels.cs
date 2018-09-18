@@ -43,6 +43,9 @@ namespace  BHSM.Areas.Admin.Models
         //newly created
         public DbSet<Department> Departments { get; set; }
         public DbSet<StaffProfile> StaffProfiles { get; set; }
+
+        public DbSet<News> News { get; set; }
+
         public DbSet<Event> Events { get; set; }
 
 
