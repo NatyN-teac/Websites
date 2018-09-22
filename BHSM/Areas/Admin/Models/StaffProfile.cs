@@ -10,12 +10,17 @@ namespace BHSM.Areas.Admin.Models
 {
     public class StaffProfile
     {
+        public StaffProfile()
+        {
+            imageUrl = "~/AppFiles/images/Contact.jpg";
+        }
         public int Id { get; set; }
 
         [Required]
         public string FirstName { get; set; }
 
         [Required]
+
         public string SecondName { get; set; }
 
         [Required]
@@ -23,6 +28,11 @@ namespace BHSM.Areas.Admin.Models
 
         [Required]
         public string imageUrl { get; set; }
+
+        [NotMapped]
+        public HttpPostedFileBase ProfileImage { get; set; }
+
+
         [Required]
         public string Gender { get; set; }
 

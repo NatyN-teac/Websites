@@ -12,11 +12,19 @@ namespace BHSM.Areas.Admin.ViewModel
     public class StaffViewModel
     {
 
+        public StaffViewModel()
+        {
+            imageUrl = "~/AppFiles/images/Contact.jpg";
+        }
+
     [Display(Name = "Choose Department")]
         public IEnumerable<Department> Departments { get; set; }
 
         [NotMapped]
         public HttpPostedFileBase ProfileImage { get; set; }
+
+        [Required]
+        public string imageUrl { get; set; }
 
         [Required]
         [Display(Name = "First Name")]
@@ -88,8 +96,7 @@ namespace BHSM.Areas.Admin.ViewModel
 
         public int DepartmentId { get; set; }
 
-        [Required]
-        public string imageUrl { get; set; }
+       
 
         //staffEducationHistoryVM
 

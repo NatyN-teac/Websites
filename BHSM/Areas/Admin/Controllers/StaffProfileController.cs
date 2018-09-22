@@ -83,10 +83,13 @@ namespace BHSM.Areas.Admin.Controllers
                 _context.StaffProfiles.Add(stf);
                 _context.SaveChanges();
             //}
-           
 
-            return View();
+
+          //  return RedirectToAction("NewStaff");
+            return Json(new { success = true, message = "successfully Submitted" }, JsonRequestBehavior.AllowGet);
 
         }
+
+      
     }
 }

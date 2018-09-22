@@ -25,7 +25,7 @@
 
         <div class="col-md-8 col-lg-8">
 
-            <form method="post" enctype="multipart/form-data" onsubmit="return sendData(this);">
+            <form method="post" enctype="multipart/form-data" onsubmit="sendData(e);">
                 @Html.AntiForgeryToken()
 
 
@@ -229,7 +229,7 @@
 
                 <br />
                 <div class="col-md-12">
-                    <button class="btn btn-success btn-block glyphicon glyphicon-plus-sign" type="submit"> Submit</button>
+                    <button class="btn btn-success btn-block glyphicon glyphicon-plus-sign" type="submit" > Submit</button>
                 </div>
 
             </form>
@@ -244,17 +244,22 @@
 @section Scripts{
     @Scripts.Render("~/bundles/jqueryval")
 
-    <script>
+   
+
+}
+
+ <script>
         function sendData(formData) {
             
-      
+
             var ajaxConfig = {
                 type: "post",
                 url: "/StaffProfile/Create",
                 data: new FormData(formData),
                 success: function (result) {
 
-                    alert("successfully Registered")
+                    console.log(result);
+                   alert(result);
 
                 },
                 fail: function (result) {
@@ -270,15 +275,12 @@
             }
             $.ajax(ajaxConfig);
 
-            console.log("hello there", formData);
+           
             return false;
-            console.log("hello there", formData);
+        
         }
 
     </script>
-
-}
-
 
 
 @* @using(@Html.BeginForm("Create","StaffProfile",FormMethod.Post , new { enctype = "multipart/form-data",onSubmit="return sendData(this);"})){
