@@ -1,15 +1,17 @@
 ﻿@model BHSM.Areas.Admin.ViewModel.StaffViewModel
 @{
-    ViewBag.Title = "NewStaff";
+    ViewBag.Title = "Edit Staff Profile";
     Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
 
     <style>
         span.field-validation-error {
-            color:red;
-            }
+            color: red;
+        }
     </style>
 }
 
+
+  <h2>Edit and Update Staff Profile</h2>
 <div>
     <h2 style="text-align:center">Register New Staff</h2>
 
@@ -140,9 +142,9 @@
                             <div class="col-md-12">
 
                                 @* <input name="ProfileImage" id="ProfileImage" class="form-control-file " placeholder="Select Image" type="file" required /><br />*@
-                                <img src="~/images/staff/@Model.imageUrl" style="width:200px;height:200px;margin:10px;" id="imagePreview" />
+                                <img src="~/images/staff/@Model.imageUrl" style="width:200px;height:200px;margin:10px;"  id="imagePreview"/>
                                 @*<img src="~/images/staff/@Model.imageUrl" alt="" class="img-responsive circ">*@
-                                @Html.TextBoxFor(m => m.ProfileImage, new { @accept = "image/x-png, image/jpeg,image/jpg,image/png", @class = "form-control-file", placeholder = "Select Image", type = "file", onChange = "ShowImagePreview(this,document.getElementById('imagePreview'))" })
+                                @Html.TextBoxFor(m => m.ProfileImage, new { @class = "form-control-file", placeholder = "Select Image", type = "file",onChange= "ShowImagePreview(this,document.getElementById('imagePreview'))" } )
 
                                 @Html.ValidationMessageFor(m => m.ProfileImage) <br />
                                 <br />
@@ -235,8 +237,6 @@
 
             </form>
 
-           
-
         </div>
         <div class="col-md-2 col-lg-2"></div>
     </div>
@@ -300,7 +300,5 @@
 
 
 }
-
-
 
 

@@ -28,6 +28,7 @@ namespace BHSM.Areas.Admin.Controllers
 
         }
 
+        // GET: Admin/StaffProfile
         public ActionResult GetList() {
 
             var staffs = _context.StaffProfiles.ToList();
@@ -43,7 +44,46 @@ namespace BHSM.Areas.Admin.Controllers
             return View(staff);
         }
 
-        // GET: Admin/StaffProfile
+        public ActionResult EditStaff([FromUri] int id) {
+
+            var staff = _context.StaffProfiles.SingleOrDefault(s => s.Id == id);
+            if(staff == null) {
+                return HttpNotFound();
+            }
+
+            var viewModel = new StaffViewModel
+            {
+                Departments = _context.Departments.ToList(),
+                FirstName = staff.FirstName,
+               
+                DepartmentId = staff.DepartmentId,
+               
+                SecondName = staff.SecondName,
+                LastName = staff.LastName,
+                imageUrl = staff.imageUrl,
+                Email = staff.Email,
+                Gender = staff.Gender,
+                Nationality = staff.Nationality,
+                Specialization = staff.Specialization,
+                Status = staff.Status,
+                LinkdenLink = staff.LinkdenLink,
+                Office = staff.Office,
+                PersonalStatement = staff.PersonalStatement,
+                WorkHistory = staff.WorkHistory,
+                AcademicRank = staff.AcademicRank,
+                EducationalBackground = staff.EducationalBackground,
+                ContributionToScienceAndResearch = staff.ContributionToScienceAndResearch,
+                AdditionalResponsibility = staff.AdditionalResponsibility
+
+
+
+            };
+
+            return View("NewStaff",viewModel);
+        
+        }
+
+        
         public ActionResult NewStaff()
         {
             var department = _context.Departments.OrderByDescending(m => m.Id).ToList();
@@ -57,16 +97,12 @@ namespace BHSM.Areas.Admin.Controllers
         }
 
 
-        [HttpPost]
+
+        
 
         public ActionResult Create(StaffViewModel staff) {
-
-            //if (!ModelState.IsValid) {
-            //    return View("NewStaff"); 
-
-            //    }
-            //    else { 
-
+        
+          
 
             string fileName = Path.GetFileNameWithoutExtension(staff.ProfileImage.FileName);
 
@@ -105,14 +141,47 @@ namespace BHSM.Areas.Admin.Controllers
 
             };
 
-            _context.StaffProfiles.Add(stf);
+            if (staff.Id == 0)
+            {
+                _context.StaffProfiles.Add(stf);
+
+            }
+            else {
+                var staffInDb = _context.StaffProfiles.Single(s => s.Id == staff.Id);
+
+
+                staffInDb.FirstName = staff.FirstName;
+                staffInDb.SecondName = staff.SecondName;
+                staffInDb.LastName = staff.LastName;
+                staffInDb.Office = staff.Office;
+                staffInDb.Email = staff.Email;
+                staffInDb.DepName = depname;
+                staffInDb.DepartmentId = staff.DepartmentId;
+                staffInDb.AcademicRank = staff.AcademicRank;
+                staffInDb.AdditionalResponsibility = staff.AdditionalResponsibility;
+                staffInDb.ContributionToScienceAndResearch = staff.ContributionToScienceAndResearch;
+                staffInDb.Status = staff.Status;
+                staffInDb.WorkHistory = staff.WorkHistory;
+                staffInDb.Specialization = staff.Specialization;
+                staffInDb.PersonalStatement = staff.PersonalStatement;
+                staffInDb.imageUrl = staff.imageUrl;
+                staffInDb.LinkdenLink = staff.LinkdenLink;
+                staffInDb.Nationality = staff.Nationality;
+                staffInDb.EducationalBackground = staff.EducationalBackground;
+                staffInDb.Gender = staff.Gender;
+                
+            }
+
+
+            
             _context.SaveChanges();
             //}
 
 
-            //  return RedirectToAction("NewStaff");
-            return Json(new { success = true, message = "successfully Submitted" }, JsonRequestBehavior.AllowGet);
 
+            //return Json(new { success = true, message = "successfully Submitted" }, JsonRequestBehavior.AllowGet);
+            return RedirectToAction("Index");
+            
         }
 
 

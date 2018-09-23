@@ -17,7 +17,8 @@ namespace BHSM.Areas.Admin.ViewModel
             imageUrl = "~/AppFiles/images/Contact.jpg";
         }
 
-    [Display(Name = "Choose Department")]
+        public int Id { get; set; }
+        [Display(Name = "Choose Department")]
         public IEnumerable<Department> Departments { get; set; }
 
         [NotMapped]

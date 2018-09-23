@@ -225,7 +225,6 @@
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\StaffController.cs" />
-    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
@@ -634,7 +633,6 @@
     <Content Include="Areas\Admin\Views\Shared\_Super.cshtml" />
     <Content Include="Areas\Admin\Views\Super\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Super\Department.cshtml" />
-    <Content Include="Areas\Admin\Views\Department\CreateDepartment.cshtml" />
     <Content Include="Areas\Admin\Views\StaffProfile\NewStaff.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\successPage.cshtml" />
     <Content Include="Areas\Admin\Views\Event\EventIndex.cshtml" />
@@ -655,6 +653,7 @@
     <Content Include="Content\DataTables\css\mixins.scss" />
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Areas\Admin\Views\StaffProfile\GetStaff.cshtml" />
+    <Content Include="Areas\Admin\Views\StaffProfile\EditStaff.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>

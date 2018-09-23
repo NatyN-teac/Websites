@@ -8,8 +8,16 @@
 <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css" rel="stylesheet" />  
 <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
 
-<h2>Index</h2>
 
+<h2>List of Staff </h2>
+
+
+<br />
+@Html.ActionLink("Create New Staff","NewStaff","StaffProfile",null,new { @class="btn btn-primary"})
+
+<br />
+<br />
+<hr />
 
 <table id="staff" class="table table-bordered table-hover">
     <thead class="table-dark">
@@ -38,7 +46,7 @@
             <td>@staff.Email</td>
             <td>@staff.Office</td>
             <td>@Html.ActionLink("Detail", "GetStaff", "StaffProfile", new { id = staff.Id }, null)</td>
-            <td>@Html.ActionLink("Edit", "EditStaff", "StaffProfile", null, new { id = staff.Id })</td>
+            <td>@Html.ActionLink("Edit", "EditStaff", "StaffProfile", new { id = staff.Id }, null)</td>
             
            
            
@@ -57,7 +65,7 @@
     
 <script src="~/Scripts/DataTables/dataTables.bootstrap.min.js"></script>
 <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
-
+<script src="~/Scripts/bootbox.js"></script>
     <script>   
         $(document).ready(function () {
             $('#modl').modal('hidden');
@@ -65,17 +73,20 @@
             $('#staff .js-delete').on("click", function (e) {
                 e.preventDefault();
                 var button = $(this);
-                if (confirm("Are Your sure to Delete this Staff ?")) {
-                    $.ajax({
-                        url: "/API/Staff/" + button.attr("data-staff-id"),
-                        method: "DELETE",
-                        success: function () {
-                            console.log("success");
-                           button.parent("tr").remove();
-                        }
-                    })
+                bootbox.confirm("Are Your sure to Delete this Staff ?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/API/Staff/" + button.attr("data-staff-id"),
+                            method: "DELETE",
+                            success: function () {
+                                console.log("success");
+                                button.parent("tr").remove();
+                            }
+                        })
+                    }
 
-                }
+                })
+               
             })
 
             //$('#staff .js-detail').on("click", function (e) {
