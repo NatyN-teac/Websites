@@ -1,0 +1,132 @@
+﻿@model IEnumerable<BHSM.Areas.Admin.Models.StaffProfile>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+   
+}
+
+<link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css" rel="stylesheet" />  
+<link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+<h2>Index</h2>
+
+
+<table id="staff" class="table table-bordered table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Email</th>
+            <th>Office</th>
+            <th>Edit</th>
+            <th>Detail</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var staff in Model)
+        {
+        <tr>
+            <td>@staff.FirstName</td>
+            <td>@staff.SecondName</td>
+            <td>@staff.LastName</td>
+            <td>@staff.DepName</td>
+            <td>@staff.Status</td>
+            <td>@staff.Email</td>
+            <td>@staff.Office</td>
+            <td>@Html.ActionLink("Detail", "GetStaff", "StaffProfile", new { id = staff.Id }, null)</td>
+            <td>@Html.ActionLink("Edit", "EditStaff", "StaffProfile", null, new { id = staff.Id })</td>
+            
+           
+           
+            <td><button data-staff-id="@staff.Id" class="btn btn-danger js-delete" >Delete</button></td>
+        </tr>
+        }
+        
+    </tbody>
+</table>
+
+
+
+
+
+@section Scripts{
+    
+<script src="~/Scripts/DataTables/dataTables.bootstrap.min.js"></script>
+<script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+
+    <script>   
+        $(document).ready(function () {
+            $('#modl').modal('hidden');
+            $('#staff').DataTable();
+            $('#staff .js-delete').on("click", function (e) {
+                e.preventDefault();
+                var button = $(this);
+                if (confirm("Are Your sure to Delete this Staff ?")) {
+                    $.ajax({
+                        url: "/API/Staff/" + button.attr("data-staff-id"),
+                        method: "DELETE",
+                        success: function () {
+                            console.log("success");
+                           button.parent("tr").remove();
+                        }
+                    })
+
+                }
+            })
+
+            //$('#staff .js-detail').on("click", function (e) {
+            //    e.preventDefault();
+            //    var btns = $(this);
+
+            //    $.ajax({
+            //        url: "/API/Staff/" + btns.attr("data-staff-id"),
+            //        method: "GET",
+            //        success: function (result) {
+            //            console.log(result);
+            //            $('#modl').modal('show');
+            //        },
+            //        error: function () {
+            //            console.log("some Error occured!");
+            //        }
+
+            //    })
+            //})
+
+//            $('#staff').DataTable({
+//                "ajax": {
+//                    "url": "/StaffProfile/GetList",
+//                    "type": "GET",
+//                    "dataType":"json"
+//                },
+//                "columns": [
+//                 { "data": "FirstName" },
+//                 {"data":"SecondName"},
+//                 { "data": "LastName" },
+//                 { "data": "DepartmentId" },
+//                 { "data": "Status" },
+//                 { "data": "Email" },
+//                 { "data": "Office" },
+
+//                ]
+//            });
+//            <table id="staff" class="table table-stripped">
+//    <thead class="table-dark">
+//        <tr>
+//            <th>First Name</th>
+//            <th>Middle Name</th>
+//            <th>Last Name</th>
+//            <th>Department</th>
+//            <th>Status</th>
+//            <th>Email</th>
+//            <th>Office</th>
+//        </tr>
+//    </thead>
+//</table>
+        });
+    </script>
+    
+    }

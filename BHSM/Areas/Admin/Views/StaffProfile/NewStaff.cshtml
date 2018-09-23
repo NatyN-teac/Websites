@@ -25,7 +25,7 @@
 
         <div class="col-md-8 col-lg-8">
 
-            <form method="post" enctype="multipart/form-data" onsubmit="sendData(e);">
+            <form method="post" enctype="multipart/form-data" onsubmit="return sendData(this);">
                 @Html.AntiForgeryToken()
 
 
@@ -246,7 +246,7 @@
 
    
 
-}
+
 
  <script>
         function sendData(formData) {
@@ -258,8 +258,8 @@
                 data: new FormData(formData),
                 success: function (result) {
 
-                    console.log(result);
-                   alert(result);
+                   
+                   alert("successfully Created!");
 
                 },
                 fail: function (result) {
@@ -283,23 +283,4 @@
     </script>
 
 
-@* @using(@Html.BeginForm("Create","StaffProfile",FormMethod.Post , new { enctype = "multipart/form-data",onSubmit="return sendData(this);"})){
-
-            @Html.LabelFor( s => s.FirstName)
-            @Html.TextBoxFor(s=>s.FirstName, new { @class="form-control",placeholder="Enter First Name"})
-            @Html.LabelFor(s=>s.SecondName)
-            @Html.TextBoxFor(s=>s.SecondName,new { @class = "form-control",placeholder="Enter Second Name" })
-
-            @Html.LabelFor(s =>s.LastName)
-            @Html.TextBoxFor(s => s.LastName,new { @class="form-control" ,placeholder="Enter Last Name" })
-
-
-            @Html.LabelFor(s => s.DepartmentImage)
-            @Html.TextBoxFor(s => s.DepartmentImage,new { @class="form-control ",type="file",id="DepartmentImage"})
-         <br />
-      <button class="btn btn-danger" > Submit</button >
-
-
-
-
-    } *@
+}

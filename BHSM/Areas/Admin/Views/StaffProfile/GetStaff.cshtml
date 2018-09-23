@@ -1,0 +1,50 @@
+﻿@model BHSM.Areas.Admin.Models.StaffProfile
+@{
+    ViewBag.Title = "GetStaff";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+}
+
+
+
+<div class="col-md-8">
+   
+    <div class="panel panel-info">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h3> @Model.AcademicRank  @Model.FirstName @Model.SecondName</h3></div>
+
+        <ul class="list-group">
+            <li class="list-group-item"><b>Full Name:</b> @Model.FirstName @Model.SecondName @Model.LastName</li>
+            <li class="list-group-item"><b>Email :</b> @Model.Email</li>
+            <li class="list-group-item"><b>Office:</b>@Model.Office</li>
+            <li class="list-group-item"><b>Nationality:</b>@Model.Nationality</li>
+            <li class="list-group-item"><b>Specialization</b> @Model.Specialization</li>
+            <li class="list-group-item"><b>Status:</b> @Model.Status</li>
+          
+            
+        </ul>
+        <hr />
+        <div class="panel-body">
+            <p>@Model.PersonalStatement</p>
+        </div>
+        <hr />
+        <div class="panel-body">
+            <p>@Model.EducationalBackground</p>
+        </div>
+        <hr />
+        <div class="panel-body">
+            <p>@Model.ContributionToScienceAndResearch</p>
+        </div>
+        <hr />
+        <div class="panel-body">
+            <p>@Model.AdditionalResponsibility</p>
+        </div>
+      
+    </div>
+  
+</div>
+<div class="col-md-4">
+    <div class="prof-img">
+        <img src="~/images/staff/@Model.imageUrl" alt="" class="img-responsive circ">
+       
+    </div>
+</div>

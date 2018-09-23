@@ -29,6 +29,10 @@ namespace BHSM.Areas.Admin.Models
         [Required]
         public string imageUrl { get; set; }
 
+        [Required]
+        public string DepName { get; set; }
+
+
         [NotMapped]
         public HttpPostedFileBase ProfileImage { get; set; }
 
