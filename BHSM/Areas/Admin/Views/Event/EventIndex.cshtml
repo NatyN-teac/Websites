@@ -1,23 +1,92 @@
-﻿
+﻿@model IEnumerable<BHSM.Areas.Admin.Models.Event>
 @{
     ViewBag.Title = "EventIndex";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
 
-    <style>
-
-
-    </style>
 }
 
+<link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
+
+
 <h2>Manage Your Event</h2>
+<br />
+<br />
 
 <div>
-    @Html.ActionLink("Create New Event","CreateEvent","Event", htmlAttributes: new { @class = "btn btn-primary" })
+    @Html.ActionLink("Create New Event", "Create", "Event", null ,new { @class = "btn btn-primary" })
 
 
 </div>
 
 
+<hr />
+<div class="col-10">
 
-<div class="jumbotron">here is list of events and delete and edit event page on modal</div>
 
+
+    <table id="event" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Title</th>
+                <th>Host</th>
+                <th>Date</th>
+                <th>Edit</th>
+               
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var events in Model)
+            {
+            <tr>
+                <td>@events.Title</td>
+                <td>@events.HostedBy</td>
+                <td>@events.PostedDate</td>
+             
+                <td>@Html.ActionLink("Edit", "EditEvent", "Event", new { id = events.Id }, null)</td>
+                <td><button data-staff-id="@events.Id" class="btn btn-danger js-delete">Delete</button></td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+@section Scripts{
+
+    <script src="~/Scripts/DataTables/dataTables.bootstrap.min.js"></script>
+    <script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/bootbox.js"></script>
+    <script>
+
+        $(document).ready(function () {
+           
+            $('#event').DataTable();
+            $('#event .js-delete').on("click", function (e) {
+                e.preventDefault();
+                var button = $(this);
+                bootbox.confirm("Are Your sure to Delete this Staff ?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/API/Event/" + button.attr("data-staff-id"),
+                            method: "DELETE",
+                            success: function () {
+                                console.log("success");
+                                button.parent("tr").remove();
+                                
+                            }
+                        })
+                    }
+
+                })
+
+            })
+
+        });
+    </script>
+
+}

@@ -8,6 +8,7 @@ namespace BHSM.Areas.Admin.ViewModel
 {
     public class EventViewModel
     {
+        public int Id { get; set; }
         [Required]
         public string Title { get; set; }
 
@@ -21,12 +22,12 @@ namespace BHSM.Areas.Admin.ViewModel
         public string RelatedImage { get; set; }
 
         [Required]
-        [Display(Name = "Event Image")]
+       
         public HttpPostedFileBase EventImage { get; set; }
 
 
         [Required]
-        [Display(Name ="Hosted By:")]
+        [Display(Name ="Created By:")]
         public string HostedBy { get; set; }
 
     }

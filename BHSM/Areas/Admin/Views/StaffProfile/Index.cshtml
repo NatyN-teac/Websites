@@ -18,46 +18,49 @@
 <br />
 <br />
 <hr />
-
-<table id="staff" class="table table-bordered table-hover">
-    <thead class="table-dark">
-        <tr>
-            <th>First Name</th>
-            <th>Middle Name</th>
-            <th>Last Name</th>
-            <th>Department</th>
-            <th>Status</th>
-            <th>Email</th>
-            <th>Office</th>
-            <th>Edit</th>
-            <th>Detail</th>
-            <th>Delete</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var staff in Model)
-        {
-        <tr>
-            <td>@staff.FirstName</td>
-            <td>@staff.SecondName</td>
-            <td>@staff.LastName</td>
-            <td>@staff.DepName</td>
-            <td>@staff.Status</td>
-            <td>@staff.Email</td>
-            <td>@staff.Office</td>
-            <td>@Html.ActionLink("Detail", "GetStaff", "StaffProfile", new { id = staff.Id }, null)</td>
-            <td>@Html.ActionLink("Edit", "EditStaff", "StaffProfile", new { id = staff.Id }, null)</td>
-            
-           
-           
-            <td><button data-staff-id="@staff.Id" class="btn btn-danger js-delete" >Delete</button></td>
-        </tr>
-        }
-        
-    </tbody>
-</table>
+<div class="col-10">
 
 
+
+    <table id="staff" class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Email</th>
+                <th>Office</th>
+                <th>Edit</th>
+                <th>Detail</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var staff in Model)
+            {
+            <tr>
+                <td>@staff.FirstName</td>
+                <td>@staff.SecondName</td>
+                <td>@staff.LastName</td>
+                <td>@staff.DepName</td>
+                <td>@staff.Status</td>
+                <td>@staff.Email</td>
+                <td>@staff.Office</td>
+                <td>@Html.ActionLink("Detail", "GetStaff", "StaffProfile", new { id = staff.Id }, null)</td>
+                <td>@Html.ActionLink("Edit", "EditStaff", "StaffProfile", new { id = staff.Id }, null)</td>
+
+
+
+                <td><button data-staff-id="@staff.Id" class="btn btn-danger js-delete">Delete</button></td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
 
 
 
@@ -89,54 +92,7 @@
                
             })
 
-            //$('#staff .js-detail').on("click", function (e) {
-            //    e.preventDefault();
-            //    var btns = $(this);
 
-            //    $.ajax({
-            //        url: "/API/Staff/" + btns.attr("data-staff-id"),
-            //        method: "GET",
-            //        success: function (result) {
-            //            console.log(result);
-            //            $('#modl').modal('show');
-            //        },
-            //        error: function () {
-            //            console.log("some Error occured!");
-            //        }
-
-            //    })
-            //})
-
-//            $('#staff').DataTable({
-//                "ajax": {
-//                    "url": "/StaffProfile/GetList",
-//                    "type": "GET",
-//                    "dataType":"json"
-//                },
-//                "columns": [
-//                 { "data": "FirstName" },
-//                 {"data":"SecondName"},
-//                 { "data": "LastName" },
-//                 { "data": "DepartmentId" },
-//                 { "data": "Status" },
-//                 { "data": "Email" },
-//                 { "data": "Office" },
-
-//                ]
-//            });
-//            <table id="staff" class="table table-stripped">
-//    <thead class="table-dark">
-//        <tr>
-//            <th>First Name</th>
-//            <th>Middle Name</th>
-//            <th>Last Name</th>
-//            <th>Department</th>
-//            <th>Status</th>
-//            <th>Email</th>
-//            <th>Office</th>
-//        </tr>
-//    </thead>
-//</table>
         });
     </script>
     

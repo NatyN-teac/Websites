@@ -19,7 +19,10 @@
 
 
     <div class="row">
-        <div class="col-md-2 col-lg-2"></div>
+        <div class="col-md-2 col-lg-2">
+            @Html.ActionLink("Back To Index", "Index", null, new { @class = "btn btn-warning" })
+            
+        </div>
 
         <div class="col-md-8 col-lg-8">
 
@@ -238,68 +241,70 @@
            
 
         </div>
-        <div class="col-md-2 col-lg-2"></div>
+        <div class="col-md-2 col-lg-2">
+          
+        </div>
     </div>
 </div>
 
 
 
-@section Scripts{
-    @Scripts.Render("~/bundles/jqueryval")
+    @section Scripts{
+        @Scripts.Render("~/bundles/jqueryval")
 
 
 
 
 
-    <script>
+        <script>
 
-        function ShowImagePreview(imageUploader, previewImage) {
-            if (imageUploader.files && imageUploader.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                $(previewImage).attr('src',e.target.result)
+            function ShowImagePreview(imageUploader, previewImage) {
+                if (imageUploader.files && imageUploader.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                    $(previewImage).attr('src',e.target.result)
+                    }
+
+                    reader.readAsDataURL(imageUploader.files[0]);
                 }
 
-                reader.readAsDataURL(imageUploader.files[0]);
-            }
+    }
 
-}
-
-        function sendData(formData) {
+            function sendData(formData) {
 
 
-            var ajaxConfig = {
-                type: "post",
-                url: "/StaffProfile/Create",
-                data: new FormData(formData),
-                success: function (result) {
+                var ajaxConfig = {
+                    type: "post",
+                    url: "/StaffProfile/Create",
+                    data: new FormData(formData),
+                    success: function (result) {
 
 
-                   alert("successfully Created!");
+                       alert("successfully Created!");
 
-                },
-                fail: function (result) {
-                    console.log(result);
-                    alert("oops,some error happed try again!");
+                    },
+                    fail: function (result) {
+                        console.log(result);
+                        alert("oops,some error happed try again!");
+                    }
                 }
+
+
+                if ($(formData).attr('enctype') == "multipart/form-data") {
+                    ajaxConfig["contentType"] = false;
+                    ajaxConfig["processData"] = false;
+                }
+                $.ajax(ajaxConfig);
+
+
+                return false;
+
             }
 
-
-            if ($(formData).attr('enctype') == "multipart/form-data") {
-                ajaxConfig["contentType"] = false;
-                ajaxConfig["processData"] = false;
-            }
-            $.ajax(ajaxConfig);
+        </script>
 
 
-            return false;
-
-        }
-
-    </script>
-
-
-}
+    }
 
 
 

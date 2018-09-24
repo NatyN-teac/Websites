@@ -439,6 +439,10 @@
     <Compile Include="Migrations\201809231052177_addDepartmentToStaffProfile.Designer.cs">
       <DependentUpon>201809231052177_addDepartmentToStaffProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809242257218_UpdateEnqueryTable.cs" />
+    <Compile Include="Migrations\201809242257218_UpdateEnqueryTable.Designer.cs">
+      <DependentUpon>201809242257218_UpdateEnqueryTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -1311,6 +1315,7 @@
     <Folder Include="Areas\Admin\Views\ManageDepartments\" />
     <Folder Include="images\DepartmentImage\" />
     <Folder Include="images\Departmen\" />
+    <Folder Include="images\Events\" />
     <Folder Include="images\staff\" />
   </ItemGroup>
   <ItemGroup>
@@ -1440,6 +1445,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809231052177_addDepartmentToStaffProfile.resx">
       <DependentUpon>201809231052177_addDepartmentToStaffProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809242257218_UpdateEnqueryTable.resx">
+      <DependentUpon>201809242257218_UpdateEnqueryTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

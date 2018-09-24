@@ -12,10 +12,8 @@
 <div class="cont-enq_page">
 
     <div class="col-md-5">
-        <div class="form-container-enq">
-            <div class="enq_header">
-                <h2>Enquery form</h2>
-            </div>
+        <div style="background-color:#858585;padding-left:80px; padding-top:20px;">
+           
 
             @using (Html.BeginForm("Send", "AboutTab", FormMethod.Post, new { onSubmit = "return SubmitToContr(this);" }))
             
@@ -38,11 +36,7 @@
                     @Html.ValidationMessageFor(m => m.Email)
 
                 </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.DateTime)
-                    @Html.TextBoxFor(m => m.DateTime, new { @class = "form-control", Placeholder = "eg. 20-Oct-2018" })
-                    @Html.ValidationMessageFor(m => m.DateTime)
-                </div>
+              
                 <div class="form-group">
                     @Html.LabelFor(m => m.location)
                     @Html.TextBoxFor(m => m.location, new { @class = "form-control", Placeholder = "eg. Ethiopia" })
@@ -55,10 +49,13 @@
                     @Html.ValidationMessageFor(m => m.Question)
 
                 </div>
-
-                <button type="Submit" class="btn btn-primary btn-md">Submit</button>
+               
+                <button type="Submit" class="btn btn-danger  btn-md">Submit</button>
 
             }
+            <br />
+            <br />
+            <br />
         </div>
 
 
@@ -152,7 +149,26 @@
 @section scripts{
     @Scripts.Render("~/bundles/jqueryval")
     <script>
-       @*$(document).ready(function () {
+       @*  function SubmitToContr(formData) {
+
+          
+            $.ajax({
+                type: "post",
+                url: "/Enquery/Save",
+                data: new FormData(formData),
+                success: function () {
+                    alert("successfully Created!");
+
+                },
+                fail: function () {
+
+                    alert("oops,some error happed try again!");
+                }
+
+            });
+
+        }
+      $(document).ready(function () {
 
            $("#Clickme").click(function () {
                var data = {

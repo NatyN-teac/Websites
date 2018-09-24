@@ -21,10 +21,7 @@ namespace BHSM.Models
          [Display(Name = "E-Mail")]
         public string Email { get; set; }
 
-        [Required]
-        [Display(Name ="Date")]
-        
-        public DateTime DateTime { get; set; }
+      
 
         [Display(Name ="Country")]
         [Required]

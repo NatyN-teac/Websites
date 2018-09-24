@@ -1,99 +1,158 @@
 ﻿@model BHSM.Areas.Admin.ViewModel.EventViewModel
 @{
-    ViewBag.Title = "Create";
-    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+    ViewBag.Title = "Create New Event";
+    Layout = "~/Areas/Admin/Views/Shared/_Super.cshtml";
+
+    <style>
+        span.field-validation-error {
+            color: red;
+        }
+    </style>
+
+
 }
+<div class="container">
+    <h2>Create New Event</h2>
 
-<h2>Create</h2>
 
-<h2>Create New Event</h2>
 
-<div class="alert alert-info">All Fields Required!</div>
 
-<div class="col-md-12 well well-lg">
-    <form id="eventForm">
-        <div class="form-group">
+    <div class="row">
+        <div class="col-md-2 col-lg-2"></div>
 
-            <label>Title</label>
+        <div class="col-md-8 col-lg-8">
 
-            <div class="col-md-12">
-                <input type="text" value="" name="Title" id="Title" style="min-width:100%!important;" class="form-control" placeholder="Enter Events Title" />
+            <form method="post" enctype="multipart/form-data" onsubmit="return sendEvent(this);">
+                @Html.AntiForgeryToken()
 
-            </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                      
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Title, new { @class = "col-md-5 control-label" })
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = "Title of the Event" })
+                               
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.HostedBy, new { @class = "col-md-5 control-label" })
+                            <div class="col-md-12">
+                                @Html.TextBoxFor(m => m.HostedBy, new { @class = "form-control", placeholder = "Enter Your Name" })
+                               
+                            </div>
+                        </div>
+
+                       
+                    </div>
+                   
+                </div>
+
+
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.Description, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+                        @Html.TextAreaFor(m => m.Description, new { @class = "form-control", placeholder = "Description "})
+                      
+                    </div>
+                    <br />
+                </div>
+
+                <div class="form-group">
+
+                    @Html.LabelFor(m => m.EventImage, new { @class = "col-md-8 control-label" })
+                    <div class="col-md-12">
+
+                        @*<img src="~/images/Events/@Model.RelatedImage" style="width:200px;height:200px;margin:10px;" id="imagePreview" />*@
+                       
+                        @Html.TextBoxFor(m => m.EventImage, new { @accept = "image/x-png, image/jpeg,image/jpg,image/png", @class = "form-control-file", placeholder = "Select Image", type = "file", onChange = "ShowImagePreview(this,document.getElementById('imagePreview'))" })
+
+                        <br />
+                    </div>
+                    <br />
+                </div>
+                
+            
+              
+             
+
+
+                <br />
+                <div class="col-md-12">
+                    @Html.HiddenFor(m => m.Id)
+                    <button class="btn btn-success " type="submit">Submit</button>
+                </div>
+
+            </form>
+
+
+
         </div>
-        <div class="form-group">
-
-            <label>Hosted By</label>
-
-            <div class="col-md-12">
-                <input type="text" value="" name="HostedBy" id="HostedBy" style="min-width:100%!important;" class="form-control" placeholder="Hosted By..." />
-
-
-            </div>
-        </div>
-        <div class="form-group">
-           
-            <label>Description</label>
-
-            <div class="col-md-12">
-                <textarea name="Description" id="Description" style="min-width:100%!important;" class="form-control"></textarea>
-
-            </div>
-        </div>
-
-        <div class="form-group">
-
-            <label>Event Image</label>
-
-            <div class="col-md-12">
-                <input type="file" id="EventImage" name="EventImage" class="form-control-file" />
-
-            </div>
-        </div>
-        <br />
-        <div class="form-group col-md-3">
-            <br />
-
-            <button class="btn btn-warning btn-block">Submit</button>
+        <div class="col-md-2 col-lg-2">
+            @Html.ActionLink("Back To Index","EventIndex",null,new {@class="btn btn-warning" })
 
         </div>
-    </form>
+    </div>
+
 </div>
 
-@section  Scripts{
+
+
+
+
+
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+
 
     <script>
-    $(document).ready(function () {
-        $("#eventForm").submit(function (e) {
-            e.preventDefault();
-            var fileUpload = $("#EventImage").get(0);
-            var files = fileUpload.files;
 
-            var fileData = new FormData();
-            for (var i = 0; i < files.length; i++) {
-                fileData.append(files[i].name, files[i]);
+        function ShowImagePreview(imageUploader, previewImage) {
+            if (imageUploader.files && imageUploader.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                $(previewImage).attr('src',e.target.result)
+                }
+
+                reader.readAsDataURL(imageUploader.files[0]);
             }
-
-            console.log(fileData);
-            $.ajax({
-                url: "/API/Event/CreateEvent",
-                method: "post",
-                data: fileData
-            })
-            .done(function () {
-                console.log("done");
-            })
-            .fail(function () {
-
-            });
-
-        })
-    });
-    </script>
 
 }
 
+        function sendEvent(formData) {
 
+
+            var ajaxConfig = {
+                type: "post",
+                url: "/Event/Save",
+                data: new FormData(formData),
+                success: function () {
+                    alert("successfully Created!");
+                    
+                },
+                fail: function () {
+            
+                    alert("oops,some error happed try again!");
+                }
+            }
+            if ($(formData).attr('enctype') == "multipart/form-data") {
+                ajaxConfig["contentType"] = false;
+                ajaxConfig["processData"] = false;
+            }
+            $.ajax(ajaxConfig);
+            return false;
+
+        }
+
+    </script>
+
+
+}
 
 
 
