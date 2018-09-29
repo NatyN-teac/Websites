@@ -18,7 +18,8 @@ namespace BHSM.Models
         public string SecondName { get; set; }
 
         [Required]
-         [Display(Name = "E-Mail")]
+        [Display(Name = "E-Mail")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
         public string Email { get; set; }
 
       
@@ -33,7 +34,7 @@ namespace BHSM.Models
         public string Question { get; set; }
 
 
-        [StringLength(3000)]
+        
         public string Answer { get; set; }
 
 

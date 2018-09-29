@@ -223,6 +223,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\API\EnqueryController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\StaffController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
@@ -256,6 +257,7 @@
     <Compile Include="Controllers\DentistryController.cs" />
     <Compile Include="Controllers\DermatovenerolgyController.cs" />
     <Compile Include="Controllers\EmergencyMedicineController.cs" />
+    <Compile Include="Controllers\EnqueryTablesController.cs" />
     <Compile Include="Controllers\ENTController.cs" />
     <Compile Include="Controllers\FamilyMedicineController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -442,6 +444,10 @@
     <Compile Include="Migrations\201809242257218_UpdateEnqueryTable.cs" />
     <Compile Include="Migrations\201809242257218_UpdateEnqueryTable.Designer.cs">
       <DependentUpon>201809242257218_UpdateEnqueryTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809291252539_updateEnqueryTabless.cs" />
+    <Compile Include="Migrations\201809291252539_updateEnqueryTabless.Designer.cs">
+      <DependentUpon>201809291252539_updateEnqueryTabless.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
@@ -658,6 +664,7 @@
     <Content Include="Content\DataTables\css\common.scss" />
     <Content Include="Areas\Admin\Views\StaffProfile\GetStaff.cshtml" />
     <Content Include="Areas\Admin\Views\StaffProfile\EditStaff.cshtml" />
+    <Content Include="Areas\Admin\Views\Enquery\Index.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1307,6 +1314,7 @@
     <Content Include="Views\Dentistry\Unit.cshtml" />
     <Content Include="Views\Biochemistry\staffDetail.cshtml" />
     <Content Include="Views\Shared\Slide.cshtml" />
+    <Content Include="Views\EnqueryTables\Answer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
@@ -1448,6 +1456,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809242257218_UpdateEnqueryTable.resx">
       <DependentUpon>201809242257218_UpdateEnqueryTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809291252539_updateEnqueryTabless.resx">
+      <DependentUpon>201809291252539_updateEnqueryTabless.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -26,6 +26,7 @@ namespace BHSM.Areas.Admin.Controllers
             return View(Events);
         }
 
+
         
         public ActionResult Create(EventViewModel vm) {
 
