@@ -59,7 +59,7 @@
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
 
-                <li class="dropdown">
+                @*<li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="badge">5</span><i class="glyphicon glyphicon-bell"></i><b class="caret"></b></a>
                     <ul class="dropdown-menu alert alert-dropdown">
                         <li>
@@ -71,7 +71,7 @@
                             <a href="#">View All</a>
                         </li>
                     </ul>
-                </li>
+                </li>*@
                 <li class="dropdown">
 
                     @Html.Partial("_LoginPartial")
@@ -88,26 +88,21 @@
                     <br />
                    
                     <li>
-                        @*<a href="@Url.Action("Department","Super")">Manage Department</a>*@
+                      
                         <a href="@Url.Action("Index", "Departments")" class="glyphicon glyphicon-registration-mark"><b> Department</b> </a>
                     </li>
                     <li>
                         <a href="@Url.Action("Index","News")" class="glyphicon glyphicon-globe"><b> News</b> </a>
                     </li>
                     <li>
-                        @*<a href="@Url.Action("newsAndEvents","Super")"><i class="fa fa-newspaper-o"></i> News </a>*@
+                       
                         <a href="@Url.Action("EventIndex","Event")" class="glyphicon glyphicon-music"><b> Events</b> </a>
                     </li>
                     <li>
-                       @* <a href="@Url.Action("AnswerEnquery","Super")"><i class="fa fa-fw fa-question-circle"></i> Enquries</a>*@
-                        <a href="@Url.Action("Index","StaffProfile")" class="glyphicon glyphicon-question-sign"><b> Enquries</b> </a>
+                      
+                        <a href="@Url.Action("Index","Enquery")" class="glyphicon glyphicon-question-sign"><b> Enquries</b> </a>
                     </li>
-                    @*<li>
-                        <a href="@Url.Action("DirectMessage","Super")"><i class="fa fa-fw fa-envelope"></i> Direct Message</a>
-                    </li>*@
-                    @*<li>
-                        <a href="@Url.Action("Blog","Super")"><i class="fa fa-fw fa-desktop"></i> Blog</a>
-                    </li>*@
+                   
                     <li>
                         <a href="@Url.Action("Index","StaffProfile")" class="glyphicon glyphicon-user"><b> Staff</b> </a>
                     </li>

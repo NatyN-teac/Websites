@@ -1,6 +1,7 @@
 ﻿using BHSM.Models;
 using System.Web.Mvc;
 using BHSM.Areas.Admin.Models;
+using System.Linq;
 
 namespace BHSM.Controllers
 {
@@ -12,6 +13,13 @@ namespace BHSM.Controllers
         public AboutTabController()
         {
             dbCon = new ApplicationDbContext();
+        }
+
+        public ActionResult ShowAnswer() {
+
+            var ans = dbCon.EnqueryTables.Where(m => m.Answer != null).ToList();
+
+            return View(ans);
         }
 
 

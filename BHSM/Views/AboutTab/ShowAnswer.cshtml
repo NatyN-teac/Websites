@@ -1,0 +1,68 @@
+﻿@model  IEnumerable<BHSM.Models.EnqueryTable>
+
+@{
+    ViewBag.Title = "Answers for Questions";
+    Layout = "~/Views/Shared/_NotDepartment.cshtml";
+
+}
+
+
+
+
+<div class="aboutTab-head">
+    <h2>Answers</h2>
+</div>
+
+<div class="col-md-10">
+
+    <div class="total_holder">
+       
+        <h2>Recently Answered Question</h2>
+@foreach (var item in Model)
+{
+ <br />
+ <br />
+ <br />
+        <div class="holder-answ" style="padding:20px;">
+
+            <div class="col-md-3">
+                <div class="colored-enq">
+                    <div class="feb_bue">
+
+                        <p>Answered</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="colored-enq-body">
+                    <h4>@item.Question </h4>
+                    <small style="text-align:right;">
+                        <cite title="location">
+                            @item.location <i class="glyphicon glyphicon-map-marker">
+                            </i>
+                        </cite>
+                    </small>
+                    <div class="answer-enq">
+                        <p>@item.Answer</p>
+                        <h6 id="styleIdperson" class="pull-right">@item.FirstName @item.SecondName</h6>
+                    </div>
+                    <hr style="border:1px solid #2e6fc6;" />
+
+
+                </div>
+            </div>
+            <br /><br />
+
+
+        </div>
+        <br />
+        <hr style="background-color:#fff; color:#fff;" />
+
+
+}  
+       
+    </div>
+ 
+</div>
+
+

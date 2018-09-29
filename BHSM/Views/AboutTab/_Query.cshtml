@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BHSM.Models.EnqueryTable>
+
+<div class="total_holder">
+    <h2>Recently Answered Question</h2>
+
+    @foreach (var query in Model)
+            {
+            <div class="holder-answ">
+
+                <div class="col-md-3">
+                    <div class="colored-enq">
+                        <div class="feb_bue">
+
+                            <p>Answered</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="colored-enq-body">
+                        <h4>@query.Question </h4>
+                        <small style="text-align:right;">
+                            <cite title="@query.location">
+                                Addis Ababa, Ethiopia <i class="glyphicon glyphicon-map-marker">
+                                </i>
+                            </cite>
+                        </small>
+                        <div class="answer-enq">
+                            <p>@query.Answer</p>
+                            <h6 id="styleIdperson" class="pull-right">@query.FirstName @query.SecondName</h6>
+                        </div>
+                        <hr style="border:1px solid #2e6fc6;" />
+
+
+                    </div>
+                </div>
+                <br /><br />
+
+            </div>
+
+
+    }
+
+</div>
+
+

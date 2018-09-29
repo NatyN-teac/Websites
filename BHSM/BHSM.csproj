@@ -228,13 +228,11 @@
     <Compile Include="Areas\Admin\Controllers\API\StaffController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentsController.cs" />
     <Compile Include="Areas\Admin\Controllers\EnqueryController.cs" />
-    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageUsersController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffProfileController.cs" />
-    <Compile Include="Areas\Admin\Controllers\SuperController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\ChsRole.cs" />
     <Compile Include="Areas\Admin\Models\CHS_Staff.cs" />
@@ -614,7 +612,6 @@
     <Content Include="Areas\Admin\Views\Shared\DisplayTemplates\SiteMapTitleHelperModel.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Error.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\Lockout.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Areas\Admin\Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -629,22 +626,11 @@
     <Content Include="Areas\Admin\Views\Account\VerifyCode.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\check.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\newsAndEvents.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\AnswerEnquery.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\DirectMessage.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\Blog.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\Staff.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\LandingPage.cshtml" />
     <Content Include="Areas\Admin\Views\ManageUsers\Index.cshtml" />
     <Content Include="Areas\Admin\Views\ManageUsers\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Account\EditUser.cshtml" />
-    <Content Include="Areas\Admin\Views\AdminHome\Department.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Super.cshtml" />
-    <Content Include="Areas\Admin\Views\Super\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Super\Department.cshtml" />
     <Content Include="Areas\Admin\Views\StaffProfile\NewStaff.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\successPage.cshtml" />
     <Content Include="Areas\Admin\Views\Event\EventIndex.cshtml" />
     <Content Include="Areas\Admin\Views\Event\CreateEvent.cshtml" />
     <Content Include="Areas\Admin\Views\Event\Create.cshtml" />
@@ -1315,6 +1301,8 @@
     <Content Include="Views\Biochemistry\staffDetail.cshtml" />
     <Content Include="Views\Shared\Slide.cshtml" />
     <Content Include="Views\EnqueryTables\Answer.cshtml" />
+    <Content Include="Views\AboutTab\_Query.cshtml" />
+    <Content Include="Views\AboutTab\ShowAnswer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />

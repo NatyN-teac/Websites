@@ -42,11 +42,11 @@ namespace BHSM.Controllers
             else {
                 var dat = _context.EnqueryTables.SingleOrDefault(m => m.Id == query.Id);
                 dat.Answer = query.Answer;
-                dat.Question = query.Question;
-                dat.FirstName = query.FirstName;
-                dat.SecondName = query.SecondName;
-                dat.Email = query.Email;
-                dat.location = query.location;
+                //dat.Question = query.Question;
+                //dat.FirstName = query.FirstName;
+                //dat.SecondName = query.SecondName;
+                //dat.Email = query.Email;
+                //dat.location = query.location;
             }
 
             _context.SaveChanges();
@@ -55,6 +55,11 @@ namespace BHSM.Controllers
             //return View(query);
             return Json(new { success = true, message = message }, JsonRequestBehavior.AllowGet);
         }
+
+        //public ActionResult ShowList() {
+        //    var vm = _context.EnqueryTables.ToList();
+        //    return PartialView("_Query",vm);
+        //}
 
        
     }

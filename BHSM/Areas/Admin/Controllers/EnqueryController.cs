@@ -44,11 +44,11 @@ namespace BHSM.Areas.Admin.Controllers
            
                 var dat = _context.EnqueryTables.SingleOrDefault(m => m.Id == id);
                 dat.Answer = query.Answer;
-                dat.Question = query.Question;
-                dat.FirstName = query.FirstName;
-                dat.SecondName = query.SecondName;
-                dat.Email = query.Email;
-                dat.location = query.location;
+                //dat.Question = query.Question;
+                //dat.FirstName = query.FirstName;
+                //dat.SecondName = query.SecondName;
+                //dat.Email = query.Email;
+                //dat.location = query.location;
             
 
             _context.SaveChanges();
