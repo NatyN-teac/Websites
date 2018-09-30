@@ -15,13 +15,7 @@ namespace  BHSM.Areas.Admin.Models
 
         [Required]
         public string Name { get; set; }
-
-        [Required]
-        public string DepartmentType { get; set; }
-
-
-
-
+        
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {

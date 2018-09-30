@@ -232,6 +232,7 @@
     <Compile Include="Areas\Admin\Controllers\ManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ManageUsersController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
     <Compile Include="Areas\Admin\Controllers\StaffProfileController.cs" />
     <Compile Include="Areas\Admin\Models\AccountViewModels.cs" />
     <Compile Include="Areas\Admin\Models\ChsRole.cs" />
@@ -447,6 +448,14 @@
     <Compile Include="Migrations\201809291252539_updateEnqueryTabless.Designer.cs">
       <DependentUpon>201809291252539_updateEnqueryTabless.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809301250290_regressional.cs" />
+    <Compile Include="Migrations\201809301250290_regressional.Designer.cs">
+      <DependentUpon>201809301250290_regressional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809301302050_regressional1.cs" />
+    <Compile Include="Migrations\201809301302050_regressional1.Designer.cs">
+      <DependentUpon>201809301302050_regressional1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -651,6 +660,10 @@
     <Content Include="Areas\Admin\Views\StaffProfile\GetStaff.cshtml" />
     <Content Include="Areas\Admin\Views\StaffProfile\EditStaff.cshtml" />
     <Content Include="Areas\Admin\Views\Enquery\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Role\AssignRoleToUser.cshtml" />
+    <Content Include="Areas\Admin\Views\Account\RegisterRole.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1447,6 +1460,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809291252539_updateEnqueryTabless.resx">
       <DependentUpon>201809291252539_updateEnqueryTabless.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809301250290_regressional.resx">
+      <DependentUpon>201809301250290_regressional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809301302050_regressional1.resx">
+      <DependentUpon>201809301302050_regressional1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

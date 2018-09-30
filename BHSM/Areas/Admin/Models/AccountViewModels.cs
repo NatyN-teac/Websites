@@ -69,6 +69,9 @@ namespace BHSM.Areas.Admin.Models
         [Display(Name ="User Name")]
         public string Name { get; set; }
 
+        public string RoleName { get; set; }
+
+
         [Required]
         public string Department { get; set; }
 

@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using BHSM.Models;
 using BHSM.Areas.Admin.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BHSM.Areas.Admin.Controllers
 {
@@ -31,6 +32,48 @@ namespace BHSM.Areas.Admin.Controllers
             SignInManager = signInManager;
            
         }
+
+        //register Role
+
+        [HttpGet]
+       [AllowAnonymous]
+        public ActionResult RegisterRole() {
+            ViewBag.Name = new SelectList(_context.Roles.ToList(), "Name", "Name");
+            ViewBag.UserName = new SelectList(_context.Users.ToList(), "UserName", "UserName");
+            return View();
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> RegisterRole(RegisterViewModel model,ApplicationUser user) {
+            var userId = _context.Users.Where(i => i.UserName == user.UserName).Select(s => s.Id);
+            string updateId = "";
+            foreach(var i in userId) {
+                updateId = i.ToString();
+            }
+
+            await this.UserManager.AddToRoleAsync(updateId, model.Name);
+
+            return RedirectToAction("Index", "Role");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //end Role 
+
+
+
 
         public ApplicationSignInManager SignInManager
         {
@@ -164,6 +207,14 @@ namespace BHSM.Areas.Admin.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+
+                    //temp code
+
+                    var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    await roleManager.CreateAsync(new IdentityRole("Super"));
+                    await UserManager.AddToRoleAsync(user.Id, "Super");
+
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
