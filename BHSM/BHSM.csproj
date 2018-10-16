@@ -223,6 +223,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminHomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\EnqueryController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\EventController.cs" />
     <Compile Include="Areas\Admin\Controllers\API\StaffController.cs" />
@@ -456,6 +457,14 @@
     <Compile Include="Migrations\201809301302050_regressional1.Designer.cs">
       <DependentUpon>201809301302050_regressional1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809302207340_addIsAssignedToUser.cs" />
+    <Compile Include="Migrations\201809302207340_addIsAssignedToUser.Designer.cs">
+      <DependentUpon>201809302207340_addIsAssignedToUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809302359428_RemoveNameFromUser.cs" />
+    <Compile Include="Migrations\201809302359428_RemoveNameFromUser.Designer.cs">
+      <DependentUpon>201809302359428_RemoveNameFromUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AnswerTable.cs" />
     <Compile Include="Models\DateTimeValid.cs" />
@@ -664,6 +673,7 @@
     <Content Include="Areas\Admin\Views\Role\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Role\AssignRoleToUser.cshtml" />
     <Content Include="Areas\Admin\Views\Account\RegisterRole.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminHome\LandingPage.cshtml" />
     <None Include="MvcSiteMapSchema.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1326,6 +1336,7 @@
     <Folder Include="images\Departmen\" />
     <Folder Include="images\Events\" />
     <Folder Include="images\staff\" />
+    <Folder Include="images\surgUnit\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -1466,6 +1477,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809301302050_regressional1.resx">
       <DependentUpon>201809301302050_regressional1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809302207340_addIsAssignedToUser.resx">
+      <DependentUpon>201809302207340_addIsAssignedToUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809302359428_RemoveNameFromUser.resx">
+      <DependentUpon>201809302359428_RemoveNameFromUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

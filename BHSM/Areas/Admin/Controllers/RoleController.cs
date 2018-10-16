@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace BHSM.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Super")]
     public class RoleController : Controller
     {
         private ApplicationDbContext context;

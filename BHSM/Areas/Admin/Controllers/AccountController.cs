@@ -36,15 +36,17 @@ namespace BHSM.Areas.Admin.Controllers
         //register Role
 
         [HttpGet]
-       [AllowAnonymous]
+       [Authorize(Roles = "Super")]
         public ActionResult RegisterRole() {
             ViewBag.Name = new SelectList(_context.Roles.ToList(), "Name", "Name");
-            ViewBag.UserName = new SelectList(_context.Users.ToList(), "UserName", "UserName");
+            //ViewBag.UserName = new SelectList(_context.Users.ToList(), "UserName", "UserName");
+            ViewBag.UserName = new SelectList(_context.Users.Where(u => u.isAssigned == false), "UserName", "UserName");
+
             return View();
         }
 
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Super")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> RegisterRole(RegisterViewModel model,ApplicationUser user) {
             var userId = _context.Users.Where(i => i.UserName == user.UserName).Select(s => s.Id);
@@ -54,6 +56,9 @@ namespace BHSM.Areas.Admin.Controllers
             }
 
             await this.UserManager.AddToRoleAsync(updateId, model.Name);
+            var userInDb = _context.Users.Single(i => i.UserName == user.UserName);
+            userInDb.isAssigned = true;
+            _context.SaveChanges();
 
             return RedirectToAction("Index", "Role");
         }
@@ -202,18 +207,17 @@ namespace BHSM.Areas.Admin.Controllers
             {
                 var user = new ApplicationUser {
                     UserName = model.Email,
-                    Email = model.Email,
-                    Name = model.Name };
+                    Email = model.Email};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
 
                     //temp code
 
-                    var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
-                    var roleManager = new RoleManager<IdentityRole>(roleStore);
-                    await roleManager.CreateAsync(new IdentityRole("Super"));
-                    await UserManager.AddToRoleAsync(user.Id, "Super");
+                    //var roleStore = new RoleStore<IdentityRole>(new ApplicationDbContext());
+                    //var roleManager = new RoleManager<IdentityRole>(roleStore);
+                    //await roleManager.CreateAsync(new IdentityRole("Super"));
+                    //await UserManager.AddToRoleAsync(user.Id, "Super");
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     
@@ -223,7 +227,7 @@ namespace BHSM.Areas.Admin.Controllers
                      var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                      await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-                    return RedirectToAction("Index", "ManageUsers");
+                    return RedirectToAction("LandingPage", "AdminHome");
                 }
                 AddErrors(result);
             }
@@ -562,7 +566,7 @@ namespace BHSM.Areas.Admin.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "AdminHome");
+            return RedirectToAction("LandingPage", "AdminHome");
         }
 
         internal class ChallengeResult : HttpUnauthorizedResult

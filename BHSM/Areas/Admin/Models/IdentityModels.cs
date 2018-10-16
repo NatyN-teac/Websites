@@ -13,9 +13,9 @@ namespace  BHSM.Areas.Admin.Models
     public class ApplicationUser : IdentityUser
     {
 
-        [Required]
-        public string Name { get; set; }
-        
+       
+
+        public bool isAssigned { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
