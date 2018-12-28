@@ -254,6 +254,7 @@
     <Compile Include="Controllers\AnesthesiologyController.cs" />
     <Compile Include="Controllers\BiochemistryController.cs" />
     <Compile Include="Controllers\CentersController.cs" />
+    <Compile Include="Controllers\ChsHomeController.cs" />
     <Compile Include="Controllers\DentistryController.cs" />
     <Compile Include="Controllers\DermatovenerolgyController.cs" />
     <Compile Include="Controllers\EmergencyMedicineController.cs" />
@@ -483,6 +484,7 @@
     <Content Include="Content\animate.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chs_main.css" />
     <Content Include="Content\curriculum.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
@@ -1326,6 +1328,9 @@
     <Content Include="Views\EnqueryTables\Answer.cshtml" />
     <Content Include="Views\AboutTab\_Query.cshtml" />
     <Content Include="Views\AboutTab\ShowAnswer.cshtml" />
+    <Content Include="Views\ChsHome\Main.cshtml" />
+    <Content Include="Views\ChsHome\Home.cshtml" />
+    <Content Include="Views\Shared\_chsHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />
@@ -1336,6 +1341,7 @@
     <Folder Include="images\Departmen\" />
     <Folder Include="images\Events\" />
     <Folder Include="images\staff\" />
+    <Folder Include="images\surgery\" />
     <Folder Include="images\surgUnit\" />
   </ItemGroup>
   <ItemGroup>

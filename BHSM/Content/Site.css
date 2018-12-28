@@ -77,6 +77,7 @@ textarea {
 
 
 
+
 .carousel-control .icon-prev,
  .carousel-control .icon-next, 
  .carousel-control .glyphicon-chevron-left, 
@@ -135,10 +136,57 @@ blockquote {
     left: 0;
 }
 
+/*chs home header with logo*/
+
+.chs_header_container{
+position: absolute;
+padding:8px;
+background:linear-gradient(rgba(14, 14, 14, 0.23),rgba(13, 13, 13, 0.25));
+height:18vh;
+width:80%;
+margin-left:10%;
+
+
+}
+
+.chs_header_container .chs_name h2{
+ color:#fff;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ font-weight:600;
+ font-style:italic;
+ font-size:40px;
+ text-align:center;
+ padding-top:20px;
+ vertical-align:central;
+}
+ .ch_logo {
+ width:100%;
+
+
+}
+ .ch_logo  img{
+ 
+ width:100px;
+ height:100px;
+ margin-left:20px;
+
+ 
+ }
+.ch_logo1{
+width:100%;
+}
+.ch_logo1  img{
+width:200px;
+height:200px;
+
+margin-left:50px;
+
+
+}
 
 
 .header-main {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.39),rgba(0,0,0,0.3)),url(../images/black.jpg);
+    background-image: linear-gradient(rgba(66, 139, 202, 0.59),rgba(66, 139, 202, 0.40)),url(../images/surgery/blacklion.jpg);
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -146,7 +194,7 @@ blockquote {
     padding-left: 250px;
 }
 .header-container{
-    /*position: relative;*/
+    position: relative;
     padding-left: 50px;
 }
 .logo{

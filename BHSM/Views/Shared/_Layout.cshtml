@@ -15,6 +15,7 @@
 
 
     @Styles.Render("~/Content/css")
+  
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
@@ -35,10 +36,10 @@
                    
 
                 </div> -->
-           <header class="header-main">
+           @*<header class="header-main">
                
 
-            </header> 
+            </header>*@ 
         </div>
 
         </div>
@@ -163,7 +164,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Research Center & Institutes", "center_institues", "Reseach")</li>
-                                <li>@Html.ActionLink("Sample Research Profile", "sampleReseach", "Reseach")</li>
+                                <li>@Html.ActionLink("Research Procedure", "sampleReseach", "Reseach")</li>
                                 <li>@Html.ActionLink("Researcher Resource", "reseachResource", "Reseach")</li>
 
                             </ul>
@@ -218,7 +219,7 @@
                             </ul>
                         </li>
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Affiliate Hospital </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Affiliates </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Zewditu Memorial Hospital", "zewditu", "AlliedHospitals")</li>
                                 <li>@Html.ActionLink("Minilik II Hospital", "menilik", "AlliedHospitals")</li>
@@ -298,7 +299,8 @@
                         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad               minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in                            reprehenderitin voluptate velit esse cillum dolore eu fugiat nulla pariatur",
                         "article": "this is the article side of the deprt",
                         "moto":"Calm down We All Are Surgens",
-                        "imageUrl": "/images/black.jpg"
+                        "imageUrl": "/images/surgery/sugery.jpg"
+                        
                     },
                     "Biochemistry": {
                         "name": "department Name",

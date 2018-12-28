@@ -1,0 +1,225 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif:400,700,family=Felipa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Felipa" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    @*<div class="container-fill">*@
+       
+              <div class="chs_header_container col-md-12 col-xs-12 col-xs-12">
+
+                  <div class="row">
+                      <div class="col-xs-2 col-md-2 col-lg-2">
+                          <div class="ch_logo">
+
+                              <img src="~/images/surgery/oph.jpg" alt="" class="img-circle img-responsive" />
+                          </div>
+
+                      </div>
+                      <div class="col-xs-8 col-md-8 col-lg-8 chs_name">
+                         <h2>College Of Health Science</h2> 
+
+                      </div>
+                      <div class="col-xs-2 col-md-2 col-lg-2">
+                          <div class="ch_logo">
+
+                              <img src="~/images/logo-tash.jpg" alt="CHS logo" class="img-circle img-responsive" />
+                          </div>
+
+                      </div>
+
+                  </div>
+                  
+
+
+
+                </div> 
+
+
+            
+            <header class="header-main">
+               
+            </header>
+       
+
+    @*</div>*@
+
+    <div class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar navbar-inverse"></span>
+                    <span class="icon-bar navbar-inverse"></span>
+                    <span class="icon-bar navbar-inverse"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CHS Home</a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("History", "History", "AboutTab")</li>
+                            <li>@Html.ActionLink("College At Glance", "SchoolAtGlance", "AboutTab")</li>
+                            <li>@Html.ActionLink("Leadership", "SchoolAdmin", "AboutTab")</li>
+                            <li>@Html.ActionLink("Culture & Campus", "cultureCampus", "AboutTab")</li>
+                            <li>@Html.ActionLink("Direction & Maps", "DirectionMap", "AboutTab")</li>
+                            <li class="divider"></li>
+                            <li>@Html.ActionLink("Contact Us", "contactUs", "AboutTab")</li>
+
+
+                        </ul>
+                    </li>
+
+                    <!--the second navbar list-->
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schools </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("School Of Medicine", "AcademicsHome", "Academics")</li>
+                            <li>@Html.ActionLink("School Of Pharmacy", "medicalEducation", "Academics")</li>
+                            <li>@Html.ActionLink("School Of Nursing", "mdadmission", "Academics")</li>
+                            <li>@Html.ActionLink("School Of Public Health", "graduateEducation", "Academics")</li>
+                          
+
+                        </ul>
+                    </li>
+
+
+
+
+                    <!--the third navbar list-->
+
+
+                 
+
+                    <!--the fourth navbar list-->
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Research Center & Institutes", "center_institues", "Reseach")</li>
+                            <li>@Html.ActionLink("Research Procedure", "sampleReseach", "Reseach")</li>
+                            <li>@Html.ActionLink("Researcher Resource", "reseachResource", "Reseach")</li>
+
+                        </ul>
+                    </li>
+
+
+                  
+
+                    <!--the six navbar list-->
+                    <!--the seven navbar list-->
+
+
+
+
+
+
+
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">News &amp; Events </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("News Releases", "news", "News")</li>
+                            <li>@Html.ActionLink("Magazine", "socialmedias", "News")</li>
+
+                        </ul>
+                    </li>
+                   
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CHS Wings </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Hospital", "zewditu", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("Academics", "menilik", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("chs wing-3", "Ghandi", "AlliedHospitals")</li>
+                            <li>@Html.ActionLink("Chs wing-4", "alert", "AlliedHospitals")</li>
+                      
+
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Sponsors </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Diabetics center", "diabetics", "Centers")</li>
+                            <li>@Html.ActionLink("Center For ethics & Priority Setting", "ethicCenter", "Centers")</li>
+                            <li>@Html.ActionLink("Infectious Disease Center", "infectiosDes", "Centers")</li>
+                            <li>@Html.ActionLink("Cardiac Center", "cardiacCenter", "Centers")</li>
+
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+
+                <!--
+                    <form class="navbar-form navbar-left">
+                     <div class="form-group">
+                         <input type="text" class="form-control" placeholder="Search">
+                     </div>
+                     <button type="submit" class="button-butn-search"><span style="color:#fff;" class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                 </form>
+
+                    -->
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!--
+        <div class="full-width-div">
+
+         <div class="headr">Logo</div>
+         <div class="headr">School Name</div>
+     </div>
+
+        -->
+
+
+
+    @*@Html.Partial("Slide")*@
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+
+    </div>
+    @Html.Partial("_footer")
+
+
+
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/slider")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

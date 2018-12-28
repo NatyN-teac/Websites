@@ -1,0 +1,22 @@
+﻿
+
+.chs_summary{
+width: 100%;
+height:auto;
+background-color:#fff;
+padding:10px;
+
+}
+
+.chs_summary_title{
+margin-top:30px;
+margin-bottom:20px;
+}
+.chs_summary_title h2{
+   color:#0d0d0d;
+   text-align:center;
+   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   margin-bottom:20px;
+
+}
+

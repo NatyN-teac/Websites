@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+   
+    <meta charset="utf-8" />
+    <title>College Of Health Science</title>
+    
+
+
+    @Styles.Render("~/Content/chs")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style>
+       .chs_logo{
+         width: 140px;
+         height: 140px;
+         border-radius: 50%;
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="navbar navbar-default navbar-fixed-top navv" data-spy="affix" data-offset-top="400">
+        <div class="container">
+            <div class="navbar-header">
+                @*<a href="#" class="navbar-brand">Logo</a>*@
+                <img src="~/images/logo-tash.jpg"  class="chs_logo"/>
+                <a class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Schools</a></li>
+                </ul>
+                <ul class="nav navbar-right navbar-nav">
+                    @*<li>
+                        <a href="#">Link</a>
+                    </li>*@
+                   
+                </ul>
+            </div>
+        </div>
+    </div><!-- /.navbar -->
+
+    <section class="first">
+        <div class="container">
+            <h1 class="text-center">College Of health Science</h1>
+        </div>
+    </section>
+
+    <div id="full-container">
+    
+
+        <div class="department-information">
+            <div class="dept-name">
+                dept name
+            </div>
+            <div class="dept-emp-count">
+                dept description test, this is department description
+            </div>
+            <div class="dept-description">
+                dept description test, this is department description
+            </div>
+        </div>
+
+    </div>
+
+
+  
+</body>
+</html>
