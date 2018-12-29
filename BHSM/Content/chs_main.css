@@ -19,4 +19,280 @@ margin-bottom:20px;
    margin-bottom:20px;
 
 }
+.academics_home{
+width:100%;
+height:auto;
+box-shadow:rgb(128, 128, 128) 0px 4px 4px 1px ;
+}
+.academics_home:hover,
+.academics_home:active{
 
+background-color: #93008c;
+
+}
+
+.academics{
+    width:100%;
+    height:auto;
+    border-top: 7px solid #93008c;
+    box-shadow:#808080 0px 3px 4px;
+    border-bottom: 4px solid transparent;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:10px;
+    margin-top:3px;
+    margin-bottom:5px;
+
+}
+
+.academics  h3 {
+    text-align:center;
+    color:#223;
+    font-family:'Californian FB';
+    font-weight:500;
+    font-weight:bold;
+    font-style:oblique;
+    width:100%;
+}
+
+.academics  h3:hover {
+   
+    color:#fff;
+    
+}
+
+.aca_body{
+padding:7px;
+margin-bottom:auto;
+}
+.aca_body p{
+    color:#223;
+    font-style:italic;
+    text-align-last:auto;
+    text-justify:auto;
+}
+.aca_body p:hover{
+    color:#fff;
+}
+
+
+
+
+.chs_community{
+    width:100%;
+    height:auto;
+    box-shadow:rgb(128, 128, 128) 0px 4px 4px 1px ;
+}
+
+.chs_community:hover,
+.chs_community:active{
+background-color: #ff6a00;
+color:white;
+}
+
+.community{
+    
+     width:100%;
+    height:auto;
+    border-top: 7px solid #ff6a00;
+    box-shadow:#808080 0px 3px 4px;
+    border-bottom: 4px solid transparent;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:10px;
+    margin-top:3px;
+    margin-bottom:5px;
+}
+.community h3{
+  text-align:center;
+    color:#223;
+    font-family:'Californian FB';
+    font-weight:500;
+    font-weight:bold;
+    font-style:oblique;
+    width:100%;
+}
+
+.community h3:hover,
+.community h3:active{
+ color:#fff;
+
+}
+.com_body{
+padding:7px;
+margin-bottom:auto;
+}
+.com_body p{
+    color:#223;
+    font-style:italic;
+    text-align-last:auto;
+    text-justify:auto;
+}
+
+.com_body p:hover,
+.com_body p:active{
+   color:#fff;
+}
+
+
+
+.chs_pil{
+    width:100%;
+    height:auto;
+    box-shadow:rgb(128, 128, 128) 0px 4px 4px 1px ;
+}
+
+.chs_pil:hover,
+.chs_pil:active{
+background-color: #00ca29;
+color:white;
+}
+
+.pil{
+    
+     width:100%;
+    height:auto;
+    border-top: 7px solid #00ca29;
+    box-shadow:#808080 0px 3px 4px;
+    border-bottom: 4px solid transparent;
+    padding-right:5px;
+    padding-left:5px;
+    padding-bottom:10px;
+    margin-top:3px;
+    margin-bottom:5px;
+}
+.pil h3{
+  text-align:center;
+    color:#223;
+    font-family:'Californian FB';
+    font-weight:500;
+    font-weight:bold;
+    font-style:oblique;
+    width:100%;
+}
+
+.pil h3:hover,
+.pil h3:active{
+ color:#fff;
+
+}
+.pil_body{
+padding:7px;
+margin-bottom:auto;
+}
+.pil_body p{
+    color:#223;
+    font-style:italic;
+    text-align-last:auto;
+    text-justify:auto;
+}
+
+.pil_body p:hover,
+.pil_body p:active{
+   color:#fff;
+}
+
+
+/*organo css*/
+.organo{
+    width:100%;
+    height:200px;
+    background-color:#fff;
+    margin-top:10px;
+
+}
+
+/*chs Adminstration layout*/
+
+.chs_adminstration{
+    width:100%;
+    height:auto;
+    background-color:white;
+    margin-top:10px;
+    padding:7px;
+  
+
+}
+
+.admin_chs{
+    padding:2px;
+    
+    width:100%;
+
+}
+
+.admin_chs img{
+    width:110px;
+    height:95px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
+.admin_chs_detail h4{
+   color:#223;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style:italic;
+   text-decoration:underline;
+
+}
+.admin_chs_detail h5{
+   color:#223;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style:italic;
+   font-weight:300;
+   font-size:15px;
+
+
+}
+.admin_chs_detail p{
+    text-align:left;
+    align-content:center;
+    color:#224;
+}
+
+.admin_contain_chs{
+    width:100%;
+    
+    border-radius:10px;
+    box-shadow:#808080 0px 3px 4px;
+    height:auto;
+}
+
+.admin_general_chs{
+    padding:2px;
+    width:100%;
+    padding:10px;
+   
+}
+
+.admin_general_chs img{
+    width:110px;
+    height:95px;
+    float:left;
+    margin-right:10px;
+    margin-bottom:10px;
+}
+
+.admin_general_chs_detail h4{
+   color:#223;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style:italic;
+   text-decoration:underline;
+
+}
+.admin_general_chs_detail h5{
+   color:#223;
+   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   font-style:italic;
+   font-weight:300;
+   font-size:15px;
+
+
+}
+.admin_general_chs_detail p{
+    text-align:left;
+    align-content:center;
+    color:#224;
+    padding:10px;
+}
