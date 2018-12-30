@@ -266,14 +266,17 @@
     <Compile Include="Controllers\MicrobiologyController.cs" />
     <Compile Include="Controllers\NeurologyController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
+    <Compile Include="Controllers\NursingController.cs" />
     <Compile Include="Controllers\ObstetricsGyneController.cs" />
     <Compile Include="Controllers\OncologyController.cs" />
     <Compile Include="Controllers\OphtalmologyController.cs" />
     <Compile Include="Controllers\OrthopedicsController.cs" />
     <Compile Include="Controllers\PathologyController.cs" />
     <Compile Include="Controllers\PediatricController.cs" />
+    <Compile Include="Controllers\PharmacyController.cs" />
     <Compile Include="Controllers\PhysiologyController.cs" />
     <Compile Include="Controllers\PsychiatryController.cs" />
+    <Compile Include="Controllers\PublicHealthController.cs" />
     <Compile Include="Controllers\RadiographyController.cs" />
     <Compile Include="Controllers\RadiologyController.cs" />
     <Compile Include="Controllers\ReseachController.cs" />
@@ -1331,6 +1334,9 @@
     <Content Include="Views\ChsHome\Main.cshtml" />
     <Content Include="Views\ChsHome\Home.cshtml" />
     <Content Include="Views\Shared\_chsHome.cshtml" />
+    <Content Include="Views\Pharmacy\Index.cshtml" />
+    <Content Include="Views\Nursing\Index.cshtml" />
+    <Content Include="Views\PublicHealth\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppFiles\Images\" />

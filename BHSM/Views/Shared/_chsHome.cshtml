@@ -24,13 +24,13 @@
 
     @*<div class="container-fill">*@
        
-              <div class="chs_header_container col-md-12 col-xs-12 col-xs-12">
+              <div class="chs_header_container">
 
                   <div class="row">
                       <div class="col-xs-2 col-md-2 col-lg-2">
                           <div class="ch_logo">
-
-                              <img src="~/images/surgery/oph.jpg" alt="" class="img-circle img-responsive" />
+                             
+                              <img src="~/images/addis.png" alt="" class="img-circle img-responsive" />
                           </div>
 
                       </div>
@@ -94,41 +94,14 @@
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Schools </a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("School Of Medicine", "AcademicsHome", "Academics")</li>
-                            <li>@Html.ActionLink("School Of Pharmacy", "medicalEducation", "Academics")</li>
-                            <li>@Html.ActionLink("School Of Nursing", "mdadmission", "Academics")</li>
-                            <li>@Html.ActionLink("School Of Public Health", "graduateEducation", "Academics")</li>
+                            <li>@Html.ActionLink("School Of Medicine", "index", "Home")</li>
+                            <li>@Html.ActionLink("School Of Pharmacy", "index", "Pharmacy")</li>
+                            <li>@Html.ActionLink("School Of Nursing", "index", "Nursing")</li>
+                            <li>@Html.ActionLink("School Of Public Health", "index", "PublicHealth")</li>
                           
 
                         </ul>
                     </li>
-
-
-
-
-                    <!--the third navbar list-->
-
-
-                 
-
-                    <!--the fourth navbar list-->
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research </a>
-                        <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Research Center & Institutes", "center_institues", "Reseach")</li>
-                            <li>@Html.ActionLink("Research Procedure", "sampleReseach", "Reseach")</li>
-                            <li>@Html.ActionLink("Researcher Resource", "reseachResource", "Reseach")</li>
-
-                        </ul>
-                    </li>
-
-
-                  
-
-                    <!--the six navbar list-->
-                    <!--the seven navbar list-->
-
 
 
 
@@ -158,12 +131,12 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Sponsors </a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Partners</a>
                         <ul class="dropdown-menu">
-                            <li>@Html.ActionLink("Diabetics center", "diabetics", "Centers")</li>
-                            <li>@Html.ActionLink("Center For ethics & Priority Setting", "ethicCenter", "Centers")</li>
-                            <li>@Html.ActionLink("Infectious Disease Center", "infectiosDes", "Centers")</li>
-                            <li>@Html.ActionLink("Cardiac Center", "cardiacCenter", "Centers")</li>
+                            <li>@Html.ActionLink("Partners 1", "diabetics", "Centers")</li>
+                            <li>@Html.ActionLink("Partners 2", "ethicCenter", "Centers")</li>
+                            <li>@Html.ActionLink("Partners 3", "infectiosDes", "Centers")</li>
+                            <li>@Html.ActionLink("Partners 4", "cardiacCenter", "Centers")</li>
 
                         </ul>
                     </li>
@@ -172,15 +145,7 @@
 
                 </ul>
 
-                <!--
-                    <form class="navbar-form navbar-left">
-                     <div class="form-group">
-                         <input type="text" class="form-control" placeholder="Search">
-                     </div>
-                     <button type="submit" class="button-butn-search"><span style="color:#fff;" class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                 </form>
-
-                    -->
+             
 
             </div>
         </div>
@@ -189,14 +154,6 @@
 
     </div>
 
-    <!--
-        <div class="full-width-div">
-
-         <div class="headr">Logo</div>
-         <div class="headr">School Name</div>
-     </div>
-
-        -->
 
 
 
@@ -221,5 +178,32 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/slider")
     @RenderSection("scripts", required: false)
+
+
+    <script>
+            $(document).ready(function () {
+                
+            
+
+            //image slider css
+                $("#immersive_slider").immersive_slider({
+                    container: ".main"
+                });
+                //our people profile
+                   $('#media').carousel({
+                       pause: true,
+                      interval: false,
+                   });
+
+
+
+
+
+
+            });
+
+
+    </script>
+
 </body>
 </html>
