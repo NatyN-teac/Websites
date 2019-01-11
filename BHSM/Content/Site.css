@@ -145,6 +145,8 @@ background:linear-gradient(rgba(14, 14, 14, 0.23),rgba(13, 13, 13, 0.25));
 height:18vh;
 width:80%;
 margin-left:10%;
+border:1px solid #fff;
+border-radius:10px;
 
 
 }

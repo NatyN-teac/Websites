@@ -1,8 +1,430 @@
 ﻿
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "School Of Nursing";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index of Nursing campus</h2>
+
+<div class="container body-content">
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+            <div class="main-holder">
+
+                <div class="sub-main-holder">
+                    @*<span class="dropdown handle-fix" data-dep-menu >Department Highlights <i class="caret"></i></span>*@
+
+                    <li class="dropdown  handle-fix" style="list-style:none;margin:3px 2px;">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            departments Overview
+                        </a>
+                        <ul class="dropdown-menu" id="sampleDepartments">
+                            <li><a value="surgery">Surgery Department</a></li>
+                            <li><a>Internal Medicine</a></li>
+                            <li><a>Biochemistry Department</a></li>
+                            <li><a>Emergency Department</a></li>
+
+
+                        </ul>
+
+
+                    </li>
+
+
+                    @* <img src="~/images/img/slide1.jpg" alt="checkup" />*@
+
+                    <img id="imgId" src="~/images/bioC.jpg" />
+
+
+                </div>
+
+                <div class="row" id="over">
+                    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+                        <div class="dep-highlight-text" id="depo">
+                            <article>
+                                <h3 id="departmentOverHead">Department Name</h3>
+
+                                <p id="department_description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+                                    in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
+                                </p>
+
+                            </article>
+
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                        <div class="related">
+                            <div class="related-sub" id="subArtDep">
+                                <h4>Related Articles</h4>
+                                <h5 id="department_moto">The related Articles Sub article title for today</h5>
+                                <p id="department_article">
+                                    pain of itself, because it is pain, but occasionally circumstances
+                                    occur in which toil and pain can procure him some great pleasure.
+                                </p>
+                                <hr class="style3" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="research-body">
+                    <div class="Total-title">
+                        <h2 style="text-align:center;">Our Research Center</h2>
+                    </div>
+
+                    <div class="research">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4 ">
+                                <div class="research-total">
+                                    <div class="research-image">
+                                        <img src="~/images/img/cardiac.jpg" />
+                                        @*<img src="~/images/img/slide1.jpg" />*@
+                                    </div>
+                                    <div class="research-desc">
+                                        <h4> Cardiac Center</h4>
+                                        <p>Focus of Speocus oocus ocialocus of Speocus oocus ociality</p>
+
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="#">READ MORE</a>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4">
+                                <div class="research-total">
+                                    <div class="research-image">
+                                        @*<img src="~/images/img/slide1.jpg" />*@
+                                        <img src="~/images/img/research.jpg" />
+                                    </div>
+                                    <div class="research-desc">
+                                        <h4>Cancer Prevention</h4>
+                                        <p>Focus of Speocus oocus ocialocus of Speocus oocus ociality</p>
+
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="#">READ MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-4">
+                                <div class="research-total">
+                                    <div class="research-image">
+                                        <img src="~/images/img/cardiac.jpg" />
+                                    </div>
+                                    <div class="research-desc">
+                                        <h4>Anti-HIV/AIDS </h4>
+                                        <p>Focus of Speocus oocus ocialocus of Speocus oocus ociality</p>
+
+                                    </div>
+                                    <div class="readmore">
+                                        <a href="#">READ MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <br />
+                    <br />
+
+
+
+
+                    <div>
+
+                        <div class="row">
+                            <h2 style="text-align:center;">Our School's People</h2>
+                        </div>
+                        <div class='row'>
+                            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                                <div class="carousel slide media-carousel" id="media">
+                                    <div class="carousel-inner">
+                                        <div class="item  active">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <div class="containnn">
+
+                                                        <a class="thumbnail" href="#">
+                                                            <img alt=""
+                                                                 src="~/images/img/helen.jpg"
+                                                                 class="img-responsive img-rounded">
+                                                        </a>
+
+                                                        <div class="name-tag">
+                                                            <h4>Dr. Helen </h4>
+                                                        </div>
+                                                        <div class="role-tag">
+                                                            <h5>Medical Director</h5>
+                                                        </div>
+                                                        <div class="response-link">
+                                                            <p>
+                                                                <a href="#" class="custom-link">First Link</a>
+
+                                                            </p>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#">
+                                                        <img alt=""
+                                                             src="~/images/img/yrigu.jpg"
+                                                             class="img-responsive img-rounded">
+                                                    </a>
+
+                                                    <div><h3>Doctor Yirgu</h3></div>
+                                                    <div><p>Medical Director</p></div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#">
+                                                        <img alt=""
+                                                             src="~/images/img/st.jpg"
+                                                             class="img-responsive img-rounded">
+                                                    </a>
+
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150" class="img-responsive img-rounded"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150" class="img-responsive img-rounded"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img alt="" src="http://placehold.it/150x150 class="img-responsive img-rounded"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img alt="" class="img-responsive img-rounded" src="http://placehold.it/150x150"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img class="img-responsive img-rounded" alt="" src="http://placehold.it/150x150"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                                    <a class="thumbnail" href="#"><img class="img-responsive img-rounded" alt="" src="http://placehold.it/150x150"></a>
+                                                    <div><h3>Hello Name</h3></div>
+                                                    <div><p>this is responsibility</p></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a data-slide="prev" href="#media" class="left carousel-control">‹</a>
+                                    <a data-slide="next" href="#media" class="right carousel-control">›</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="side-holder">
+                <div class="sub-side">
+                    <div class="sub-side-img">
+
+                        <img src="~/images/surgUnit/default.png" class="img-responsive " />
+                    </div>
+                    <div class="sub-side-detail">
+                        <div class="sub-side-header">
+                            <h3>Dean's Letter</h3>
+                        </div>
+                        <div class="sub-side-article">
+                            <p>
+                                According to Latin professor Richard McClintock — the man credited
+                                with discovering Lorem Ipsum's roots — it is likely
+                                that sometime during the middle ages a typesetter scrambled part of
+                            </p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#">READ MORE</a>
+                        </div>
+                        <hr />
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="side-holder">
+                <div class="sub-side">
+                    <div class="sub-side-img">
+                        <img src="~/images/surgUnit/default.png" class="img-responsive " />
+                    </div>
+                    <div class="sub-side-detail">
+                        <div class="sub-side-header">
+                            <h3>News</h3>
+                        </div>
+                        <div class="sub-side-article">
+                            <p>
+                                According to Latin professor Richard McClintock — the man credited
+                                with discovering Lorem Ipsum's roots — it is likely
+                                that sometime during the middle ages a typesetter scrambled part of
+                            </p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#">READ MORE</a>
+                        </div>
+                        <hr />
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+            <div class="side-holder">
+                <div class="sub-side">
+                    <div class="sub-side-img">
+                        <img src="~/images/surgUnit/default.png" class="img-responsive " />
+                    </div>
+                    <div class="sub-side-detail">
+                        <div class="sub-side-header">
+                            <h3>Magazine</h3>
+                        </div>
+                        <div class="sub-side-article">
+                            <p>
+                                According to Latin professor Richard McClintock — the man credited
+                                with discovering Lorem Ipsum's roots — it is likely
+                                that sometime during the middle ages a typesetter scrambled part of
+                            </p>
+                        </div>
+                        <div class="readmore">
+                            <a href="#">READ MORE</a>
+                        </div>
+                        <hr />
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+    <div class="motivation">
+        <div class="row">
+            <h2 class="timeline" style="text-align:center;">The Core Legacy of School Of Nursing </h2>
+
+            <ul class="timeline">
+
+                <li class="timeline-inverted">
+                    <div class="timeline-badge warning"><i class="glyphicon glyphicon-globe"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Graduation.....???</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-alert"></i> Proffessor Daniel Kitawu</small></p>
+
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-badge danger"><i class="glyphicon glyphicon-hand-left"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Care For ........?</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-alert"></i> Proffessor Daniel Kitawu</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>
+                                Mussum ipsum cacilds, vidis litro abertis. , paradis. Paisis, filhis, espiritis santis. Mé faiz elementum
+                                girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis
+                                Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+
+                <li class="timeline-inverted">
+                    <div class="timeline-badge success"><i class="glyphicon glyphicon-hand-right"></i></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">Your Responsibility......</h4>
+                            <p><small class="text-muted"><i class="glyphicon glyphicon-alert"></i> Proffessor Daniel Kitawu</small></p>
+                        </div>
+                        <div class="timeline-body">
+                            <p>Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+
+
+</div>
+
+
+
+@section Scripts{
+
+
+}
+
+
+
+
+
+
 

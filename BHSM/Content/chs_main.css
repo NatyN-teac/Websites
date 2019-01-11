@@ -196,10 +196,16 @@ margin-bottom:auto;
 /*organo css*/
 .organo{
     width:100%;
-    height:200px;
+    height:auto;
     background-color:#fff;
     margin-top:10px;
 
+}
+
+.organo img{
+width:70%;
+height:70%;
+margin-left:140px;
 }
 
 /*chs Adminstration layout*/
